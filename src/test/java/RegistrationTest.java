@@ -29,13 +29,10 @@ public class RegistrationTest {
     }
 
     @Test
-    public void FullRegistration() {
+    public void FullRegistration() throws InterruptedException {
         objHomePage = new HomePage(driver);
         objRegistrationPage1 = objHomePage.ClickRegBtn();
         objRegistrationPage2 = objRegistrationPage1.CompleteRegistration1();
-
-
-
         objRegistrationPage2.CompleteRegistration2();
 
     }
@@ -43,7 +40,7 @@ public class RegistrationTest {
     @AfterMethod
     public static void closeBrowser() throws InterruptedException {
         Thread.sleep(3000);
-       driver.quit();
+        driver.quit();
     }
 
 

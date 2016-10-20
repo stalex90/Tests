@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="jar://C:/Libs/selenium-java-3.0.0-beta4/client-combined-3.0.0-beta4-nodeps.jar!/" />
       <root url="file://C:/Libs/selenium-java-3.0.0-beta4/lib" />
+      <root url="jar://C:/Libs/javax.mail.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

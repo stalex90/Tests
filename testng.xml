@@ -5,6 +5,7 @@
     <classes>
       <class name="LogoutHeaderTest"/>
       <class name="LoginHeaderTest"/>
+      <class name="LoginModuleTest"/>
       <class name="RegistrationTest"/>
     </classes>
   </test> <!-- Pokupo -->

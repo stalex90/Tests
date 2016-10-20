@@ -93,6 +93,11 @@ public class HomePage {
 
     }
 
+    public By getProfileIcon() {
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(ProfileIcon));
+        return ProfileIcon;
+    }
+
 
 
 
