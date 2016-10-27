@@ -11,7 +11,7 @@ public class RegistrationPage1 {
 
     String a = Integer.toString(a1);
     String LoginN = "login" + a;
-    String EmailN = a + "@mailinator.com";
+    String EmailN = "katestarodubova90@gmail.com";
     String PhoneN = "7" + a;
     String PasswordN = "1234qwer";
 
@@ -31,7 +31,14 @@ public class RegistrationPage1 {
     By SecondPassword = By.id("secondPassword");
     By Checkbox = By.xpath(".//span[text()='Я принимаю условия']");
     By ContinueBtn = By.xpath(".//a[text() = 'Продолжить']");
+    By LoginWarning = By.xpath(".//p[contains(@data-bind,'errorUsername')]");
+    By EmailWarning = By.xpath(".//p[contains(@data-bind,'errorEmail')]");
+    By PhoneWarning = By.xpath(".//p[contains(@data-bind,'errorPhone')]");
+    By FirstPswWarning = By.xpath(".//p[contains(@data-bind,'errorFirstPassword')]");
+    By SecondPswWarning = By.xpath(".//p[contains(@data-bind,'errorSecondPassword')]");
+    By CheckboxWarning = By.xpath(".//p[contains(@data-bind,'errorIsChecked')]");
 
+    //Getters--------------------------------------------------------
     public String GetEmail(){
 
         return EmailN;
@@ -42,22 +49,82 @@ public class RegistrationPage1 {
         return driver.findElement(RegistrationHeader).getText();
     }
 
+    public String GetLoginWarning(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(LoginWarning));
+        return driver.findElement(LoginWarning).getText();
+    }
+
+    public String GetEmailWarning(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(EmailWarning));
+        return driver.findElement(EmailWarning).getText();
+    }
+
+    public String GetPhoneWarning(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(PhoneWarning));
+        return driver.findElement(PhoneWarning).getText();
+    }
+
+    public String GetFirstPswWarning(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(FirstPswWarning));
+        return driver.findElement(FirstPswWarning).getText();
+    }
+
+    public String GetSecondPswWarning(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SecondPswWarning));
+        return driver.findElement(SecondPswWarning).getText();
+    }
+
+    public String GetCheckboxWarning(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CheckboxWarning));
+        return driver.findElement(CheckboxWarning).getText();
+    }
+
+
+
+
+
+    //Methods--------------------------------------------------------
+
     public void InputLogin(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(Login));
         driver.findElement(Login).sendKeys(LoginN);
     }
 
+    public void InputShortLogin(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(Login));
+        driver.findElement(Login).sendKeys("Aaa");
+    }
+
     public void InputEmail(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(Email));
         driver.findElement(Email).sendKeys(EmailN);
     }
 
+    public void InputInvalidEmail(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(Email));
+        driver.findElement(Email).sendKeys("asd@basd");
+    }
 
     public void InputPhone(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(Phone));
         driver.findElement(Phone).click();
         driver.findElement(Phone).sendKeys(PhoneN);
     }
 
+    public void InputInvalidPhone(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(Phone));
+        driver.findElement(Phone).click();
+        driver.findElement(Phone).sendKeys("1234");
+    }
+
     public void InputFirstPassword(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(FirstPassword));
         driver.findElement(FirstPassword).sendKeys(PasswordN);
+    }
+
+    public void InputShortPassword(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(FirstPassword));
+        driver.findElement(FirstPassword).sendKeys("11111");
     }
 
     public void InputSecondPassword(){
@@ -65,15 +132,16 @@ public class RegistrationPage1 {
     }
 
     public void ClickCheckbox(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(Checkbox));
         driver.findElement(Checkbox).click();
     }
 
     public void ClickContinueBtn(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(ContinueBtn));
         driver.findElement(ContinueBtn).click();
     }
 
     public RegistrationPage2 CompleteRegistration1() {
-        System.out.println(a1);
         InputLogin();
         InputEmail();
         InputPhone();

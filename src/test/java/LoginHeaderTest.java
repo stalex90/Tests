@@ -26,7 +26,7 @@ public class LoginHeaderTest {
 
     }
 
-    @Test
+    @Test (description = "Проверка перехода на домашнюю страницу по логотипу")
     public void ReturnLogo() throws InterruptedException {
 
         objHomePage = new HomePage(driver);
@@ -37,7 +37,7 @@ public class LoginHeaderTest {
 
     }
 
-    @Test
+    @Test (description = "Проверка перехода на домашнюю страницу по названию магазина")
     public void ReturnText()  {
 
         objHomePage = new HomePage(driver);
@@ -48,7 +48,7 @@ public class LoginHeaderTest {
 
     }
 
-    @Test
+    @Test (description = "Проверка открытия страницы профиль")
     public void CheckProfileOpens()  {
 
         objHomePage = new HomePage(driver);
@@ -60,7 +60,7 @@ public class LoginHeaderTest {
 
     }
 
-    @Test
+    @Test (description = "Проверка открытия страницы заказы")
     public void CheckOrderOpens()  {
 
         objHomePage = new HomePage(driver);
@@ -72,7 +72,7 @@ public class LoginHeaderTest {
 
     }
 
-    @Test
+    @Test (description = "Проверка открытия страницы сообщения")
     public void CheckMessageOpens()  {
 
         objHomePage = new HomePage(driver);
@@ -84,7 +84,7 @@ public class LoginHeaderTest {
 
     }
 
-    @Test
+    @Test (description = "Проверка открытия выхода")
     public void CheckLogout()  {
 
         objHomePage = new HomePage(driver);

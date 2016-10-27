@@ -26,7 +26,7 @@ public class LogoutHeaderTest {
 
     }
 
-    @Test
+    @Test (description = "Проверка перехода на домашнюю страницу по логотипу")
     public void ReturnLogo() {
 
         objHomePage = new HomePage(driver);
@@ -35,7 +35,7 @@ public class LogoutHeaderTest {
 
     }
 
-    @Test
+    @Test (description = "Проверка перехода на домашнюю страницу по названию магазина")
     public void ReturnText()  {
 
         objHomePage = new HomePage(driver);
@@ -44,7 +44,7 @@ public class LogoutHeaderTest {
 
     }
 
-    @Test
+    @Test (description = "Проверка открытия модуля аутентификации")
     public void ClickLoginBtn(){
 
         objHomePage = new HomePage(driver);
@@ -53,7 +53,7 @@ public class LogoutHeaderTest {
 
     }
 
-    @Test
+    @Test (description = "Проверка открытия модуля регистрации")
     public void ClickRegBtn(){
 
         objHomePage = new HomePage(driver);
