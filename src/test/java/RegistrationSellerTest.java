@@ -23,7 +23,7 @@ public class RegistrationSellerTest {
 
     @BeforeMethod
     public static void openBrowser(){
-        System.setProperty("webdriver.chrome.driver","chromedriver");
+        System.setProperty("webdriver.chrome.driver","/var/lib/jenkins/workspace/Test/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.get("https://dev.pokupo.ru/user/reg_seller/");
