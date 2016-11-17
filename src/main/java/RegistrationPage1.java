@@ -11,7 +11,7 @@ public class RegistrationPage1 {
 
     String a = Integer.toString(a1);
     String LoginN = "login" + a;
-    String EmailN = "katestarodubova90@gmail.com";
+    String EmailN = "pokupotest+" + a + "@gmail.com";
     String PhoneN = "7" + a;
     String PasswordN = "1234qwer";
 

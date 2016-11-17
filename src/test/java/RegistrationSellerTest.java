@@ -20,10 +20,13 @@ public class RegistrationSellerTest {
     RegSeller1 objRegSeller1;
     RegSeller2 objRegSeller2;
     SellerLogin objSellerLogin;
+    static OS_Version objOS_Version;
 
     @BeforeMethod
     public static void openBrowser(){
-        System.setProperty("webdriver.chrome.driver","C:\\Documents and Settings\\Admin\\IdeaProjects\\TestProject\\lib\\chromedriver.exe");
+        objOS_Version = new OS_Version();
+        objOS_Version.SetChromeProperty();
+        //System.setProperty("webdriver.chrome.driver","chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.get("https://dev.pokupo.ru/user/reg_seller/");

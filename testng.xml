@@ -3,11 +3,7 @@
 <suite name="Default Suite">
   <test name="Pokupo">
     <classes>
-      <class name="LogoutHeaderTest"/>
-      <class name="LoginHeaderTest"/>
-      <class name="LoginModuleTest"/>
-      <class name="RegistrationTest"/>
-      <class name="CatalogTest"/>
+
       <class name="RegistrationSellerTest"/>
 
     </classes>
