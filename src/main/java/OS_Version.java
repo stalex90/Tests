@@ -7,11 +7,11 @@ public class OS_Version {
     public void SetChromeProperty(){
         if(isWindows()){
             System.setProperty("webdriver.chrome.driver","chromedriver.exe");
-            System.out.println(getOSVerion());
+
         }
         if (isUnix()){
             System.setProperty("webdriver.chrome.driver","/usr/lib/chromium/chromedriver");
-            System.out.println(getOSVerion());
+
         }
     }
 
@@ -31,8 +31,4 @@ public class OS_Version {
 
     }
 
-    public static String getOSVerion() {
-        String os = System.getProperty("os.name");
-        return os;
-    }
 }
