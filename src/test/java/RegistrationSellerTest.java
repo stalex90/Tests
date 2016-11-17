@@ -30,7 +30,7 @@ public class RegistrationSellerTest {
         driver.manage().window().maximize();
     }
 
-    @Test(description = "Полная регистрация частного лица")
+   /* @Test(description = "Полная регистрация частного лица")
     public void ChastnoeFullRegistration() throws InterruptedException {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller2 = new RegSeller2(driver);
@@ -97,7 +97,7 @@ public class RegistrationSellerTest {
         objRegSeller2.InputEmailCode();
         objRegSeller2.ClickSubmit();
         Assert.assertTrue(driver.findElement(objSellerLogin.Submit).isDisplayed());
-    }
+    }*/
 
     @Test(description = "Возвращение назад при активации кода частного лица")
     public void ChastnoeBack()  {
@@ -117,7 +117,7 @@ public class RegistrationSellerTest {
         Assert.assertTrue(driver.findElement(objRegSeller1.Email).isDisplayed());
     }
 
-    @Test(description = "Ошибка пустого email")
+   /* @Test(description = "Ошибка пустого email")
     public void EmptyEmail()  {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller1.ClickCheckbox();
@@ -258,7 +258,7 @@ public class RegistrationSellerTest {
         objRegSeller1.ClickSubmit();
         objRegSeller2.ClickSubmit();
         Assert.assertEquals(objRegSeller2.GetCodeError(),objRegSeller2.EmptyCode);
-    }
+    }*/
 
 
 
