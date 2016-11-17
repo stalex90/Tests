@@ -218,7 +218,7 @@ public class RegistrationSellerTest {
         Assert.assertEquals(objRegSeller2.GetCodeError(),objRegSeller2.IncorrectCode);
     }
 
-    @Test(description = "Ошибка некорректного емаил кода с заполненным смс кода")
+  /*  @Test(description = "Ошибка некорректного емаил кода с заполненным смс кода")
     public void IncorrectEmailCode()  {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller2 = new RegSeller2(driver);
@@ -227,7 +227,7 @@ public class RegistrationSellerTest {
         objRegSeller2.InputSMSCode();
         objRegSeller2.ClickSubmit();
         Assert.assertEquals(objRegSeller2.GetCodeError(),objRegSeller2.IncorrectCode);
-    }
+    }*/
 
     @Test(description = "Ошибка некорректного смс кода с заполненным емаил кода")
     public void IncorrectSMSCode() throws InterruptedException {

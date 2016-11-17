@@ -28,6 +28,7 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>LogoutHeader.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin></plugins>
