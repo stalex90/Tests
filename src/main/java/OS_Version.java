@@ -32,7 +32,7 @@ public class OS_Version {
     }
 
     public static String getOSVerion() {
-        String os = System.getProperty("os.version");
+        String os = System.getProperty("os.name");
         return os;
     }
 }
