@@ -33,6 +33,10 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
+                    <properties>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>LogoutHeader.xml</suiteXmlFile>
+                    </properties>
                 </configuration>
             </plugin></plugins>
     </build>
