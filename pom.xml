@@ -16,7 +16,10 @@
             <url>http://jcenter.bintray.com</url>
         </repository>
     </repositories>
-        <build>
+    <properties>
+        <suiteXmlFile>testng.xml</suiteXmlFile>
+    </properties>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -33,7 +36,7 @@
                 <version>2.19.1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin></plugins>
