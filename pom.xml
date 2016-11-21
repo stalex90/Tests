@@ -16,9 +16,7 @@
             <url>http://jcenter.bintray.com</url>
         </repository>
     </repositories>
-    <properties>
-        <suiteXmlFile>testng.xml</suiteXmlFile>
-    </properties>
+
     <build>
         <plugins>
             <plugin>
