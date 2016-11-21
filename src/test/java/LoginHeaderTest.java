@@ -15,10 +15,12 @@ public class LoginHeaderTest {
     HomePage objHomePage;
     LoginPage objLoginPage;
     LogoutPopup objLogoutPopup;
+    static OS_Version objOS_Version;
 
     @BeforeMethod
     public static void openBrowser() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Documents and Settings\\Admin\\IdeaProjects\\TestProject\\lib\\chromedriver.exe");
+        objOS_Version = new OS_Version();
+        objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("https://promodev.pokupo.ru/shop/1");
