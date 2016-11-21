@@ -4,7 +4,7 @@
   <test name="Pokupo">
     <classes>
 
-      <class name="LogoutHeaderTest1"/>
+      <class name="LogoutHeaderTest"/>
 
     </classes>
   </test> <!-- Pokupo -->
