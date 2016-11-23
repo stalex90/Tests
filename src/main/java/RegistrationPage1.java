@@ -92,7 +92,7 @@ public class RegistrationPage1 {
 
     public void InputShortLogin(){
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(Login));
-        driver.findElement(Login).sendKeys("Aaa");
+        driver.findElement(Login).sendKeys("Aa");
     }
 
     public void InputEmail(){

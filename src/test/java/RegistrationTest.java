@@ -76,7 +76,7 @@ public class RegistrationTest {
         objRegistrationPage1 = objHomePage.ClickRegBtn();
         objRegistrationPage1.InputShortLogin();
         objRegistrationPage1.ClickContinueBtn();
-        Assert.assertEquals(objRegistrationPage1.GetLoginWarning() ,"Минимум 4 символа");
+        Assert.assertEquals(objRegistrationPage1.GetLoginWarning() ,"Минимум 3 символа");
     }
 
     @Test (description = "Проверка появления ошибки при некорректном email")

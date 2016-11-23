@@ -13,7 +13,7 @@ public class LoginPage {
 
     WebDriver driver;
 
-    String LoginN = "testpokupo@mail.ru";
+    String LoginN = "pokupomy1@gmail.com";
     String PasswordN = "1234qwer";
     String InvalidLoginN = "invalid";
     String InvalidPasswordN = "1234asdf";
