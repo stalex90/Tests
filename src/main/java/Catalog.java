@@ -12,6 +12,7 @@ import java.util.List;
  */
 public class Catalog {
     WebDriver driver;
+    String NeedCategory = "Зонты";
 
 
     public Catalog(WebDriver driver) {
@@ -50,7 +51,7 @@ public class Catalog {
     }
 
     public void AddFirst8Item() {
-        SelectCategory("Кухонные ножи");
+        SelectCategory(NeedCategory);
 
         for (int x=0;x<8;x++){
             AddItem(x);

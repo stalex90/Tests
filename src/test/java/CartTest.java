@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by user on 31.10.16.
  */
-public class CatalogTest {
+public class CartTest {
 
     static WebDriver driver;
     HomePage objHomePage;
@@ -35,7 +35,7 @@ public class CatalogTest {
     public void CheckDisplayCount(){
         objHomePage = new HomePage(driver);
         objCatalog = new Catalog(driver);
-        objCatalog.SelectCategory("Кухонные ножи");
+        objCatalog.SelectCategory(objCatalog.NeedCategory);
         objCatalog.AddItem(10);
         Assert.assertTrue(driver.findElement(objHomePage.CartCount).isDisplayed());
     }
@@ -60,22 +60,22 @@ public class CatalogTest {
         Assert.assertEquals(objHomePage.GetCartCount(),7);
     }
 
-    @Test (description = "Добавить количество для товара")
+   /* @Test (description = "Добавить количество для товара")
     public void CheckAddItemCount(){
         objHomePage = new HomePage(driver);
         objCatalog = new Catalog(driver);
-        objCatalog.SelectCategory("Кухонные ножи");
+        objCatalog.SelectCategory(objCatalog.NeedCategory);
         objCatalog.AddItem(7);
         objHomePage.ClickCartIcon();
         objHomePage.ItemCountAdd(1);
         Assert.assertEquals(objHomePage.GetItemCount(1),2);
-    }
+    }*/
 
     @Test (description = "Убавить количество для товара")
     public void CheckRemoveItemCount(){
         objHomePage = new HomePage(driver);
         objCatalog = new Catalog(driver);
-        objCatalog.SelectCategory("Кухонные ножи");
+        objCatalog.SelectCategory(objCatalog.NeedCategory);
         objCatalog.AddItem(7);
         objHomePage.ClickCartIcon();
         objHomePage.ItemCountRemove(1);
@@ -95,7 +95,7 @@ public class CatalogTest {
     public void CheckInCart() throws InterruptedException {
         objHomePage = new HomePage(driver);
         objCatalog = new Catalog(driver);
-        objCatalog.SelectCategory("Кухонные ножи");
+        objCatalog.SelectCategory(objCatalog.NeedCategory);
         objCatalog.AddItem(7);
         objHomePage.ClickCartIcon();
         objCart = objHomePage.ClickInCart();
@@ -108,7 +108,7 @@ public class CatalogTest {
         objHomePage = new HomePage(driver);
         objCatalog = new Catalog(driver);
         objLoginPage = new LoginPage(driver);
-        objCatalog.SelectCategory("Кухонные ножи");
+        objCatalog.SelectCategory(objCatalog.NeedCategory);
         objCatalog.AddItem(7);
         objHomePage.ClickCartIcon();
         objOformit = objHomePage.ClickOformit();
@@ -123,7 +123,7 @@ public class CatalogTest {
     public void CheckNameCart(){
         objHomePage = new HomePage(driver);
         objCatalog = new Catalog(driver);
-        objCatalog.SelectCategory("Кухонные ножи");
+        objCatalog.SelectCategory(objCatalog.NeedCategory);
         objCatalog.AddItem(7);
         objHomePage.ClickCartIcon();
         Assert.assertEquals(objHomePage.GetCartName(),"Корзина");
@@ -136,6 +136,7 @@ public class CatalogTest {
         objCatalog.AddFirst8Item();
         objHomePage.ClickCartIcon();
         objHomePage.DeleteItem(2);
+        objHomePage.ClickCartIcon();
         Assert.assertEquals(objHomePage.GetSummFinalCost(),objHomePage.GetFinalCost());
     }
 
