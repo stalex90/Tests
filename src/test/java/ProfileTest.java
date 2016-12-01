@@ -155,7 +155,7 @@ public class ProfileTest {
         objHomePage.ClickProfileBtn();
         objProfile.ClickCountryField();
         objProfile.InputCountry();
-        objProfile.SelectCountry(objProfile.Country);
+        //objProfile.SelectCountry(objProfile.Country);
         objProfile.ClickSave2();
         Assert.assertEquals(objProfile.GetMsg(objProfile.RegionError),objProfile.EmptyMsg);
     }
@@ -169,7 +169,7 @@ public class ProfileTest {
         objHomePage.ClickProfileBtn();
         objProfile.ClickCountryField();
         objProfile.InputCountry();
-        objProfile.SelectCountry(objProfile.Country);
+        //objProfile.SelectCountry(objProfile.Country);
         objProfile.InputRegion();
         objProfile.ClickSave2();
         Assert.assertEquals(objProfile.GetMsg(objProfile.CityError),objProfile.EmptyMsg);
@@ -184,7 +184,7 @@ public class ProfileTest {
         objHomePage.ClickProfileBtn();
         objProfile.ClickCountryField();
         objProfile.InputCountry();
-        objProfile.SelectCountry(objProfile.Country);
+        //objProfile.SelectCountry(objProfile.Country);
         objProfile.InputRegion();
         objProfile.InputCity();
         objProfile.ClickSave2();
@@ -203,7 +203,7 @@ public class ProfileTest {
         objHomePage.ClickProfileBtn();
         objProfile.ClickCountryField();
         objProfile.InputCountry();
-        objProfile.SelectCountry(objProfile.Country);
+        //objProfile.SelectCountry(objProfile.Country);
         objProfile.InputRegion();
         objProfile.InputCity();
         objProfile.InputAddress();
@@ -252,7 +252,7 @@ public class ProfileTest {
         objProfile.ClickAddNewAddress();
         objProfile.ClickCountryField();
         objProfile.InputCountry();
-        objProfile.SelectCountry(objProfile.Country);
+        //objProfile.SelectCountry(objProfile.Country);
         objProfile.InputPoluchatel();
         objProfile.InputShipPhone();
         objProfile.ClickShipSave();
@@ -270,7 +270,7 @@ public class ProfileTest {
         objProfile.ClickAddNewAddress();
         objProfile.ClickCountryField();
         objProfile.InputCountry();
-        objProfile.SelectCountry(objProfile.Country);
+        //objProfile.SelectCountry(objProfile.Country);
         objProfile.InputRegion();
         objProfile.InputPoluchatel();
         objProfile.InputShipPhone();
@@ -291,7 +291,7 @@ public class ProfileTest {
         objProfile.InputShipPhone();
         objProfile.ClickCountryField();
         objProfile.InputCountry();
-        objProfile.SelectCountry(objProfile.Country);
+        //objProfile.SelectCountry(objProfile.Country);
         objProfile.InputRegion();
         objProfile.InputCity();
         objProfile.ClickShipSave();
@@ -314,7 +314,7 @@ public class ProfileTest {
         objProfile.InputShipPhone();
         objProfile.ClickCountryField();
         objProfile.InputCountry();
-        objProfile.SelectCountry(objProfile.Country);
+        //objProfile.SelectCountry(objProfile.Country);
         objProfile.InputRegion();
         objProfile.InputCity();
         objProfile.InputAddress();
@@ -337,7 +337,7 @@ public class ProfileTest {
         objProfile.InputShipPhone();
         objProfile.ClickCountryField();
         objProfile.InputCountry();
-        objProfile.SelectCountry(objProfile.Country);
+        //objProfile.SelectCountry(objProfile.Country);
         objProfile.InputRegion();
         objProfile.InputCity();
         objProfile.InputAddress();
@@ -359,7 +359,7 @@ public class ProfileTest {
         objProfile.InputPoluchatel();
         objProfile.ClickCountryField();
         objProfile.InputCountry();
-        objProfile.SelectCountry(objProfile.Country);
+        //objProfile.SelectCountry(objProfile.Country);
         objProfile.InputRegion();
         objProfile.InputCity();
         objProfile.InputAddress();

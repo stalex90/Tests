@@ -35,6 +35,7 @@ public class Profile {
     By PersDanBtn = By.xpath(".//span[text()='Персональные данные']");
     By AvatarBtn = By.id("avatar_file");
     By FullName = By.xpath(".//*[@id='fullname']");
+    By FullNameResults = By.xpath(".//div[contains(@class,'suggestions-suggestions')]");
     By LastName = By.id("fullname__surname");
     By FirstName = By.id("fullname__name");
     By MiddleName = By.id("fullname__patronymic");
@@ -146,15 +147,16 @@ public class Profile {
     public void InputFullName(){
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(FullName));
         driver.findElement(FullName).sendKeys("Иванов Иван Иванович");
-        driver.findElement(FullName).click();
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(FullNameResults));
         driver.findElement(FullName).sendKeys(Keys.ENTER);
+
 
     }
 
     public void ClearFullName(){
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(FullName));
         driver.findElement(FullName).clear();
-        driver.findElement(FullName).sendKeys(Keys.ENTER);
+
     }
 
     public void ClearLastName(){
@@ -280,8 +282,8 @@ public class Profile {
 
     public void InputCountry(){
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SearchCountry));
-        //driver.findElement(SearchCountry).clear();
         driver.findElement(SearchCountry).sendKeys(Country);
+        driver.findElement(SearchCountry).sendKeys(Keys.ENTER);
     }
 
     public void SelectCountry(String country) throws InterruptedException {
@@ -291,7 +293,6 @@ public class Profile {
         for (WebElement x : CountryList){
             if (x.getText().equals(country)){
                 (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CountryPlaceholderMsg));
-                Thread.sleep(2000);
                 x.click();
                 return;
             }
