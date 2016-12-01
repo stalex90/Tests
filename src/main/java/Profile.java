@@ -19,6 +19,7 @@ public class Profile {
     By ProfileBtn = By.xpath(".//a[@class='icon__profile']");
     By CountryField = By.xpath(".//*[@id='country_list_chosen']/a");
     By SearchCountry = By.xpath(".//*[@id='country_list_chosen']/div/div/div/input");
+    By SearchWindow = By.xpath(".//*[@id='country_list_chosen']/div");
     By SearchResults = By.xpath(".//*[@class='chosen-results']/li");
     By RegionField = By.id("region_list");
     By CityField = By.id("city_list");
@@ -284,6 +285,7 @@ public class Profile {
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SearchCountry));
         driver.findElement(SearchCountry).sendKeys(Country);
         driver.findElement(SearchCountry).sendKeys(Keys.ENTER);
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(RegionField));
     }
 
     public void SelectCountry(String country) throws InterruptedException {
@@ -347,7 +349,7 @@ public class Profile {
     public void InputAllAddress() throws InterruptedException {
         ClickCountryField();
         InputCountry();
-        SelectCountry(Country);
+        //SelectCountry(Country);
         InputRegion();
         InputCity();
         InputAddress();
@@ -405,7 +407,7 @@ public class Profile {
         ClickAddNewAddress();
         ClickCountryField();
         InputCountry();
-        SelectCountry(Country);
+        //SelectCountry(Country);
         InputRegion();
         InputCity();
         InputAddress();
