@@ -278,18 +278,10 @@ public class Profile {
 
     //Методы для почтового адреса и адреса доставки
 
-    public void ClickCountryField() throws IOException {
-
-        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SearchCountry));
-        File screenshot1 = ((TakesScreenshot) driver).
-                getScreenshotAs(OutputType.FILE);
-        String path1 = "/var/lib/jenkins/workspace/Тест личный кабинет (Профиль)/src/test/resources/" + "scr0" + screenshot1.getName();
-        FileUtils.copyFile(screenshot1, new File(path1));
+    public void ClickCountryField(){
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CountryField));
         ((JavascriptExecutor)driver).executeScript("window.scrollBy(0,1000);");
         driver.findElement(CountryField).click();
-
-
     }
 
     public void InputCountry() throws IOException, InterruptedException {
