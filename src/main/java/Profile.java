@@ -302,8 +302,8 @@ public class Profile {
         }
     }
 
-    public void InputRegion(){
-        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(RegionField));
+    public void InputRegion() throws InterruptedException {
+        Thread.sleep(1000);
         driver.findElement(RegionField).clear();
          driver.findElement(RegionField).sendKeys(Region);
     }

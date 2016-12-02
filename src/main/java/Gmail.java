@@ -37,7 +37,7 @@ public class Gmail {
                 if (CodeS[i].equals("и") && CodeS[i+1].equals(":")){
                     a = i+4;
                 }
-                if (CodeS[i].equals("П") && CodeS[i+1].equals("о") && CodeS[i+2].equals("с")){
+                if ((CodeS[i].equals("П") && CodeS[i+1].equals("о") && CodeS[i+2].equals("с")) || (CodeS[i].equals("С") && CodeS[i+1].equals("н") && CodeS[i+2].equals("а"))) {
                     b = i-2;
                 }
             }
