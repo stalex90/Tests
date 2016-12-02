@@ -217,7 +217,7 @@ public class ProfileTest {
     }*/
 
 
-    @Test(description = "Проверка на добавление нового адреса доставки")
+   /* @Test(description = "Проверка на добавление нового адреса доставки")
     public void CheckAddAddress() throws InterruptedException, IOException {
         objHomePage = new HomePage(driver);
         objProfile = new Profile(driver);
@@ -226,7 +226,7 @@ public class ProfileTest {
         objHomePage.ClickProfileBtn();
         objProfile.InputAllShipAddess();
         Assert.assertEquals(objProfile.GetMsg(objProfile.Success),objProfile.ShipSuccessMsg);
-    }
+    }*/
 
   /*  @Test(description = "Проверка на появление ошибки пустого Страны, Получатель, Телефон")
     public void CheckCountPolPhoneError() throws InterruptedException {
@@ -243,7 +243,7 @@ public class ProfileTest {
         Assert.assertEquals(objProfile.GetMsg(objProfile.ShipPhoneError),objProfile.EmptyMsg);
     }*/
 
-    @Test(description = "Проверка на появление ошибки пустого региона доставки")
+ /*   @Test(description = "Проверка на появление ошибки пустого региона доставки")
     public void CheckShipRegionError() throws InterruptedException, IOException {
         objHomePage = new HomePage(driver);
         objProfile = new Profile(driver);
@@ -259,7 +259,7 @@ public class ProfileTest {
         objProfile.InputShipPhone();
         objProfile.ClickShipSave();
         Assert.assertEquals(objProfile.GetMsg(objProfile.RegionError),objProfile.EmptyMsg);
-    }
+    }*/
 
     @Test(description = "Проверка на появление ошибки пустого города доставки")
     public void CheckShipCityError() throws InterruptedException, IOException {

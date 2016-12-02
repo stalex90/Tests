@@ -294,7 +294,11 @@ public class Profile {
         String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Профиль)/src/test/resources/" + screenshot.getName();
         FileUtils.copyFile(screenshot, new File(path));
 
-        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(RegionField));
+        ClickShipSave();
+        File screenshot1 = ((TakesScreenshot) driver).
+                getScreenshotAs(OutputType.FILE);
+        String path1 = "/var/lib/jenkins/workspace/Тест личный кабинет (Профиль)/src/test/resources/" + screenshot1.getName();
+        FileUtils.copyFile(screenshot1, new File(path1));
     }
 
 
