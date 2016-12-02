@@ -26,6 +26,7 @@ public class ProfileTest {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("https://promodev.pokupo.ru/shop/1");
+        driver.manage().window().maximize();
     }
 
    /* @Test(description = "Проверка автоматического заполнения фио")
