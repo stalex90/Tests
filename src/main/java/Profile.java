@@ -292,9 +292,10 @@ public class Profile {
         FileUtils.copyFile(screenshot1, new File(path1));
 
         driver.findElement(SearchCountry).sendKeys(Country);
+        Thread.sleep(1000);
         File screenshot2 = ((TakesScreenshot) driver).
                 getScreenshotAs(OutputType.FILE);
-        String path2 = "/var/lib/jenkins/workspace/Тест личный кабинет (Профиль)/src/test/resources/" + "scr2" +screenshot2.getName();
+        String path2 = "/var/lib/jenkins/workspace/Тест личный кабинет (Профиль)/src/test/resources/" + "scr17" +screenshot2.getName();
         FileUtils.copyFile(screenshot1, new File(path2));
 
         driver.findElement(SearchCountry).sendKeys(Keys.ENTER);
