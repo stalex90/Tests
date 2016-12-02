@@ -286,7 +286,7 @@ public class Profile {
         driver.findElement(SearchCountry).sendKeys(Country);
         driver.findElement(SearchCountry).sendKeys(Keys.ENTER);
         driver.findElement(SearchCountry).sendKeys(Keys.TAB);
-        (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(RegionField));
+
     }
 
     public void SelectCountry(String country) throws InterruptedException {

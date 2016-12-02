@@ -61,7 +61,8 @@ public class RegistrationPage2 {
     public void InputEmailCode() throws InterruptedException {
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(EmailField));
         Thread.sleep(40000);
-        driver.findElement(EmailField).sendKeys((new Gmail().GetEmailCode()));
+        String Code = new Gmail().GetEmailCode();
+        driver.findElement(EmailField).sendKeys(Code);
     }
 
     public void InputInvalidEmailCode(){
