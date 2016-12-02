@@ -25,6 +25,7 @@ public class Profile {
     By CityField = By.id("city_list");
     By AddressField = By.id("address");
     By IndexField = By.id("address__postalcode");
+    By FirstResult = By.xpath(".//*[@id='country_list_chosen']/div/ul/li/em");
 
     String Country = "Россия";
     String Region = "Московская область";
@@ -284,7 +285,7 @@ public class Profile {
     public void InputCountry() {
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SearchCountry));
         driver.findElement(SearchCountry).sendKeys(Country);
-        driver.findElement(SearchCountry).sendKeys(Keys.ENTER);
+        driver.findElement(FirstResult).click();
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(RegionField));
     }
 
