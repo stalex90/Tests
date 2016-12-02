@@ -226,7 +226,7 @@ public class ProfileTest {
         Assert.assertEquals(objProfile.GetMsg(objProfile.Success),objProfile.ShipSuccessMsg);
     }
 
-    @Test(description = "Проверка на появление ошибки пустого Страны, Получатель, Телефон")
+  /*  @Test(description = "Проверка на появление ошибки пустого Страны, Получатель, Телефон")
     public void CheckCountPolPhoneError() throws InterruptedException {
         objHomePage = new HomePage(driver);
         objProfile = new Profile(driver);
@@ -239,7 +239,7 @@ public class ProfileTest {
         Assert.assertEquals(objProfile.GetMsg(objProfile.CountryError),objProfile.EmptyMsg);
         Assert.assertEquals(objProfile.GetMsg(objProfile.PoluchatelError),objProfile.EmptyMsg);
         Assert.assertEquals(objProfile.GetMsg(objProfile.ShipPhoneError),objProfile.EmptyMsg);
-    }
+    }*/
 
     @Test(description = "Проверка на появление ошибки пустого региона доставки")
     public void CheckShipRegionError() throws InterruptedException {

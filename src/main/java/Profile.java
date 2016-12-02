@@ -281,13 +281,15 @@ public class Profile {
         driver.findElement(CountryField).click();
     }
 
-    public void InputCountry(){
+    public void InputCountry() {
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SearchCountry));
         driver.findElement(SearchCountry).sendKeys(Country);
         driver.findElement(SearchCountry).sendKeys(Keys.ENTER);
-        driver.findElement(SearchCountry).sendKeys(Keys.TAB);
-
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(RegionField));
     }
+
+
+
 
     public void SelectCountry(String country) throws InterruptedException {
 
@@ -305,7 +307,7 @@ public class Profile {
     public void InputRegion(){
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(RegionField));
         driver.findElement(RegionField).clear();
-         driver.findElement(RegionField).sendKeys(Region);
+        driver.findElement(RegionField).sendKeys(Region);
     }
 
     public void InputCity(){
