@@ -258,7 +258,7 @@ public class ProfileTest {
         objProfile.ClickShipSave();
         Assert.assertEquals(objProfile.GetMsg(objProfile.RegionError),objProfile.EmptyMsg);
     }
-/*
+
     @Test(description = "Проверка на появление ошибки пустого города доставки")
     public void CheckShipCityError() throws InterruptedException {
         objHomePage = new HomePage(driver);
@@ -277,7 +277,7 @@ public class ProfileTest {
         objProfile.ClickShipSave();
         Assert.assertEquals(objProfile.GetMsg(objProfile.CityError),objProfile.EmptyMsg);
     }
-
+/*
     @Test(description = "Проверка на появление ошибки пустой страны, телефона, получателя в адресе доставки")
     public void CheckShipAddressError() throws InterruptedException {
         objHomePage = new HomePage(driver);
