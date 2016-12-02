@@ -29,7 +29,7 @@ public class Profile {
     By AddressField = By.id("address");
     By IndexField = By.id("address__postalcode");
 
-    String Country = "Россия";
+    String Country = "Израиль";
     String Region = "Московская область";
     String City = "Москва";
     String Address = "ул. Московская 1 кв.1";
