@@ -1,7 +1,10 @@
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -25,7 +28,6 @@ public class Profile {
     By CityField = By.id("city_list");
     By AddressField = By.id("address");
     By IndexField = By.id("address__postalcode");
-    By FirstResult = By.xpath(".//*[@id='country_list_chosen']/div/ul/li/em");
 
     String Country = "Россия";
     String Region = "Московская область";
@@ -282,10 +284,16 @@ public class Profile {
         driver.findElement(CountryField).click();
     }
 
-    public void InputCountry() {
+    public void InputCountry() throws IOException, InterruptedException {
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SearchCountry));
         driver.findElement(SearchCountry).sendKeys(Country);
-        driver.findElement(FirstResult).click();
+        driver.findElement(SearchCountry).sendKeys(Keys.ENTER);
+        Thread.sleep(2000);
+        File screenshot = ((TakesScreenshot) driver).
+                getScreenshotAs(OutputType.FILE);
+        String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Профиль)/src/test/resources/" + screenshot.getName();
+        FileUtils.copyFile(screenshot, new File(path));
+
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(RegionField));
     }
 
@@ -350,7 +358,7 @@ public class Profile {
         driver.findElement(Save2).click();
     }
 
-    public void InputAllAddress() throws InterruptedException {
+    public void InputAllAddress() throws InterruptedException, IOException {
         ClickCountryField();
         InputCountry();
         //SelectCountry(Country);
@@ -406,7 +414,7 @@ public class Profile {
 
     }
 
-    public void InputAllShipAddess() throws InterruptedException {
+    public void InputAllShipAddess() throws InterruptedException, IOException {
         ClickShipAddress();
         ClickAddNewAddress();
         ClickCountryField();

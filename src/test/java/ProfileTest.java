@@ -5,6 +5,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -216,7 +217,7 @@ public class ProfileTest {
 
 
     @Test(description = "Проверка на добавление нового адреса доставки")
-    public void CheckAddAddress() throws InterruptedException {
+    public void CheckAddAddress() throws InterruptedException, IOException {
         objHomePage = new HomePage(driver);
         objProfile = new Profile(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
@@ -242,7 +243,7 @@ public class ProfileTest {
     }*/
 
     @Test(description = "Проверка на появление ошибки пустого региона доставки")
-    public void CheckShipRegionError() throws InterruptedException {
+    public void CheckShipRegionError() throws InterruptedException, IOException {
         objHomePage = new HomePage(driver);
         objProfile = new Profile(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
@@ -260,7 +261,7 @@ public class ProfileTest {
     }
 
     @Test(description = "Проверка на появление ошибки пустого города доставки")
-    public void CheckShipCityError() throws InterruptedException {
+    public void CheckShipCityError() throws InterruptedException, IOException {
         objHomePage = new HomePage(driver);
         objProfile = new Profile(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
