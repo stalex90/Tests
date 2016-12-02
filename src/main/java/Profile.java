@@ -286,19 +286,35 @@ public class Profile {
 
     public void InputCountry() throws IOException, InterruptedException {
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SearchCountry));
-        driver.findElement(SearchCountry).sendKeys(Country);
-        driver.findElement(SearchCountry).sendKeys(Keys.ENTER);
-        Thread.sleep(2000);
-        File screenshot = ((TakesScreenshot) driver).
-                getScreenshotAs(OutputType.FILE);
-        String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Профиль)/src/test/resources/" + screenshot.getName();
-        FileUtils.copyFile(screenshot, new File(path));
-
-        ClickShipSave();
         File screenshot1 = ((TakesScreenshot) driver).
                 getScreenshotAs(OutputType.FILE);
-        String path1 = "/var/lib/jenkins/workspace/Тест личный кабинет (Профиль)/src/test/resources/" + screenshot1.getName();
+        String path1 = "/var/lib/jenkins/workspace/Тест личный кабинет (Профиль)/src/test/resources/" + screenshot1.getName() + "scr2";
         FileUtils.copyFile(screenshot1, new File(path1));
+
+        driver.findElement(SearchCountry).sendKeys(Country);
+        File screenshot2 = ((TakesScreenshot) driver).
+                getScreenshotAs(OutputType.FILE);
+        String path2 = "/var/lib/jenkins/workspace/Тест личный кабинет (Профиль)/src/test/resources/" + screenshot2.getName() + "scr2";
+        FileUtils.copyFile(screenshot1, new File(path2));
+
+        driver.findElement(SearchCountry).sendKeys(Keys.ENTER);
+
+        File screenshot3 = ((TakesScreenshot) driver).
+                getScreenshotAs(OutputType.FILE);
+        String path3 = "/var/lib/jenkins/workspace/Тест личный кабинет (Профиль)/src/test/resources/" + screenshot3.getName() + "scr3";
+        FileUtils.copyFile(screenshot3, new File(path3));
+
+        Thread.sleep(5000);
+        File screenshot4 = ((TakesScreenshot) driver).
+                getScreenshotAs(OutputType.FILE);
+        String path4 = "/var/lib/jenkins/workspace/Тест личный кабинет (Профиль)/src/test/resources/" + screenshot4.getName() +"scr4";
+        FileUtils.copyFile(screenshot4, new File(path4));
+
+        ClickShipSave();
+        File screenshot5 = ((TakesScreenshot) driver).
+                getScreenshotAs(OutputType.FILE);
+        String path5 = "/var/lib/jenkins/workspace/Тест личный кабинет (Профиль)/src/test/resources/" + screenshot1.getName() + "scr5";
+        FileUtils.copyFile(screenshot5, new File(path5));
     }
 
 
