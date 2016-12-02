@@ -285,6 +285,7 @@ public class Profile {
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SearchCountry));
         driver.findElement(SearchCountry).sendKeys(Country);
         driver.findElement(SearchCountry).sendKeys(Keys.ENTER);
+        driver.findElement(SearchCountry).sendKeys(Keys.TAB);
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(RegionField));
     }
 
