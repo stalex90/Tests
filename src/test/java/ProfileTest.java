@@ -27,7 +27,7 @@ public class ProfileTest {
         driver.get("https://promodev.pokupo.ru/shop/1");
     }
 
-    @Test(description = "Проверка автоматического заполнения фио")
+   /* @Test(description = "Проверка автоматического заполнения фио")
     public void CheckInputFullname() throws InterruptedException {
         objHomePage = new HomePage(driver);
         objProfile = new Profile(driver);
@@ -212,7 +212,7 @@ public class ProfileTest {
         objProfile.InputIncorrectIndex();
         objProfile.ClickSave2();
         Assert.assertEquals(objProfile.GetMsg(objProfile.IndexError),objProfile.ShortIndexMsg);
-    }
+    }*/
 
 
     @Test(description = "Проверка на добавление нового адреса доставки")
@@ -258,7 +258,7 @@ public class ProfileTest {
         objProfile.ClickShipSave();
         Assert.assertEquals(objProfile.GetMsg(objProfile.RegionError),objProfile.EmptyMsg);
     }
-
+/*
     @Test(description = "Проверка на появление ошибки пустого города доставки")
     public void CheckShipCityError() throws InterruptedException {
         objHomePage = new HomePage(driver);
@@ -395,7 +395,7 @@ public class ProfileTest {
         objProfile.ClickShipAddress();
         objProfile.ClickDelete1ShipAddress();
         Assert.assertTrue(driver.findElement(objProfile.DeletePopup).isDisplayed());
-    }
+    }*/
 
 
 

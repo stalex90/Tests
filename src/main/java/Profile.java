@@ -21,7 +21,7 @@ public class Profile {
     By SearchCountry = By.xpath(".//*[@id='country_list_chosen']/div/div/div/input");
     By SearchWindow = By.xpath(".//*[@id='country_list_chosen']/div");
     By SearchResults = By.xpath(".//*[@class='chosen-results']/li");
-    By RegionField = By.id("region_list");
+    By RegionField = By.xpath(".//input[@id='region_list']");
     By CityField = By.id("city_list");
     By AddressField = By.id("address");
     By IndexField = By.id("address__postalcode");
@@ -302,8 +302,8 @@ public class Profile {
         }
     }
 
-    public void InputRegion() throws InterruptedException {
-        Thread.sleep(1000);
+    public void InputRegion(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(RegionField));
         driver.findElement(RegionField).clear();
          driver.findElement(RegionField).sendKeys(Region);
     }

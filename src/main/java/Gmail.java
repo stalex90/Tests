@@ -29,7 +29,7 @@ public class Gmail {
             BodyPart bp = mp.getBodyPart(0);
             String Text = stripTags(bp.getContent() + "");
             Code = SkipSpace(Text);
-            System.out.println(Code);
+            //System.out.println(Code);
             String CodeS[] = Code.split("");
             int a=0;
             int b=0;

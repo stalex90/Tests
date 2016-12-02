@@ -57,7 +57,7 @@ public class RegistrationTest {
 
     // 1 - этап------------------------------------------------------------------------
 
-    @Test (description = "Проверка появления ошибок для пустых полей на 1 этапе регистрации")
+    @Test (description = "Проверка появления ошибок для пустых полей на 1 этапе регистрации") ////ПРоверить!!!!!!!!!!!!!
     public void EmptyWarningsStep1() {
         objHomePage = new HomePage(driver);
         objRegistrationPage1 = objHomePage.ClickRegBtn();
@@ -92,6 +92,7 @@ public class RegistrationTest {
     public void InvalidPhoneWarningsStep1() {
         objHomePage = new HomePage(driver);
         objRegistrationPage1 = objHomePage.ClickRegBtn();
+        objRegistrationPage1.InputLogin();
         objRegistrationPage1.InputInvalidPhone();
         objRegistrationPage1.ClickContinueBtn();
         Assert.assertEquals(objRegistrationPage1.GetPhoneWarning() ,"Не верный формат телефона");
