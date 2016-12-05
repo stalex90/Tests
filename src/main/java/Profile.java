@@ -1,9 +1,7 @@
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -21,10 +19,11 @@ public class Profile {
     // Профиль--------------------------------------------------------------------------------------------------------------
     By ProfileBtn = By.xpath(".//a[@class='icon__profile']");
     By CountryField = By.xpath(".//*[@id='country_list_chosen']/a");
-    By SearchCountry = By.xpath(".//*[@id='country_list_chosen']/div/div");
+    By SearchCountryField = By.xpath(".//div[@id='country_list_chosen']/div/div/div/input[contains(@id,'i-')]");
     By Australia = By.xpath(".//*[@id='country_list_chosen']/div/ul/li[2]");
     By SearchWindow = By.xpath(".//*[@id='country_list_chosen']/div");
     By SearchResults = By.xpath(".//*[@class='chosen-results']/li");
+    By FirstSearchresultItem = By.xpath(".//*[@id='country_list_chosen']/div/ul/li");
     By RegionField = By.xpath(".//input[@id='region_list']");
     By CityField = By.id("city_list");
     By AddressField = By.id("address");
@@ -286,10 +285,12 @@ public class Profile {
     }
 
     public void InputCountry() throws IOException, InterruptedException {
-        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SearchCountry));
-        driver.findElement(Australia).click();
-
-
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SearchCountryField));
+        driver.findElement(SearchCountryField).click();
+        Thread.sleep(2000);
+        driver.findElement(SearchCountryField).sendKeys(Country);
+        driver.findElement(FirstSearchresultItem).click();
+        //(new WebDriverWait(driver, 30)).until(ExpectedConditions.invisibilityOfElementLocated(SearchCountryField));
     }
 
 
