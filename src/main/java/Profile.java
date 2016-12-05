@@ -29,7 +29,18 @@ public class Profile {
     By AddressField = By.id("address");
     By IndexField = By.id("address__postalcode");
 
-    String Country = "Израиль";
+
+    public String RandomCountry(){
+        List<WebElement> CountryList = driver.findElements(SearchResults);
+        int index = 2 + (int)(Math.random() * ((250 - 2) + 1));
+        System.out.println(index);
+        System.out.println(CountryList.get(index).getText());
+        return CountryList.get(index).getText();
+
+    }
+
+
+
     String Region = "Московская область";
     String City = "Москва";
     String Address = "ул. Московская 1 кв.1";
@@ -288,7 +299,7 @@ public class Profile {
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SearchCountryField));
         driver.findElement(SearchCountryField).click();
         Thread.sleep(2000);
-        driver.findElement(SearchCountryField).sendKeys(Country);
+        driver.findElement(SearchCountryField).sendKeys(RandomCountry());
         driver.findElement(FirstSearchresultItem).click();
 
     }
