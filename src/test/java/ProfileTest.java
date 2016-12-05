@@ -29,7 +29,7 @@ public class ProfileTest {
         driver.manage().window().maximize();
     }
 
-   /* @Test(description = "Проверка автоматического заполнения фио")
+    @Test(description = "Проверка автоматического заполнения фио")
     public void CheckInputFullname() throws InterruptedException {
         objHomePage = new HomePage(driver);
         objProfile = new Profile(driver);
@@ -138,7 +138,7 @@ public class ProfileTest {
     }
 
     @Test(description = "Проверка на полный корректный ввод почтового адреса")
-    public void CheckInputAddress() throws InterruptedException {
+    public void CheckInputAddress() throws InterruptedException{
         objHomePage = new HomePage(driver);
         objProfile = new Profile(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
@@ -214,10 +214,10 @@ public class ProfileTest {
         objProfile.InputIncorrectIndex();
         objProfile.ClickSave2();
         Assert.assertEquals(objProfile.GetMsg(objProfile.IndexError),objProfile.ShortIndexMsg);
-    }*/
+    }
 
 
-   /* @Test(description = "Проверка на добавление нового адреса доставки")
+    @Test(description = "Проверка на добавление нового адреса доставки")
     public void CheckAddAddress() throws InterruptedException, IOException {
         objHomePage = new HomePage(driver);
         objProfile = new Profile(driver);
@@ -226,9 +226,9 @@ public class ProfileTest {
         objHomePage.ClickProfileBtn();
         objProfile.InputAllShipAddess();
         Assert.assertEquals(objProfile.GetMsg(objProfile.Success),objProfile.ShipSuccessMsg);
-    }*/
+    }
 
-  /*  @Test(description = "Проверка на появление ошибки пустого Страны, Получатель, Телефон")
+    @Test(description = "Проверка на появление ошибки пустого Страны, Получатель, Телефон")
     public void CheckCountPolPhoneError() throws InterruptedException {
         objHomePage = new HomePage(driver);
         objProfile = new Profile(driver);
@@ -241,9 +241,9 @@ public class ProfileTest {
         Assert.assertEquals(objProfile.GetMsg(objProfile.CountryError),objProfile.EmptyMsg);
         Assert.assertEquals(objProfile.GetMsg(objProfile.PoluchatelError),objProfile.EmptyMsg);
         Assert.assertEquals(objProfile.GetMsg(objProfile.ShipPhoneError),objProfile.EmptyMsg);
-    }*/
+    }
 
- /*   @Test(description = "Проверка на появление ошибки пустого региона доставки")
+    @Test(description = "Проверка на появление ошибки пустого региона доставки")
     public void CheckShipRegionError() throws InterruptedException, IOException {
         objHomePage = new HomePage(driver);
         objProfile = new Profile(driver);
@@ -259,7 +259,7 @@ public class ProfileTest {
         objProfile.InputShipPhone();
         objProfile.ClickShipSave();
         Assert.assertEquals(objProfile.GetMsg(objProfile.RegionError),objProfile.EmptyMsg);
-    }*/
+    }
 
     @Test(description = "Проверка на появление ошибки пустого города доставки")
     public void CheckShipCityError() throws InterruptedException, IOException {
@@ -279,7 +279,7 @@ public class ProfileTest {
         objProfile.ClickShipSave();
         Assert.assertEquals(objProfile.GetMsg(objProfile.CityError),objProfile.EmptyMsg);
     }
-/*
+
     @Test(description = "Проверка на появление ошибки пустой страны, телефона, получателя в адресе доставки")
     public void CheckShipAddressError() throws InterruptedException {
         objHomePage = new HomePage(driver);
@@ -397,7 +397,7 @@ public class ProfileTest {
         objProfile.ClickShipAddress();
         objProfile.ClickDelete1ShipAddress();
         Assert.assertTrue(driver.findElement(objProfile.DeletePopup).isDisplayed());
-    }*/
+    }
 
 
 
