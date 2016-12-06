@@ -1,5 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -398,6 +399,80 @@ public class ProfileTest {
         objProfile.ClickShipAddress();
         objProfile.ClickDelete1ShipAddress();
         Assert.assertTrue(driver.findElement(objProfile.DeletePopup).isDisplayed());
+    }
+
+    @Test(description = "Неправильный текущий пароль при смене пароля в ЛК")
+    public void CheckIncorrectOldPass(){
+        objHomePage = new HomePage(driver);
+        objProfile = new Profile(driver);
+        objHomePage.ClickLoginBtn().CompleteLogin();
+        objHomePage.ClickProfileIcon();
+        objHomePage.ClickProfileBtn();
+        objProfile.ClickSecurity();
+        objProfile.InputOldPassword("12345678");
+        objProfile.InputNewPassword("1234qwer");
+        objProfile.InputRepeatPassword("1234qwer");
+        objProfile.ClickSaveSecurity();
+        Assert.assertEquals(objProfile.GetPasswordError(),objProfile.PasswordErrorMsg);
+    }
+
+    @Test(description = "Неправильный повтор пароля при смене пароля в ЛК")
+    public void CheckIncorrectRepeatPass(){
+        objHomePage = new HomePage(driver);
+        objProfile = new Profile(driver);
+        objHomePage.ClickLoginBtn().CompleteLogin();
+        objHomePage.ClickProfileIcon();
+        objHomePage.ClickProfileBtn();
+        objProfile.ClickSecurity();
+        objProfile.InputOldPassword("1234qwer");
+        objProfile.InputNewPassword("1234qwer");
+        objProfile.InputRepeatPassword("12345678");
+        objProfile.ClickSaveSecurity();
+        Assert.assertEquals(objProfile.GetRepeatPassError(),objProfile.RepeatPassErrorMsg);
+    }
+
+    @Test(description = "Корректная смена пароля в ЛК")
+    public void CheckChangePass(){
+        objHomePage = new HomePage(driver);
+        objProfile = new Profile(driver);
+        objHomePage.ClickLoginBtn().CompleteLogin();
+        objHomePage.ClickProfileIcon();
+        objHomePage.ClickProfileBtn();
+        objProfile.ClickSecurity();
+        objProfile.InputOldPassword("1234qwer");
+        objProfile.InputNewPassword("1234qwer");
+        objProfile.InputRepeatPassword("1234qwer");
+        objProfile.ClickSaveSecurity();
+        Assert.assertEquals(objProfile.GetSuccesMsg(),objProfile.SuccesChangePass);
+    }
+
+    @Test(description = "Проверка появления сообщения о пустых полях")
+    public void CheckEmptyPassError(){
+        objHomePage = new HomePage(driver);
+        objProfile = new Profile(driver);
+        objHomePage.ClickLoginBtn().CompleteLogin();
+        objHomePage.ClickProfileIcon();
+        objHomePage.ClickProfileBtn();
+        objProfile.ClickSecurity();
+        objProfile.ClickSaveSecurity();
+        Assert.assertEquals(objProfile.GetOldPassError(),objProfile.EmptyMsg);
+        Assert.assertEquals(objProfile.GetNewPassError(),objProfile.EmptyMsg);
+    }
+
+    @Test(description = "Проверка появления сообщения о пустых полях")
+    public void CheckShortPassError(){
+        objHomePage = new HomePage(driver);
+        objProfile = new Profile(driver);
+        objHomePage.ClickLoginBtn().CompleteLogin();
+        objHomePage.ClickProfileIcon();
+        objHomePage.ClickProfileBtn();
+        objProfile.ClickSecurity();
+        objProfile.InputOldPassword("1");
+        objProfile.InputNewPassword("1");
+        objProfile.InputRepeatPassword("1");
+        objProfile.ClickSaveSecurity();
+        Assert.assertEquals(objProfile.GetOldPassError(),objProfile.ShortPassMsg);
+        Assert.assertEquals(objProfile.GetNewPassError(),objProfile.ShortPassMsg);
     }
 
 

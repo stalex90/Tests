@@ -101,6 +101,10 @@ public class Profile {
     By CountryError = By.xpath(".//p[contains(@data-bind,'errorCountry')]");
     By PoluchatelError = By.xpath(".//p[contains(@data-bind,'errorAddressee')]");
     By ShipPhoneError = By.xpath(".//p[contains(@data-bind,'errorContactPhone')]");
+    By PasswordError = By.xpath(".//p[contains(@data-bind,'message')]");
+    By RepeatPassError = By.xpath(".//p[contains(@data-bind,'errorConfirmPass')]");
+    By OldPassError = By.xpath(".//p[contains(@data-bind,'errorOldPass')]");
+    By NewPassError = By.xpath(".//p[contains(@data-bind,'errorNewPass')]");
 
     By CountryPlaceholderMsg = By.xpath(".//*[@id='country_list_chosen']/div/div/div/label");
 
@@ -116,6 +120,10 @@ public class Profile {
     String ShipSuccessMsg = "Данные успешно сохранены.";
     String IncorrectShipPhone = "Не верный формат телефона";
     String DeleteSuccessMsg = "Адрес доставки успешно удален.";
+    String ShortPassMsg = "Пароль должен быть не менее 6 символов";
+    String PasswordErrorMsg = "Пароль не принят, операция отменена";
+    String RepeatPassErrorMsg = "Пароль не совпадает с образцом";
+    String SuccesChangePass = "Пароль успешно изменен.";
 
 
     //Getters-------------------------------------------------------------------------------------------------------------------
@@ -153,6 +161,22 @@ public class Profile {
 
     public String GetMsg(By element){
         return driver.findElement(element).getText();
+    }
+
+    public String GetPasswordError() {
+        return driver.findElement(PasswordError).getText();
+    }
+
+    public String GetOldPassError() {
+        return driver.findElement(OldPassError).getText();
+    }
+
+    public String GetNewPassError() {
+        return driver.findElement(NewPassError).getText();
+    }
+
+    public String GetRepeatPassError() {
+        return driver.findElement(RepeatPassError).getText();
     }
 
     //Methods-------------------------------------------------------------------------------------------------------------------
@@ -450,6 +474,31 @@ public class Profile {
     public void ClickDeleteNo(){
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(DeleteNo));
         driver.findElement(DeleteNo).click();
+    }
+
+    public void InputOldPassword(String s){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(OldPassword));
+        driver.findElement(OldPassword).sendKeys(s);
+    }
+
+    public void InputNewPassword(String s){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(NewPassword));
+        driver.findElement(NewPassword).sendKeys(s);
+    }
+
+    public void InputRepeatPassword(String s){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(RepeatPassword));
+        driver.findElement(RepeatPassword).sendKeys(s);
+    }
+
+    public void ClickSecurity(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SecurityBtn));
+        driver.findElement(SecurityBtn).click();
+    }
+
+    public void ClickSaveSecurity(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SecuritySave));
+        driver.findElement(SecuritySave).click();
     }
 
 

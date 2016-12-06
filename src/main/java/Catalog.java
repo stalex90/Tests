@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+
 
 
 import java.util.List;
@@ -93,7 +93,6 @@ public class Catalog {
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(FavoriteBtn));
         driver.findElement(FavoriteBtn).click();
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SuccessFavoriteMsg));
-        Assert.assertEquals(GetFavoriMsg(),SuccessFavorite);
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.invisibilityOfElementLocated(SuccessFavoriteMsg));
     }
 
