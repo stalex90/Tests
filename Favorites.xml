@@ -4,7 +4,7 @@
   <test name="Pokupo">
     <classes>
 
-      <class name="CartTest"/>
+      <class name="FavoritesTest"/>
 
     </classes>
   </test> <!-- Pokupo -->
