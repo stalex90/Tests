@@ -17,6 +17,7 @@ public class ProfileTest {
     static OS_Version objOS_Version;
     HomePage objHomePage;
     Profile objProfile;
+    Catalog objCatalog;
 
 
     @BeforeMethod
@@ -398,6 +399,10 @@ public class ProfileTest {
         objProfile.ClickDelete1ShipAddress();
         Assert.assertTrue(driver.findElement(objProfile.DeletePopup).isDisplayed());
     }
+
+
+
+
 
 
 

@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
 public class Catalog {
     WebDriver driver;
     String NeedCategory = "Зонты";
+    int index = 0 + (int)(Math.random() * ((19 - 0) + 1));
 
 
     public Catalog(WebDriver driver) {
@@ -24,6 +26,11 @@ public class Catalog {
     By AllItemsOnPage = By.xpath(".//div[@class='b-catalog__item']");
     By SuccessMsg = By.xpath(".//h3[text()='Товар успешно добавлен в корзину']");
     By CategoryTitle = By.id("js-nosidebar");
+    By FavoriteBtn = By.xpath(".//a[@class='pseudo-link']");
+    By AllItemsTitel = By.xpath(".//div[@class='b-item with_popover']/div/div/h4[@class='b-item__title']/a");
+    By SuccessFavoriteMsg = By.xpath(".//h3[contains(@class,'icon-success')]");
+
+    String SuccessFavorite = "Выбранные товары добавлены в избранное.";
 
 
     public void SelectCategory(String name)
@@ -56,6 +63,41 @@ public class Catalog {
         for (int x=0;x<8;x++){
             AddItem(x);
         }
+    }
+
+    public void OpenItem(int i){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CategoryTitle));
+        List<WebElement> ItemsList = driver.findElements(AllItemsTitel);
+        ItemsList.get(i).click();
+    }
+
+    public void NavigateBack(){
+        driver.navigate().back();
+    }
+
+
+    public void OpenRandomItem(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CategoryTitle));
+        List<WebElement> ItemsList = driver.findElements(AllItemsTitel);
+        ItemsList.get(index).click();
+    }
+
+    public String GetName(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CategoryTitle));
+        List<WebElement> ItemsList = driver.findElements(AllItemsTitel);
+        return ItemsList.get(index).getText();
+    }
+
+    public void AddFavorite(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(FavoriteBtn));
+        driver.findElement(FavoriteBtn).click();
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SuccessFavoriteMsg));
+        Assert.assertEquals(GetFavoriMsg(),SuccessFavorite);
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.invisibilityOfElementLocated(SuccessFavoriteMsg));
+    }
+
+    public String GetFavoriMsg(){
+        return driver.findElement(SuccessFavoriteMsg).getText();
     }
 
 
