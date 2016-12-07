@@ -93,11 +93,12 @@ public class CabinetCart {
         AllCounts.get(i).sendKeys(key);
     }
 
-    public void ClickPlusIconsForMax(int i){
+    public void ClickPlusIconsForMax(int i) throws InterruptedException {
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(PlusIcons));
         List<WebElement> AllPlus = driver.findElements(PlusIcons);
         for (int x=0;x<GetNaSklade(i);x++){
             AllPlus.get(i).click();
+            Thread.sleep(500);
             (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(BarLoad));
 
         }
