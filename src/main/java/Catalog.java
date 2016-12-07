@@ -15,6 +15,7 @@ import java.util.List;
 public class Catalog {
     WebDriver driver;
     String NeedCategory = "Зонты";
+    String NeedCategory2 = "Средства по уходу за кожей лица Крема MIZON";
     int index = 0 + (int)(Math.random() * ((19 - 0) + 1));
 
 
@@ -30,6 +31,7 @@ public class Catalog {
     By FavoriteBtn = By.xpath(".//a[@class='pseudo-link']");
     By AllItemsTitel = By.xpath(".//div[@class='b-item with_popover']/div/div/h4[@class='b-item__title']/a");
     By SuccessFavoriteMsg = By.xpath(".//h3[contains(@class,'icon-success')]");
+    By InCart = By.xpath(".//*[@id='btn_to_cart']");
 
     String SuccessFavorite = "Выбранные товары добавлены в избранное.";
 
@@ -44,6 +46,13 @@ public class Catalog {
                 return;
             }
         }
+    }
+
+    public void ClickInCart(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(InCart));
+        driver.findElement(InCart).click();
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SuccessMsg));
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.invisibilityOfElementLocated(SuccessMsg));
     }
 
     public void AddItem(int i){
@@ -66,6 +75,14 @@ public class Catalog {
         }
     }
 
+    public void AddFirstIitems(int i,String s) {
+        SelectCategory(s);
+
+        for (int x=1;x<i;x++){
+            AddItem(x);
+        }
+    }
+
     public void OpenItem(int i){
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CategoryTitle));
         List<WebElement> ItemsList = driver.findElements(AllItemsTitel);
@@ -83,9 +100,22 @@ public class Catalog {
         ItemsList.get(index).click();
     }
 
+    public void AddRandomItem(){
+
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CategoryTitle));
+        List<WebElement> ItemsList = driver.findElements(AllItemsOnPage);
+        Actions action = new Actions(driver);
+        action.moveToElement(ItemsList.get(index)).release().build().perform();
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='content_pkp']/div/div/div[2]/div[" + (index+1) + "]/div/div[5]/div[1]/div[3]/button")));
+        driver.findElement(By.xpath(".//*[@id='content_pkp']/div/div/div[2]/div[" + (index+1) + "]/div/div[5]/div[1]/div[3]/button")).click();
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SuccessMsg));
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.invisibilityOfElementLocated(SuccessMsg));
+    }
+
     public String GetName(){
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CategoryTitle));
         List<WebElement> ItemsList = driver.findElements(AllItemsTitel);
+        System.out.println(ItemsList.get(index).getText());
         return ItemsList.get(index).getText();
     }
 

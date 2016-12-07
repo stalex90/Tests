@@ -14,6 +14,7 @@ public class HomePage {
     WebDriver driver;
     String URL;
     int i;
+    HomePage objHomepage;
 
 
 
@@ -32,7 +33,7 @@ public class HomePage {
     By AllCartItems = By.xpath(".//*[@id='cart_dropdown__content']/div/ol/li");
     By ItemName = By.xpath(".//*[@id='cart_dropdown__content']/div/ol/li[" + i+ "]/div[1]/span");
     By ItemCount = By.xpath(".//*[@id='cart_dropdown__content']/div/ol/li["+ i +"]/div[2]/span/span[2]");
-    By ItemCountAdd = By.xpath(".//*[@id='cart_dropdown__content']/div/ol/li[1]/div[2]/span/span[3]");
+    By ItemCountAdd = By.xpath(".//span[contains(@data-bind,'Plus')]");
     By ItemCountRemove = By.xpath(".//*[@id='cart_dropdown__content']/div/ol/li[1]/div[2]/span/span[1]");
     By ItemPrice = By.xpath(".//*[@id='cart_dropdown__content']/div/ol/li["+ i +"]/div[3]/span[1]");
     By ItemDelete = By.xpath(".//*[@id='cart_dropdown__content']/div/ol/li["+ i +"]/div[4]");
@@ -40,6 +41,9 @@ public class HomePage {
     By InCart = By.xpath(".//a[text()='В корзину']");
     By Oformit = By.xpath(".//a[text()='Оформить']");
     By CartName = By.xpath(".//*[@id='cart_dropdown__content']/p");
+    By CartAllDeleteBtns = By.xpath(".//div[contains(@data-bind,'Remove')]");
+    By CartWindows = By.xpath(".//*[@id='cart_dropdown__content']/div");
+
 
 
     public HomePage(WebDriver driver) {
@@ -118,6 +122,7 @@ public class HomePage {
 
     public void ClickCartIcon(){
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CartIcon));
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(CartIcon));
         driver.findElement(CartIcon).click();
     }
 
@@ -145,8 +150,9 @@ public class HomePage {
     }
 
     public void ItemCountAdd(int i){
-        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='cart_dropdown__content']/div/ol/li[1]/div[2]/span/span[3]")));
-        driver.findElement(By.xpath(".//*[@id='cart_dropdown__content']/div/ol/li[1]/div[2]/span/span[3]")).click();
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(ItemCountAdd));
+        List<WebElement> AllCountAdd = driver.findElements(ItemCountAdd);
+        AllCountAdd.get(i).click();
     }
 
     public void ItemCountRemove(int i){
@@ -197,6 +203,18 @@ public class HomePage {
     public String GetCartName(){
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CartName));
         return driver.findElement(CartName).getText();
+    }
+
+    public void DeleteAllCartMethod() throws InterruptedException {
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(ProfileIcon));
+        objHomepage = new HomePage(driver);
+
+        while (driver.findElements(CartCount).size()>0){
+            objHomepage.ClickCartIcon();
+            (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CartWindows));
+            objHomepage.DeleteItem(1);
+            (new WebDriverWait(driver, 30)).until(ExpectedConditions.invisibilityOfElementLocated(CartWindows));
+        }
     }
 
 

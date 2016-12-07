@@ -1,7 +1,5 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -38,7 +36,7 @@ public class FavoritesTest {
         objCatalog = new Catalog(driver);
         objFavorites =new Favorites(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        objFavorites.ClearAllMethod();
+        objFavorites.ClearAllFavoritesMethod();
         objCatalog.SelectCategory(objCatalog.NeedCategory);
         String SelectedItemName = objCatalog.GetName();
         objCatalog.OpenRandomItem();
@@ -55,7 +53,7 @@ public class FavoritesTest {
         objCatalog = new Catalog(driver);
         objFavorites =new Favorites(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        objFavorites.ClearAllMethod();
+        objFavorites.ClearAllFavoritesMethod();
         objCatalog.SelectCategory(objCatalog.NeedCategory);
         objCatalog.OpenItem(0);
         objCatalog.AddFavorite();
@@ -76,7 +74,7 @@ public class FavoritesTest {
         objCatalog = new Catalog(driver);
         objFavorites =new Favorites(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        objFavorites.ClearAllMethod();
+        objFavorites.ClearAllFavoritesMethod();
         objCatalog.SelectCategory(objCatalog.NeedCategory);
         objCatalog.OpenRandomItem();
         objCatalog.AddFavorite();
@@ -93,7 +91,7 @@ public class FavoritesTest {
         objCatalog = new Catalog(driver);
         objFavorites =new Favorites(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        objFavorites.ClearAllMethod();
+        objFavorites.ClearAllFavoritesMethod();
         objCatalog.SelectCategory(objCatalog.NeedCategory);
         objCatalog.OpenItem(0);
         objCatalog.AddFavorite();
@@ -115,7 +113,7 @@ public class FavoritesTest {
         objFavorites =new Favorites(driver);
         objOformit = new Oformit(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        objFavorites.ClearAllMethod();
+        objFavorites.ClearAllFavoritesMethod();
         objCatalog.SelectCategory(objCatalog.NeedCategory);
         objCatalog.OpenRandomItem();
         objCatalog.AddFavorite();
@@ -134,7 +132,7 @@ public class FavoritesTest {
         objFavorites =new Favorites(driver);
         objOformit = new Oformit(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        objFavorites.ClearAllMethod();
+        objFavorites.ClearAllFavoritesMethod();
         objCatalog.SelectCategory(objCatalog.NeedCategory);
         objCatalog.OpenItem(0);
         objCatalog.AddFavorite();

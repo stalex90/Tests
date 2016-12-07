@@ -97,7 +97,7 @@ public class Favorites {
         DeleteList.get(i).click();
     }
 
-    public void ClearAllMethod(){
+    public void ClearAllFavoritesMethod(){
         objHomepage = new HomePage(driver);
         objHomepage.ClickProfileIcon();
         objHomepage.ClickProfileBtn();
