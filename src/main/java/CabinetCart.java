@@ -18,7 +18,7 @@ public class CabinetCart {
     }
 
     By CartBtn = By.xpath(".//a[@class='icon__cart']");
-    By HeaderTitel = By.xpath(".//h1[@class='b-profile__header']");
+    By HeaderTitel = By.xpath(".//h1[text()='Моя корзина']");
     By CheckboxSelectAll = By.xpath(".//label[contains(@data-bind,'ClickSelectAll')]");
     By AllChecboxes = By.xpath(".//label[contains(@data-bind,'Item')]");
     By MinusIcons = By.xpath(".//*[contains(@data-bind,'ClickMinus')]");

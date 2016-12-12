@@ -45,7 +45,7 @@ public class RegistrationTest {
         objRegistrationPage4.CompleteRegistration4();
     }
 
-    @Test (description = "Проверка регистрации без ввода необязательных данных")
+    @Test (description = "Проверка регистрации без ввода необязательных данных") //Проверить!!!!
     public void FullRegistrationWithoutData() throws InterruptedException {
         objHomePage = new HomePage(driver);
         objRegistrationPage1 = objHomePage.ClickRegBtn();
@@ -53,6 +53,7 @@ public class RegistrationTest {
         objRegistrationPage3 = objRegistrationPage2.CompleteRegistration2();
         objRegistrationPage4 = objRegistrationPage3.ClickCheckBox();
         objRegistrationPage4.ClickCheckbox();
+        objRegistrationPage4.ClickContinueBtn();
     }
 
     // 1 - этап------------------------------------------------------------------------

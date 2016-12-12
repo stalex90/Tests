@@ -13,5 +13,6 @@ public class Oformit {
     }
 
     By OformitTitel = By.xpath(".//*[@id='content_pkp']/h1");
+    By SelectAddressTitel = By.xpath(".//h2[text()='Выберите адрес доставки']");
 }
 

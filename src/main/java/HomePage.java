@@ -15,6 +15,7 @@ public class HomePage {
     String URL;
     int i;
     HomePage objHomepage;
+    Oformit objOformit;
 
 
 
@@ -195,9 +196,12 @@ public class HomePage {
     }
 
     public Oformit ClickOformit(){
+        objOformit = new Oformit(driver);
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(Oformit));
         driver.findElement(Oformit).click();
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(objOformit.OformitTitel));
         return new Oformit(driver);
+
     }
 
     public String GetCartName(){
