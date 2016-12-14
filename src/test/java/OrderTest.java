@@ -71,7 +71,7 @@ public class OrderTest {
         Assert.assertTrue(driver.findElement(objOrder.HeaderTitel).isDisplayed());
     }
 
-    @Test(description = "Проверка Открыть один из заказов на странице заказов в режиме редактирования ")
+    @Test(description = "Проверка Открыть один из заказов на странице заказов в режиме редактирования")
     public void CheckEditOrder() throws InterruptedException {
         objHomePage = new HomePage(driver);
         objCatalog = new Catalog(driver);
