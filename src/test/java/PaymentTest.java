@@ -27,7 +27,7 @@ public class PaymentTest {
         //driver.manage().window().maximize();
     }
 
-    @Test(description = "Проверка оплаты заказа с кошелька z-payment")
+    @Test(priority = 0, description = "Проверка оплаты заказа с кошелька z-payment")
     public void CheckPayZpayment() throws InterruptedException {
         objPayment = new Payment(driver);
         objPayment.InputSumm("0.01");
@@ -44,6 +44,89 @@ public class PaymentTest {
         objPayment.UpdateStatus();
         Assert.assertEquals(objPayment.GetSuccessStatus(),objPayment.StatusMsg);
     }
+
+    /*@Test(priority = 1, description = "Проверка появления ошибки при некорректном кошельке")
+    public void CheckIncorrectWalletError() throws InterruptedException {
+        objPayment = new Payment(driver);
+        objPayment.InputSumm("0.01");
+        objPayment.InputEmail("pokupomy1@gmail.com");
+        objPayment.ClickZpay();
+        objPayment.ClickNextBtn();
+        objPayment.ClickPays(0);
+        objPayment.ClickGoPay();
+        objPayment.ClickNextBtn2();
+        Assert.assertEquals(objPayment.GetWalletError(),objPayment.IncorrectWallerMsg);
+    }
+
+    @Test(priority = 2, description = "unlock")
+    public void ZPAYUnclock1() throws InterruptedException {
+        objPayment = new Payment(driver);
+        objPayment.InputSumm("0.01");
+        objPayment.InputEmail("pokupomy1@gmail.com");
+        objPayment.ClickZpay();
+        objPayment.ClickNextBtn();
+        objPayment.ClickPays(0);
+        objPayment.ClickGoPay();
+        objPayment.InputWallet();
+        objPayment.ClickNextBtn2();
+        objPayment.InputPayPass();
+        objPayment.ClickGoPay();
+        objPayment.ClickReturnToShop();
+        objPayment.UpdateStatus();
+        Assert.assertEquals(objPayment.GetSuccessStatus(),objPayment.StatusMsg);
+    }
+
+    @Test(priority = 3, description = "Проверка появления ошибки при недостаточном балансе")
+    public void CheckIncorrectSummforWallet() throws InterruptedException {
+        objPayment = new Payment(driver);
+        objPayment.InputSumm("1000");
+        objPayment.InputEmail("pokupomy1@gmail.com");
+        objPayment.ClickZpay();
+        objPayment.ClickNextBtn();
+        objPayment.ClickPays(0);
+        objPayment.ClickGoPay();
+        objPayment.InputWallet();
+        objPayment.ClickNextBtn2();
+        objPayment.InputPayPass();
+        objPayment.ClickGoPay();
+        Assert.assertEquals(objPayment.GetWalletError(),objPayment.IncorrectSummforWalletMsg);
+    }
+
+    @Test(priority = 4, description = "unlock")
+    public void ZPAYUnclock2() throws InterruptedException {
+        objPayment = new Payment(driver);
+        objPayment.InputSumm("0.01");
+        objPayment.InputEmail("pokupomy1@gmail.com");
+        objPayment.ClickZpay();
+        objPayment.ClickNextBtn();
+        objPayment.ClickPays(0);
+        objPayment.ClickGoPay();
+        objPayment.InputWallet();
+        objPayment.ClickNextBtn2();
+        objPayment.InputPayPass();
+        objPayment.ClickGoPay();
+        objPayment.ClickReturnToShop();
+        objPayment.UpdateStatus();
+        Assert.assertEquals(objPayment.GetSuccessStatus(),objPayment.StatusMsg);
+    }
+
+    @Test(priority = 5, description = "Проверка появления ошибки при некорректном пароле")
+    public void CheckIncorrectPaypas() throws InterruptedException {
+        objPayment = new Payment(driver);
+        objPayment.InputSumm("1000");
+        objPayment.InputEmail("pokupomy1@gmail.com");
+        objPayment.ClickZpay();
+        objPayment.ClickNextBtn();
+        objPayment.ClickPays(0);
+        objPayment.ClickGoPay();
+        objPayment.InputWallet();
+        objPayment.ClickNextBtn2();
+        objPayment.InputIncorrectPayPass();
+        objPayment.ClickGoPay();
+        Assert.assertEquals(objPayment.GetWalletError(),objPayment.IncorrectPayPassMsg);
+    }*/
+
+
 
     @Test(description = "Проверка ошибок пустого поля сумма и емаил")
     public void ZpayCheckEmptyWarnings() {
@@ -74,50 +157,7 @@ public class PaymentTest {
         Assert.assertEquals(objPayment.GetSumm(),"0.01");
     }
 
-    @Test(description = "Проверка появления ошибки при некорректном кошельке")
-    public void CheckIncorrectWalletError() throws InterruptedException {
-        objPayment = new Payment(driver);
-        objPayment.InputSumm("0.01");
-        objPayment.InputEmail("pokupomy1@gmail.com");
-        objPayment.ClickZpay();
-        objPayment.ClickNextBtn();
-        objPayment.ClickPays(0);
-        objPayment.ClickGoPay();
-        objPayment.ClickNextBtn2();
-        Assert.assertEquals(objPayment.GetWalletError(),objPayment.IncorrectWallerMsg);
-    }
 
-    @Test(description = "Проверка появления ошибки при недостаточном балансе")
-    public void CheckIncorrectSummforWallet() throws InterruptedException {
-        objPayment = new Payment(driver);
-        objPayment.InputSumm("1000");
-        objPayment.InputEmail("pokupomy1@gmail.com");
-        objPayment.ClickZpay();
-        objPayment.ClickNextBtn();
-        objPayment.ClickPays(0);
-        objPayment.ClickGoPay();
-        objPayment.InputWallet();
-        objPayment.ClickNextBtn2();
-        objPayment.InputPayPass();
-        objPayment.ClickGoPay();
-        Assert.assertEquals(objPayment.GetWalletError(),objPayment.IncorrectSummforWalletMsg);
-    }
-
-    @Test(description = "Проверка появления ошибки при некорректном пароле")
-    public void CheckIncorrectPaypas() throws InterruptedException {
-        objPayment = new Payment(driver);
-        objPayment.InputSumm("1000");
-        objPayment.InputEmail("pokupomy1@gmail.com");
-        objPayment.ClickZpay();
-        objPayment.ClickNextBtn();
-        objPayment.ClickPays(0);
-        objPayment.ClickGoPay();
-        objPayment.InputWallet();
-        objPayment.ClickNextBtn2();
-        objPayment.InputIncorrectPayPass();
-        objPayment.ClickGoPay();
-        Assert.assertEquals(objPayment.GetWalletError(),objPayment.IncorrectPayPassMsg);
-    }
 
     @Test(description = "Проверка оплаты заказа с кошелька z-payment яндексденьги")
     public void CheckZpayYandex() throws InterruptedException {
@@ -194,6 +234,7 @@ public class PaymentTest {
         objPayment.ClickNextBtn();
         objPayment.ClickPays(6);
         objPayment.ClickCoinNext();
+        Thread.sleep(5000);
         Assert.assertTrue(driver.findElement(objPayment.CoinsRefresh).isDisplayed());
     }
 
@@ -206,6 +247,7 @@ public class PaymentTest {
         objPayment.ClickNextBtn();
         objPayment.ClickPays(7);
         objPayment.ClickCoinNext();
+        Thread.sleep(5000);
         Assert.assertTrue(driver.findElement(objPayment.CoinsRefresh).isDisplayed());
     }
 
@@ -313,6 +355,7 @@ public class PaymentTest {
         objPayment.InputEmail("pokupomy1@gmail.com");
         objPayment.ClickIntellectpay();
         objPayment.ClickIntellectNext();
+        Thread.sleep(5000);
         Assert.assertTrue(driver.findElement(objPayment.IntellectCheck).isDisplayed());
     }
 
@@ -323,6 +366,7 @@ public class PaymentTest {
         objPayment.InputEmail("pokupomy1@gmail.com");
         objPayment.ClickPayu();
         objPayment.ClickIntellectNext();
+        Thread.sleep(5000);
         Assert.assertTrue(driver.findElement(objPayment.PayUCheck).isDisplayed());
     }
 
