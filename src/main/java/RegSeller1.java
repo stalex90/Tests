@@ -22,7 +22,7 @@ public class RegSeller1 {
     String EmptyEmailMsg = "Это поле обязательно для заполнения";
     String IncorrectEmailMsg = "Введите корректный email";
     String ShortNameMsg = "Hазвание магазина не может быть менее 4 символов";
-    String IncorrectNameMsg = "Логин/название магазина содержит недопустимые символы. Навзвание магазина может содержать русские и латинские символы, цифры, подчеркивания, дефисы, точки и пробелы";
+    String IncorrectNameMsg = "Логин/название магазина содержит недопустимые символы. Название магазина может содержать русские и латинские символы, цифры, подчеркивания, дефисы, точки и пробелы. Первым символом должна быть буква";
     String IncorrectDomainMsg ="Субдомен может содержать только латинские символы, цифры, дефис и подчеркивание. Первым и последним символами должны быть латинские символы.";
     String IncorrectSiteMsg = "Введите корректный URL";
     String IncorrectPhoneMsg = "Ошибочный формат номера телефона";
@@ -140,7 +140,7 @@ public class RegSeller1 {
 
     public void InputIncorrectName(){ //Ввести некорректноне название магазина
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(NameShop));
-        driver.findElement(NameShop).sendKeys("asdф");
+        driver.findElement(NameShop).sendKeys("111111111");
         driver.findElement(NameShop).sendKeys(Keys.ENTER);
 
     }
