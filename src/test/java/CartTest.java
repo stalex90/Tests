@@ -27,12 +27,12 @@ public class CartTest {
     Oformit objOformit;
     static OS_Version objOS_Version;
 
-    @BeforeSuite
+    /*@BeforeSuite
     public static void deleteAllFilesFolder() {
         String path = "/var/lib/jenkins/workspace/Тестирование корзины/src/test/resources/";
         for (File myFile : new File(path).listFiles())
             if (myFile.isFile()) myFile.delete();
-    }
+    }*/
 
     @BeforeMethod
     public static void openBrowser() {
