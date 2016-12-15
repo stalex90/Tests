@@ -143,7 +143,7 @@ public class PaymentTest {
     }
 
     @Test(description = "Проверка ошибок пустого поля сумма и емаил")
-    public void ZpayCheckIncorrectWarnings() {
+    public void ZpayCheckIncorrectWarnings() throws InterruptedException {
         objPayment = new Payment(driver);
         objPayment.InputSumm("-1");
         objPayment.InputEmail("asd");
@@ -153,7 +153,7 @@ public class PaymentTest {
     }
 
     @Test(description = "Проверка возвращение со 2 шага назад и проверка что значения остались")
-    public void ZpayCheckBack() {
+    public void ZpayCheckBack() throws InterruptedException {
         objPayment = new Payment(driver);
         objPayment.InputSumm("0.01");
         objPayment.InputEmail("pokupomy1@gmail.com");

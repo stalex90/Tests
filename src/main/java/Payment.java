@@ -49,6 +49,7 @@ public class Payment {
     By PrintChek = By.xpath("//input[@value='Распечатать квитанцию']");
     By CoinsNext = By.xpath("//input[contains(@class,'inputNext')]");
     By CoinsRefresh = By.xpath("//input[contains(@class,'inputReturn')]");
+    By LoadBar = By.xpath("//div[contains(@style,'width')]");
 
 
     By IntellectNext = By.xpath("//button[contains(@data-bind,'ClickPay')]");
@@ -107,9 +108,10 @@ public class Payment {
         return driver.findElement(ErrorEmail).getText();
     }
 
-    public void InputSumm(String i){
+    public void InputSumm(String i) throws InterruptedException {
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(Summa));
         driver.findElement(Summa).sendKeys(i);
+        Thread.sleep(2000);
 
     }
 
