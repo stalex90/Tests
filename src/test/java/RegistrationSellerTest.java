@@ -25,12 +25,15 @@ public class RegistrationSellerTest {
     CabinetSeller objCabinetSeller;
     static OS_Version objOS_Version;
 
-    /*@BeforeSuite
+    @BeforeSuite
     public static void deleteAllFilesFolder() {
-        String path = "/var/lib/jenkins/workspace/Регистрация продавца/src/main/resources/";
-        for (File myFile : new File(path).listFiles())
-            if (myFile.isFile()) myFile.delete();
-    }*/
+        objOS_Version = new OS_Version();
+        if (objOS_Version.isUnix()) {
+            String path = "/var/lib/jenkins/workspace/Регистрация продавца/src/main/resources/";
+            for (File myFile : new File(path).listFiles())
+                if (myFile.isFile()) myFile.delete();
+        }
+    }
 
     @BeforeMethod
     public static void openBrowser(){
@@ -282,10 +285,12 @@ public class RegistrationSellerTest {
 
     @AfterMethod
     public void closebrowser(ITestResult testResult) throws IOException {
-        if (testResult.getStatus() == ITestResult.FAILURE) {
-            File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-            String path = "/var/lib/jenkins/workspace/Регистрация продавца/src/test/resources" + testResult.getName() + ".jpg";
-            FileUtils.copyFile(scrFile, new File(path));
+        if (objOS_Version.isUnix()) {
+            if (testResult.getStatus() == ITestResult.FAILURE) {
+                File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+                String path = "/var/lib/jenkins/workspace/Регистрация продавца/src/test/resources" + testResult.getName() + ".jpg";
+                FileUtils.copyFile(scrFile, new File(path));
+            }
         }
         driver.quit();
     }

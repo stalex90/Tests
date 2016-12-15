@@ -9,6 +9,7 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -30,12 +31,15 @@ public class CabinetCartTest {
     CabinetCart objCabinetcart;
     static OS_Version objOS_Version;
 
-    /*@BeforeSuite
+   @BeforeSuite
     public static void deleteAllFilesFolder() {
-        String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Корзина)/src/test/resources/";
-        for (File myFile : new File(path).listFiles())
-            if (myFile.isFile()) myFile.delete();
-    }*/
+        objOS_Version = new OS_Version();
+        if (objOS_Version.isUnix()) {
+            String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Корзина)/src/test/resources/";
+            for (File myFile : new File(path).listFiles())
+                if (myFile.isFile()) myFile.delete();
+        }
+    }
 
     @BeforeMethod
     public static void openBrowser() {
@@ -158,9 +162,10 @@ public class CabinetCartTest {
         objHomePage.ClickProfileIcon();
         objHomePage.ClickProfileBtn();
         objCabinetcart.ClickCart();
+        Double Price = objCabinetcart.GetPriceIitem(0);
         objCabinetcart.ClickPlusIcons(0);
         Double a = objCabinetcart.GetTotalPrice();
-        Double b = objCabinetcart.GetPriceIitem(0)*objCabinetcart.GetCountIitem(0);
+        Double b = Price*objCabinetcart.GetCountIitem(0);
         try {
             Assert.assertEquals(a,b);
         }
@@ -208,9 +213,10 @@ public class CabinetCartTest {
         objHomePage.ClickProfileIcon();
         objHomePage.ClickProfileBtn();
         objCabinetcart.ClickCart();
+        Double Price = objCabinetcart.GetPriceIitem(0)/objCabinetcart.GetCountIitem(0);
         objCabinetcart.ClickMinusIcons(0);
         Double a = objCabinetcart.GetTotalPrice();
-        Double b = objCabinetcart.GetPriceIitem(0)*objCabinetcart.GetCountIitem(0);
+        Double b = Price*objCabinetcart.GetCountIitem(0);
         objCabinetcart.ClearCartMethod();
         Assert.assertEquals(a,b);
 
@@ -313,10 +319,12 @@ public class CabinetCartTest {
 
     @AfterMethod
     public void closebrowser(ITestResult testResult) throws IOException {
-        if (testResult.getStatus() == ITestResult.FAILURE) {
-            File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-            String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Корзина)/src/test/resources/" + testResult.getName() + ".jpg";
-            FileUtils.copyFile(scrFile, new File(path));
+        if (objOS_Version.isUnix()) {
+            if (testResult.getStatus() == ITestResult.FAILURE) {
+                File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+                String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Корзина)/src/test/resources/" + testResult.getName() + ".jpg";
+                FileUtils.copyFile(scrFile, new File(path));
+            }
         }
         driver.quit();
     }
