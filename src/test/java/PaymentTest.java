@@ -1,10 +1,16 @@
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -391,10 +397,16 @@ public class PaymentTest {
 
 
     @AfterMethod
-    public static void closeBrowser() throws InterruptedException {
-        Thread.sleep(3000);
+
+    public void closebrowser(ITestResult testResult) throws IOException {
+        if (testResult.getStatus() == ITestResult.FAILURE) {
+            File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+            String path = "/var/lib/jenkins/workspace/Оплата заказа/src/test/resources/" + testResult.getName() + ".jpg";
+            FileUtils.copyFile(scrFile, new File(path));
+        }
         driver.quit();
     }
+
 
 
 }
