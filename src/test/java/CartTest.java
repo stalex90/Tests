@@ -125,7 +125,7 @@ public class CartTest {
         objCatalog.SelectCategory(objCatalog.NeedCategory);
         objCatalog.AddItem(7);
         objHomePage.ClickCartIcon();
-        objOformit = objHomePage.ClickOformit();
+        objOformit = objHomePage.ClickOformitUnlogin();
         objLoginPage.InputLogin();
         objLoginPage.InputPassword();
         objLoginPage.ClickLoginBtn();

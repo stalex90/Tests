@@ -204,6 +204,14 @@ public class HomePage {
 
     }
 
+    public Oformit ClickOformitUnlogin(){
+        objOformit = new Oformit(driver);
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(Oformit));
+        driver.findElement(Oformit).click();
+        return new Oformit(driver);
+
+    }
+
     public String GetCartName(){
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CartName));
         return driver.findElement(CartName).getText();
