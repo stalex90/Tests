@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -22,6 +23,12 @@ public class PaymentTest {
     Payment objPayment;
 
 
+    @BeforeSuite
+    public static void deleteAllFilesFolder() {
+        String path = "/var/lib/jenkins/workspace/Оплата заказа/src/test/resources/";
+        for (File myFile : new File(path).listFiles())
+            if (myFile.isFile()) myFile.delete();
+    }
 
     @BeforeMethod
     public static void openBrowser() {
