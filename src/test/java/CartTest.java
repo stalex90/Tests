@@ -180,7 +180,7 @@ public class CartTest {
         if (objOS_Version.isUnix()) {
             if (testResult.getStatus() == ITestResult.FAILURE) {
                 File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-                String path = "/var/lib/jenkins/workspace/Тестирование корзины/src/test/resources/" + testResult.getName() + ".jpg";
+                String path = "/var/lib/jenkins/workspace/Тестирование корзины/screenshots/" + testResult.getName() + ".jpg";
                 FileUtils.copyFile(scrFile, new File(path));
             }
         }

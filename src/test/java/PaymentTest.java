@@ -412,7 +412,7 @@ public class PaymentTest {
         if (objOS_Version.isUnix()) {
             if (testResult.getStatus() == ITestResult.FAILURE) {
                 File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-                String path = "/var/lib/jenkins/workspace/Оплата заказа/src/test/resources/" + testResult.getName() + ".jpg";
+                String path = "/var/lib/jenkins/workspace/Оплата заказа/screenshots/" + testResult.getName() + ".jpg";
                 FileUtils.copyFile(scrFile, new File(path));
             }
         }
