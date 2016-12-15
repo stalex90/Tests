@@ -1,10 +1,17 @@
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -19,6 +26,13 @@ public class CartTest {
     Cart objCart;
     Oformit objOformit;
     static OS_Version objOS_Version;
+
+    @BeforeSuite
+    public static void deleteAllFilesFolder() {
+        String path = "/var/lib/jenkins/workspace/Тестирование корзины/src/test/resources";
+        for (File myFile : new File(path).listFiles())
+            if (myFile.isFile()) myFile.delete();
+    }
 
     @BeforeMethod
     public static void openBrowser() {
@@ -159,8 +173,12 @@ public class CartTest {
 
 
     @AfterMethod
-    public static void closeBrowser() throws InterruptedException {
-        Thread.sleep(13000);
+    public void closebrowser(ITestResult testResult) throws IOException {
+        if (testResult.getStatus() == ITestResult.FAILURE) {
+            File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+            String path = "/var/lib/jenkins/workspace/Тестирование корзины/src/test/resources" + testResult.getName() + ".jpg";
+            FileUtils.copyFile(scrFile, new File(path));
+        }
         driver.quit();
     }
 
