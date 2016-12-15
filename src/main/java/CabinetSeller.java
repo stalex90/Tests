@@ -4,14 +4,14 @@ import org.openqa.selenium.WebDriver;
 /**
  * Created by user on 14.11.16.
  */
-public class SellerLogin {
+public class CabinetSeller {
 
     WebDriver driver;
 
 
-    public SellerLogin(WebDriver driver) {
+    public CabinetSeller(WebDriver driver) {
         this.driver = driver;
     }
 
-    By Submit = By.id("_submit");
+    By LogoutBtn = By.xpath("//a[contains(@ui-sref,'logout')]");
 }

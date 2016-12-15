@@ -311,16 +311,6 @@ public class CabinetCartTest {
         Assert.assertTrue(driver.findElement(objOformit.OformitTitel).isDisplayed());
     }
 
-
-
-
-
-
-
-
-
-
-
     @AfterMethod
     public void closebrowser(ITestResult testResult) throws IOException {
         if (testResult.getStatus() == ITestResult.FAILURE) {

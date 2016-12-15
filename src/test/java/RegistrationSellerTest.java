@@ -3,10 +3,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -26,15 +22,15 @@ public class RegistrationSellerTest {
     static WebDriver driver;
     RegSeller1 objRegSeller1;
     RegSeller2 objRegSeller2;
-    SellerLogin objSellerLogin;
+    CabinetSeller objCabinetSeller;
     static OS_Version objOS_Version;
 
-    /*@BeforeSuite
+    @BeforeSuite
     public static void deleteAllFilesFolder() {
         String path = "/var/lib/jenkins/workspace/Регистрация продавца/src/main/resources/";
         for (File myFile : new File(path).listFiles())
             if (myFile.isFile()) myFile.delete();
-    }*/
+    }
 
     @BeforeMethod
     public static void openBrowser(){
@@ -51,69 +47,69 @@ public class RegistrationSellerTest {
     public void ChastnoeFullRegistration() throws InterruptedException {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller2 = new RegSeller2(driver);
-        objSellerLogin = new SellerLogin(driver);
+        objCabinetSeller = new CabinetSeller(driver);
         objRegSeller1.ChastnoeCompleteRegSeller1();
         objRegSeller2.EmailCompleteRegSeller2();
-        Assert.assertTrue(driver.findElement(objSellerLogin.Submit).isDisplayed());
+        Assert.assertTrue(driver.findElement(objCabinetSeller.LogoutBtn).isDisplayed());
     }
 
     @Test(description = "Полная регистрация компании")
     public void CompanyFullRegistration() throws InterruptedException {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller2 = new RegSeller2(driver);
-        objSellerLogin = new SellerLogin(driver);
+        objCabinetSeller = new CabinetSeller(driver);
         objRegSeller1.CompanyCompleteRegSeller1();
         objRegSeller2.EmailCompleteRegSeller2();
-        Assert.assertTrue(driver.findElement(objSellerLogin.Submit).isDisplayed());
+        Assert.assertTrue(driver.findElement(objCabinetSeller.LogoutBtn).isDisplayed());
     }
 
     @Test(description = "Краткая регистрация частного лица")
     public void ChastnoeShortRegistration() throws InterruptedException {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller2 = new RegSeller2(driver);
-        objSellerLogin = new SellerLogin(driver);
+        objCabinetSeller = new CabinetSeller(driver);
         objRegSeller1.InputEmail();
         objRegSeller1.ClickCheckbox();
         objRegSeller1.ClickSubmit();
         objRegSeller2.InputEmailCode();
         objRegSeller2.ClickSubmit();
-        Assert.assertTrue(driver.findElement(objSellerLogin.Submit).isDisplayed());
+        Assert.assertTrue(driver.findElement(objCabinetSeller.LogoutBtn).isDisplayed());
     }
 
     @Test(description = "Краткая регистрация компании")
     public void CompanyShortRegistration() throws InterruptedException {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller2 = new RegSeller2(driver);
-        objSellerLogin = new SellerLogin(driver);
+        objCabinetSeller = new CabinetSeller(driver);
         objRegSeller1.ClickCompany();
         objRegSeller1.InputEmail();
         objRegSeller1.ClickCheckbox();
         objRegSeller1.ClickSubmit();
         objRegSeller2.InputEmailCode();
         objRegSeller2.ClickSubmit();
-        Assert.assertTrue(driver.findElement(objSellerLogin.Submit).isDisplayed());
+        Assert.assertTrue(driver.findElement(objCabinetSeller.LogoutBtn).isDisplayed());
     }
 
     @Test(description = "Полная регистрация частного лица без телефона")
     public void ChastnoeFullRegistrationWithoutPhone() throws InterruptedException {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller2 = new RegSeller2(driver);
-        objSellerLogin = new SellerLogin(driver);
+        objCabinetSeller = new CabinetSeller(driver);
         objRegSeller1.ChastnoeCompleteRegSellerWithoutPhone1();
         objRegSeller2.InputEmailCode();
         objRegSeller2.ClickSubmit();
-        Assert.assertTrue(driver.findElement(objSellerLogin.Submit).isDisplayed());
+        Assert.assertTrue(driver.findElement(objCabinetSeller.LogoutBtn).isDisplayed());
     }
 
     @Test(description = "Полная регистрация компании без телефона")
     public void CompanyFullRegistrationWithoutPhone() throws InterruptedException {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller2 = new RegSeller2(driver);
-        objSellerLogin = new SellerLogin(driver);
+        objCabinetSeller = new CabinetSeller(driver);
         objRegSeller1.CompanyCompleteRegSellerWithoutPhone1();
         objRegSeller2.InputEmailCode();
         objRegSeller2.ClickSubmit();
-        Assert.assertTrue(driver.findElement(objSellerLogin.Submit).isDisplayed());
+        Assert.assertTrue(driver.findElement(objCabinetSeller.LogoutBtn).isDisplayed());
     }
 
     @Test(description = "Возвращение назад при активации кода частного лица")
