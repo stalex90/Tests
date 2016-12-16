@@ -291,7 +291,7 @@ public class RegistrationTest {
         objRegistrationPage4.InputCity();
         objRegistrationPage4.InputShortAddress();
         objRegistrationPage4.ClickContinueBtn();
-        Assert.assertEquals(objRegistrationPage4.GetAddressWarning(), "Адрес должен быть не менее 6 символов");
+        Assert.assertEquals(objRegistrationPage4.GetAddressWarning(), "Минимум 6 символов");
     }
 
     @Test (description = "Проверка появления ошибок для пустого поля индекс на 4 этапе регистрации")

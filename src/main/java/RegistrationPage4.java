@@ -46,7 +46,7 @@ public class RegistrationPage4 {
 
     By CountryWarning = By.xpath(".//p[contains(@data-bind,'errorCountry')]");
     By RegionWarning = By.xpath(".//p[contains(@data-bind,'errorRegion')]");
-    By CityWarning = By.xpath("");
+    By CityWarning = By.xpath("//p[contains(@data-bind,'errorCity')]");
     By AddressWarning = By.xpath(".//p[contains(@data-bind,'errorAddress')]");
     By IndexWarning = By.xpath(".//p[contains(@data-bind,'errorPostIndex')]");
     By Success = By.xpath(".//h3[contains(@class,'icon-success')]");
