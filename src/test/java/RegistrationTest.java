@@ -27,15 +27,15 @@ public class RegistrationTest {
     RegistrationPage4 objRegistrationPage4;
     static OS_Version objOS_Version;
 
-    @BeforeSuite
+   /* @BeforeSuite
     public static void deleteAllFilesFolder() {
         objOS_Version = new OS_Version();
         if (objOS_Version.isUnix()) {
-            String path = "/var/lib/jenkins/workspace/Регистрация покупателя/src/test/resources/";
+            String path = "/var/lib/jenkins/workspace/Регистрация покупателя/screenshots/";
             for (File myFile : new File(path).listFiles())
                 if (myFile.isFile()) myFile.delete();
         }
-    }
+    }*/
 
 
     @BeforeMethod
@@ -60,6 +60,7 @@ public class RegistrationTest {
         objRegistrationPage3 = objRegistrationPage2.CompleteRegistration2();
         objRegistrationPage4 = objRegistrationPage3.CompleteRegistration3();
         objRegistrationPage4.CompleteRegistration4();
+        Assert.assertEquals(objRegistrationPage4.GetSuccessMsg(),"Вы успешно зарегистрировались в магазине");
     }
 
     @Test (description = "Проверка регистрации без ввода необязательных данных") //Проверить!!!!
@@ -70,12 +71,12 @@ public class RegistrationTest {
         objRegistrationPage3 = objRegistrationPage2.CompleteRegistration2();
         objRegistrationPage4 = objRegistrationPage3.ClickCheckBox();
         objRegistrationPage4.ClickCheckbox();
-        objRegistrationPage4.ClickContinueBtn();
+        Assert.assertEquals(objRegistrationPage4.GetSuccessMsg(),"Вы успешно зарегистрировались в магазине");
     }
 
     // 1 - этап------------------------------------------------------------------------
 
-    @Test (description = "Проверка появления ошибок для пустых полей на 1 этапе регистрации") ////ПРоверить!!!!!!!!!!!!!
+    @Test (description = "Проверка появления ошибок для пустых полей на 1 этапе регистрации")
     public void EmptyWarningsStep1() {
         objHomePage = new HomePage(driver);
         objRegistrationPage1 = objHomePage.ClickRegBtn();
@@ -84,7 +85,7 @@ public class RegistrationTest {
         Assert.assertEquals(objRegistrationPage1.GetEmailWarning() ,"Поле обязательно для заполнения");
         Assert.assertEquals(objRegistrationPage1.GetFirstPswWarning() ,"Поле обязательно для заполнения");
         Assert.assertEquals(objRegistrationPage1.GetSecondPswWarning() ,"Поле обязательно для заполнения");
-        Assert.assertEquals(objRegistrationPage1.GetCheckboxWarning() ,"Вам необходимо прочитать и принять условия соглашения");
+        Assert.assertEquals(objRegistrationPage1.GetCheckboxWarning() ,"Поле обязательно для заполнения");
 
     }
 
@@ -155,6 +156,7 @@ public class RegistrationTest {
         objRegistrationPage2 = objRegistrationPage1.CompleteRegistration1();
         objRegistrationPage2.InputInvalidEmailCode();
         objRegistrationPage2.InputInvalidSMSCode();
+        objRegistrationPage2.ClickContinueBtn();
         Assert.assertTrue(driver.findElement(objRegistrationPage2.VerifyCodeError).isDisplayed());
         Assert.assertEquals(objRegistrationPage2.GetVerifyError() ,"Не удалось выполнить активацию, проверьте правильность указанных кодов");
 
@@ -196,7 +198,7 @@ public class RegistrationTest {
         objRegistrationPage3 = objRegistrationPage2.CompleteRegistration2();
         objRegistrationPage3.InputInvalidSecondName();
         objRegistrationPage3.ClickContinueBtn();
-        Assert.assertEquals(objRegistrationPage3.GetSecondNameWarning() ,"Только буквы латинского или русского алфавита");
+        Assert.assertEquals(objRegistrationPage3.GetSecondNameWarning() ,"Недопустимое значение.");
     }
 
     @Test (description = "Проверка появления ошибки при коротком имени")
@@ -218,7 +220,7 @@ public class RegistrationTest {
         objRegistrationPage3 = objRegistrationPage2.CompleteRegistration2();
         objRegistrationPage3.InputInvalidFirstName();
         objRegistrationPage3.ClickContinueBtn();
-        Assert.assertEquals(objRegistrationPage3.GetFirstNameWarning() ,"Только буквы латинского или русского алфавита");
+        Assert.assertEquals(objRegistrationPage3.GetFirstNameWarning() ,"Недопустимое значение.");
     }
 
     //4 - этап -----------------------------------------------------------------------------

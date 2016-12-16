@@ -24,9 +24,18 @@ public class RegistrationPage4 {
     String City = "Москва";
     String Address = "ул. Московская 1 кв.1";
     String Index = "550001";
+    public String RandomCountry(){
+        List<WebElement> CountryList = driver.findElements(SearchResults);
+        int index = 2 + (int)(Math.random() * ((250 - 2) + 1));
+        System.out.println(index);
+        System.out.println(CountryList.get(index).getText());
+        return CountryList.get(index).getText();
 
-    By CountryField = By.xpath(".//span[text()='Страна']");
-    By SearchField = By.xpath(".//div[@class='chosen-search']");
+    }
+
+    By CountryField = By.xpath(".//*[@id='country_list_chosen']/a");
+    By SearchField = By.xpath(".//*[@id='country_list_chosen']/div/div/input");
+    By FirstSearchresultItem = By.xpath(".//*[@id='country_list_chosen']/div/ul/li");
     By RegionField = By.id("region_list");
     By CityField = By.id("city_list");
     By AddressField = By.id("address");
@@ -34,13 +43,20 @@ public class RegistrationPage4 {
     By CheckBox = By.xpath(".//label[text()='Указать позже']");
     By ContinueBtn = By.xpath(".//a[text()='Продолжить']");
     By SearchResults = By.xpath(".//*[@class='chosen-results']/li");
+
     By CountryWarning = By.xpath(".//p[contains(@data-bind,'errorCountry')]");
     By RegionWarning = By.xpath(".//p[contains(@data-bind,'errorRegion')]");
     By CityWarning = By.xpath("");
     By AddressWarning = By.xpath(".//p[contains(@data-bind,'errorAddress')]");
     By IndexWarning = By.xpath(".//p[contains(@data-bind,'errorPostIndex')]");
+    By Success = By.xpath(".//h3[contains(@class,'icon-success')]");
 
     //Getters------------------------------------------------------------------
+
+    public String GetSuccessMsg(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(Success));
+        return driver.findElement(Success).getText();
+    }
     public String GetCountryWarning(){
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CountryWarning));
         return driver.findElement(CountryWarning).getText();
@@ -74,16 +90,16 @@ public class RegistrationPage4 {
         driver.findElement(CountryField).click();
     }
 
-    public void SelectCountry(String country){
+    public void SelectCountry(String country) throws InterruptedException {
 
-        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SearchResults));
-        List<WebElement> CountryList = driver.findElements(SearchResults);
-
-        for (WebElement x : CountryList){
-            if (x.getText().equals(country)){
-                x.click();
-            }
-        }
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SearchField));
+        driver.findElement(SearchField).click();
+        Thread.sleep(2000);
+        driver.findElement(SearchField).sendKeys(RandomCountry());
+        driver.findElement(FirstSearchresultItem).click();
+        ClickCountryField();
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(SearchField));
+        driver.findElement(SearchField).sendKeys(Keys.ENTER);
     }
 
     public void InputRegion(){
@@ -126,6 +142,7 @@ public class RegistrationPage4 {
     }
 
     public void ClickCheckbox(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CountryField));
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CheckBox));
         driver.findElement(CheckBox).click();
     }
@@ -135,7 +152,7 @@ public class RegistrationPage4 {
         driver.findElement(ContinueBtn).click();
     }
 
-    public void CompleteRegistration4(){
+    public void CompleteRegistration4() throws InterruptedException {
         ClickCountryField();
         SelectCountry(Country);
         InputRegion();
