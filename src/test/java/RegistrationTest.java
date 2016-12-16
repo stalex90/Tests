@@ -27,7 +27,7 @@ public class RegistrationTest {
     RegistrationPage4 objRegistrationPage4;
     static OS_Version objOS_Version;
 
-   /* @BeforeSuite
+    @BeforeSuite
     public static void deleteAllFilesFolder() {
         objOS_Version = new OS_Version();
         if (objOS_Version.isUnix()) {
@@ -35,7 +35,7 @@ public class RegistrationTest {
             for (File myFile : new File(path).listFiles())
                 if (myFile.isFile()) myFile.delete();
         }
-    }*/
+    }
 
 
     @BeforeMethod
@@ -243,6 +243,7 @@ public class RegistrationTest {
         objRegistrationPage2 = objRegistrationPage1.CompleteRegistration1();
         objRegistrationPage3 = objRegistrationPage2.CompleteRegistration2();
         objRegistrationPage4 = objRegistrationPage3.CompleteRegistration3();
+        objRegistrationPage4.ClickCountryField();
         objRegistrationPage4.SelectCountry("Россия");
         objRegistrationPage4.ClickContinueBtn();
         Assert.assertEquals(objRegistrationPage4.GetRegionWarning(), "Поле обязательно для заполнения");
@@ -255,6 +256,7 @@ public class RegistrationTest {
         objRegistrationPage2 = objRegistrationPage1.CompleteRegistration1();
         objRegistrationPage3 = objRegistrationPage2.CompleteRegistration2();
         objRegistrationPage4 = objRegistrationPage3.CompleteRegistration3();
+        objRegistrationPage4.ClickCountryField();
         objRegistrationPage4.SelectCountry("Россия");
         objRegistrationPage4.InputRegion();
         objRegistrationPage4.ClickContinueBtn();
@@ -268,6 +270,7 @@ public class RegistrationTest {
         objRegistrationPage2 = objRegistrationPage1.CompleteRegistration1();
         objRegistrationPage3 = objRegistrationPage2.CompleteRegistration2();
         objRegistrationPage4 = objRegistrationPage3.CompleteRegistration3();
+        objRegistrationPage4.ClickCountryField();
         objRegistrationPage4.SelectCountry("Россия");
         objRegistrationPage4.InputRegion();
         objRegistrationPage4.InputCity();
@@ -282,6 +285,7 @@ public class RegistrationTest {
         objRegistrationPage2 = objRegistrationPage1.CompleteRegistration1();
         objRegistrationPage3 = objRegistrationPage2.CompleteRegistration2();
         objRegistrationPage4 = objRegistrationPage3.CompleteRegistration3();
+        objRegistrationPage4.ClickCountryField();
         objRegistrationPage4.SelectCountry("Россия");
         objRegistrationPage4.InputRegion();
         objRegistrationPage4.InputCity();
@@ -297,6 +301,7 @@ public class RegistrationTest {
         objRegistrationPage2 = objRegistrationPage1.CompleteRegistration1();
         objRegistrationPage3 = objRegistrationPage2.CompleteRegistration2();
         objRegistrationPage4 = objRegistrationPage3.CompleteRegistration3();
+        objRegistrationPage4.ClickCountryField();
         objRegistrationPage4.SelectCountry("Россия");
         objRegistrationPage4.InputRegion();
         objRegistrationPage4.InputCity();
@@ -312,6 +317,7 @@ public class RegistrationTest {
         objRegistrationPage2 = objRegistrationPage1.CompleteRegistration1();
         objRegistrationPage3 = objRegistrationPage2.CompleteRegistration2();
         objRegistrationPage4 = objRegistrationPage3.CompleteRegistration3();
+        objRegistrationPage4.ClickCountryField();
         objRegistrationPage4.SelectCountry("Россия");
         objRegistrationPage4.InputRegion();
         objRegistrationPage4.InputCity();
@@ -328,6 +334,7 @@ public class RegistrationTest {
         objRegistrationPage2 = objRegistrationPage1.CompleteRegistration1();
         objRegistrationPage3 = objRegistrationPage2.CompleteRegistration2();
         objRegistrationPage4 = objRegistrationPage3.CompleteRegistration3();
+        objRegistrationPage4.ClickCountryField();
         objRegistrationPage4.SelectCountry("Россия");
         objRegistrationPage4.InputRegion();
         objRegistrationPage4.InputCity();

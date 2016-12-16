@@ -148,6 +148,7 @@ public class RegistrationPage4 {
     }
 
     public void ClickContinueBtn(){
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CountryField));
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(ContinueBtn));
         driver.findElement(ContinueBtn).click();
     }
