@@ -28,7 +28,7 @@ public class MessageTest {
     Messages objMessages;
 
 
-    /*@BeforeSuite
+    @BeforeSuite
     public static void deleteAllFilesFolder() {
         objOS_Version = new OS_Version();
         if (objOS_Version.isUnix()) {
@@ -36,7 +36,7 @@ public class MessageTest {
             for (File myFile : new File(path).listFiles())
                 if (myFile.isFile()) myFile.delete();
         }
-    }*/
+    }
 
     @BeforeMethod
     public static void openBrowser(){

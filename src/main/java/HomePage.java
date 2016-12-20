@@ -220,6 +220,7 @@ public class HomePage {
     public void DeleteAllCartMethod() throws InterruptedException {
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(ProfileIcon));
         objHomepage = new HomePage(driver);
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(CartIcon));
 
         while (driver.findElements(CartCount).size()>0){
             objHomepage.ClickCartIcon();

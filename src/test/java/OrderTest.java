@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -26,13 +27,23 @@ public class OrderTest {
     Oformit objOformit;
     CabinetCart objCabinetCart;
 
+    @BeforeSuite
+    public static void deleteAllFilesFolder() {
+        objOS_Version = new OS_Version();
+        if (objOS_Version.isUnix()) {
+            String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Заказы)/screenshots/";
+            for (File myFile : new File(path).listFiles())
+                if (myFile.isFile()) myFile.delete();
+        }
+    }
+
 
     @BeforeMethod
     public static void openBrowser() {
         objOS_Version = new OS_Version();
         objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://promodev.pokupo.ru/shop/1");
         //driver.manage().window().maximize();
     }
@@ -62,9 +73,10 @@ public class OrderTest {
         objCatalog = new Catalog(driver);
         objOrder = new Order(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
+        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
         objCatalog.AddRandomItem();
@@ -84,9 +96,10 @@ public class OrderTest {
         objOrder = new Order(driver);
         objOformit = new Oformit(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
+        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -107,9 +120,10 @@ public class OrderTest {
         objOrder = new Order(driver);
         objOformit = new Oformit(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
+        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -129,9 +143,10 @@ public class OrderTest {
         objOrder = new Order(driver);
         objOformit = new Oformit(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
+        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -152,9 +167,10 @@ public class OrderTest {
         objOformit = new Oformit(driver);
         objCabinetCart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
+        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -176,9 +192,10 @@ public class OrderTest {
         objOrder = new Order(driver);
         objOformit = new Oformit(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
+        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -201,9 +218,10 @@ public class OrderTest {
         objOrder = new Order(driver);
         objOformit = new Oformit(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
+        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -224,9 +242,10 @@ public class OrderTest {
         objOrder = new Order(driver);
         objOformit = new Oformit(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
+        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -249,9 +268,10 @@ public class OrderTest {
         objOformit = new Oformit(driver);
         objCabinetCart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
+        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -274,9 +294,10 @@ public class OrderTest {
         objOformit = new Oformit(driver);
         objCabinetCart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
+        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -299,9 +320,10 @@ public class OrderTest {
         objOformit = new Oformit(driver);
         objCabinetCart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
+        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
