@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by user on 19.12.16.
  */
-public class MessagesTest {
+public class MessageTest {
 
     static WebDriver driver;
     static OS_Version objOS_Version;
@@ -27,7 +27,8 @@ public class MessagesTest {
     Profile objProfile;
     Messages objMessages;
 
-    /*@BeforeSuite
+
+    @BeforeSuite
     public static void deleteAllFilesFolder() {
         objOS_Version = new OS_Version();
         if (objOS_Version.isUnix()) {
@@ -35,7 +36,7 @@ public class MessagesTest {
             for (File myFile : new File(path).listFiles())
                 if (myFile.isFile()) myFile.delete();
         }
-    }*/
+    }
 
     @BeforeMethod
     public static void openBrowser(){
@@ -46,7 +47,7 @@ public class MessagesTest {
         driver.get("https://promodev.pokupo.ru/shop/1");
     }
 
-    @Test(description = "Создать новое сообщение одному из существующих  продавцов")
+    @Test(description = "Создать новое сообщение одному из существующих  продавцов.")
     public void CheckNewMsg() {
         objHomePage = new HomePage(driver);
         objProfile = new Profile(driver);
@@ -177,14 +178,6 @@ public class MessagesTest {
         Assert.assertTrue(driver.findElements(objMessages.ReMessagePhoto).size()==2);
 
     }
-
-
-
-
-
-
-
-
 
 
 
