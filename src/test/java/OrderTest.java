@@ -54,9 +54,9 @@ public class OrderTest {
         objCatalog = new Catalog(driver);
         objOrder = new Order(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(4000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
+        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
         objCatalog.AddRandomItem();
