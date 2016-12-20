@@ -28,15 +28,15 @@ public class MessageTest {
     Messages objMessages;
 
 
-    @BeforeSuite
+    /*@BeforeSuite
     public static void deleteAllFilesFolder() {
         objOS_Version = new OS_Version();
         if (objOS_Version.isUnix()) {
-            String path = "/var/lib/jenkins/workspace/Регистрация продавца/src/main/resources/";
+            String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Сообщения)/screenshots/";
             for (File myFile : new File(path).listFiles())
                 if (myFile.isFile()) myFile.delete();
         }
-    }
+    }*/
 
     @BeforeMethod
     public static void openBrowser(){
@@ -188,7 +188,7 @@ public class MessageTest {
         if (objOS_Version.isUnix()) {
             if (testResult.getStatus() == ITestResult.FAILURE) {
                 File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-                String path = "/var/lib/jenkins/workspace/Регистрация продавца/screenshots/" + testResult.getName() + ".jpg";
+                String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Сообщения)/screenshots/" + testResult.getName() + ".jpg";
                 FileUtils.copyFile(scrFile, new File(path));
             }
         }

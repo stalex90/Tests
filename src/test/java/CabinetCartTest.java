@@ -35,7 +35,7 @@ public class CabinetCartTest {
     public static void deleteAllFilesFolder() {
         objOS_Version = new OS_Version();
         if (objOS_Version.isUnix()) {
-            String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Корзина)/src/test/resources/";
+            String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Корзина)/screenshots/";
             for (File myFile : new File(path).listFiles())
                 if (myFile.isFile()) myFile.delete();
         }

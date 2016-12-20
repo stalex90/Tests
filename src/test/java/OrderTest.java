@@ -43,7 +43,7 @@ public class OrderTest {
         objCatalog = new Catalog(driver);
         objOrder = new Order(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
         objHomePage.DeleteAllCartMethod();
@@ -62,7 +62,7 @@ public class OrderTest {
         objCatalog = new Catalog(driver);
         objOrder = new Order(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
         objHomePage.DeleteAllCartMethod();
@@ -84,7 +84,7 @@ public class OrderTest {
         objOrder = new Order(driver);
         objOformit = new Oformit(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
         objHomePage.DeleteAllCartMethod();
@@ -107,7 +107,7 @@ public class OrderTest {
         objOrder = new Order(driver);
         objOformit = new Oformit(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
         objHomePage.DeleteAllCartMethod();
@@ -129,7 +129,7 @@ public class OrderTest {
         objOrder = new Order(driver);
         objOformit = new Oformit(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
         objHomePage.DeleteAllCartMethod();
@@ -152,7 +152,7 @@ public class OrderTest {
         objOformit = new Oformit(driver);
         objCabinetCart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
         objHomePage.DeleteAllCartMethod();
@@ -176,7 +176,7 @@ public class OrderTest {
         objOrder = new Order(driver);
         objOformit = new Oformit(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
         objHomePage.DeleteAllCartMethod();
@@ -201,7 +201,7 @@ public class OrderTest {
         objOrder = new Order(driver);
         objOformit = new Oformit(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
         objHomePage.DeleteAllCartMethod();
@@ -224,7 +224,7 @@ public class OrderTest {
         objOrder = new Order(driver);
         objOformit = new Oformit(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
         objHomePage.DeleteAllCartMethod();
@@ -249,7 +249,7 @@ public class OrderTest {
         objOformit = new Oformit(driver);
         objCabinetCart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
         objHomePage.DeleteAllCartMethod();
@@ -274,7 +274,7 @@ public class OrderTest {
         objOformit = new Oformit(driver);
         objCabinetCart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
         objHomePage.DeleteAllCartMethod();
@@ -299,7 +299,7 @@ public class OrderTest {
         objOformit = new Oformit(driver);
         objCabinetCart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
         objHomePage.DeleteAllCartMethod();
