@@ -29,7 +29,7 @@ public class RegistrationSellerTest {
     public static void deleteAllFilesFolder() {
         objOS_Version = new OS_Version();
         if (objOS_Version.isUnix()) {
-            String path = "/var/lib/jenkins/workspace/Регистрация продавца/src/main/resources/";
+            String path = "/var/lib/jenkins/workspace/Регистрация продавца/screenshots/";
             for (File myFile : new File(path).listFiles())
                 if (myFile.isFile()) myFile.delete();
         }

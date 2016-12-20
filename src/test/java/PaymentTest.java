@@ -27,7 +27,7 @@ public class PaymentTest {
     public static void deleteAllFilesFolder() {
         objOS_Version = new OS_Version();
         if (objOS_Version.isUnix()) {
-            String path = "/var/lib/jenkins/workspace/Оплата заказа/src/test/resources/";
+            String path = "/var/lib/jenkins/workspace/Оплата заказа/screenshots/";
             for (File myFile : new File(path).listFiles())
                 if (myFile.isFile()) myFile.delete();
         }
