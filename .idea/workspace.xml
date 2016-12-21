@@ -6,47 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cb52326-68e4-45ce-b566-dd6a2fd83188" name="Default" comment="21.12.2016">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chromedriver" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chromedriver.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/CabinetCart.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/CabinetSeller.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Cart.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Catalog.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Favorites.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Gmail.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/HomePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/LoginPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/LogoutPopup.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Messages.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/OS_Version.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Oformit.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Order.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Payment.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Profile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/RegSeller1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/RegSeller2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/RegistrationPage1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/RegistrationPage2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/RegistrationPage3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/RegistrationPage4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Waiters.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/CabinetCartTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/CartTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/FavoritesTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/LoginHeaderTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/LoginModuleTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/LogoutHeaderTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/MessageTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/OrderTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/PaymentTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/ProfileTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/RegistrationSellerTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/RegistrationTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CabinetCartTest.java" afterPath="$PROJECT_DIR$/src/test/java/CabinetCartTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/MessageTest.java" afterPath="$PROJECT_DIR$/src/test/java/MessageTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/OrderTest.java" afterPath="$PROJECT_DIR$/src/test/java/OrderTest.java" />
+    <list default="true" id="1cb52326-68e4-45ce-b566-dd6a2fd83188" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/PaymentTest.java" afterPath="$PROJECT_DIR$/src/test/java/PaymentTest.java" />
     </list>
     <ignored path="Pokupo.iws" />
@@ -83,21 +44,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MessageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/MessageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.1233552">
+            <state vertical-scroll-proportion="0.0">
               <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaymentTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PaymentTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/PaymentTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="256" column="8" selection-start-line="256" selection-start-column="8" selection-end-line="256" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.30098686">
+              <caret line="362" column="31" selection-start-line="362" selection-start-column="31" selection-end-line="362" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -246,8 +207,8 @@
         <option value="$PROJECT_DIR$/src/main/java/CabinetCart.java" />
         <option value="$PROJECT_DIR$/src/test/java/CabinetCartTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/OrderTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/PaymentTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/MessageTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/PaymentTest.java" />
       </list>
     </option>
   </component>
@@ -880,12 +841,6 @@
       <option name="number" value="Default" />
       <updated>1476160413751</updated>
     </task>
-    <task id="LOCAL-00033" summary="2.12.2016">
-      <created>1480667920828</created>
-      <option name="number" value="00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1480667920828</updated>
-    </task>
     <task id="LOCAL-00034" summary="2.12.2016">
       <created>1480668234843</created>
       <option name="number" value="00034" />
@@ -1174,7 +1129,13 @@
       <option name="project" value="LOCAL" />
       <updated>1482310459796</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="21.12.2016">
+      <created>1482315802765</created>
+      <option name="number" value="00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1482315802781</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1220,7 +1181,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1058" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3304721" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1230,7 +1191,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3183246" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3304721" sideWeight="0.49574015" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3197425" sideWeight="0.4968051" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3197425" sideWeight="0.4968051" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14909478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1696,18 +1657,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/PaymentTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/MessageTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="256" column="8" selection-start-line="256" selection-start-column="8" selection-end-line="256" selection-end-column="8" />
+          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MessageTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/PaymentTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1233552">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.30098686">
+          <caret line="362" column="31" selection-start-line="362" selection-start-column="31" selection-end-line="362" selection-end-column="31" />
           <folding />
         </state>
       </provider>

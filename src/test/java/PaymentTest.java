@@ -229,7 +229,7 @@ public class PaymentTest {
         Assert.assertTrue(driver.findElement(objPayment.PrintChek).isDisplayed());
     }
 
-    @Test(description = "Проверка оплаты заказа с кошелька z-payment Card UA")
+    /*@Test(description = "Проверка оплаты заказа с кошелька z-payment Card UA")
     public void CheckZpayCardUA() throws InterruptedException {
         objPayment = new Payment(driver);
         objPayment.InputSumm("50");
@@ -239,7 +239,7 @@ public class PaymentTest {
         objPayment.ClickPays(5);
         objPayment.ClickYandexNext();
         Assert.assertTrue(driver.findElement(objPayment.PrintChek).isDisplayed());
-    }
+    }*/
 
     @Test(description = "Проверка оплаты заказа с кошелька z-payment Bitcoin")
     public void CheckZpayBitcoin() throws InterruptedException {
@@ -248,7 +248,7 @@ public class PaymentTest {
         objPayment.InputEmail("pokupomy1@gmail.com");
         objPayment.ClickZpay();
         objPayment.ClickNextBtn();
-        objPayment.ClickPays(6);
+        objPayment.ClickPays(5);
         objPayment.ClickCoinNext();
         Thread.sleep(5000);
         Assert.assertTrue(driver.findElement(objPayment.CoinsRefresh).isDisplayed());
@@ -263,7 +263,7 @@ public class PaymentTest {
         objPayment.ClickZpay();
         objPayment.ClickNextBtn();
         Thread.sleep(5000);
-        objPayment.ClickPays(7);
+        objPayment.ClickPays(6);
         objPayment.ClickCoinNext();
         Thread.sleep(5000);
         Assert.assertTrue(driver.findElement(objPayment.CoinsRefresh).isDisplayed());
@@ -276,7 +276,7 @@ public class PaymentTest {
         objPayment.InputEmail("pokupomy1@gmail.com");
         objPayment.ClickZpay();
         objPayment.ClickNextBtn();
-        objPayment.ClickPays(8);
+        objPayment.ClickPays(7);
         objPayment.ClickNextBtn2();
         Assert.assertTrue(driver.findElement(objPayment.PrintChek).isDisplayed());
     }
@@ -288,7 +288,7 @@ public class PaymentTest {
         objPayment.InputEmail("pokupomy1@gmail.com");
         objPayment.ClickZpay();
         objPayment.ClickNextBtn();
-        objPayment.ClickPays(9);
+        objPayment.ClickPays(8);
         objPayment.ClickNextBtn2();
         Assert.assertTrue(driver.findElement(objPayment.PrintChek).isDisplayed());
     }
@@ -300,7 +300,7 @@ public class PaymentTest {
         objPayment.InputEmail("pokupomy1@gmail.com");
         objPayment.ClickZpay();
         objPayment.ClickNextBtn();
-        objPayment.ClickPays(10);
+        objPayment.ClickPays(9);
         objPayment.ClickNextBtn2();
         Assert.assertTrue(driver.findElement(objPayment.PrintChek).isDisplayed());
     }
@@ -312,7 +312,7 @@ public class PaymentTest {
         objPayment.InputEmail("pokupomy1@gmail.com");
         objPayment.ClickZpay();
         objPayment.ClickNextBtn();
-        objPayment.ClickPays(11);
+        objPayment.ClickPays(10);
         objPayment.ClickNextBtn2();
         Assert.assertTrue(driver.findElement(objPayment.PrintChek).isDisplayed());
     }
@@ -324,7 +324,7 @@ public class PaymentTest {
         objPayment.InputEmail("pokupomy1@gmail.com");
         objPayment.ClickZpay();
         objPayment.ClickNextBtn();
-        objPayment.ClickPays(12);
+        objPayment.ClickPays(11);
         objPayment.ClickNextBtn2();
         Assert.assertTrue(driver.findElement(objPayment.PrintChek).isDisplayed());
     }
@@ -336,7 +336,7 @@ public class PaymentTest {
         objPayment.InputEmail("pokupomy1@gmail.com");
         objPayment.ClickZpay();
         objPayment.ClickNextBtn();
-        objPayment.ClickPays(13);
+        objPayment.ClickPays(12);
         objPayment.ClickNextBtn2();
         Assert.assertTrue(driver.findElement(objPayment.PrintChek).isDisplayed());
     }
@@ -348,7 +348,7 @@ public class PaymentTest {
         objPayment.InputEmail("pokupomy1@gmail.com");
         objPayment.ClickZpay();
         objPayment.ClickNextBtn();
-        objPayment.ClickPays(14);
+        objPayment.ClickPays(13);
         objPayment.ClickNextBtn2();
         Assert.assertTrue(driver.findElement(objPayment.PrintChek).isDisplayed());
     }
@@ -360,7 +360,7 @@ public class PaymentTest {
         objPayment.InputEmail("pokupomy1@gmail.com");
         objPayment.ClickZpay();
         objPayment.ClickNextBtn();
-        objPayment.ClickPays(15);
+        objPayment.ClickPays(14);
         objPayment.InputPochta();
         objPayment.ClickNextBtn2();
         Assert.assertTrue(driver.findElement(objPayment.PrintChek).isDisplayed());
