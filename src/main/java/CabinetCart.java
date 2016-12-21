@@ -156,7 +156,7 @@ public class CabinetCart {
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(AllItemsNames));
         List<WebElement> AllNames = driver.findElements(AllItemsNames);
         for (WebElement x :AllNames){
-            if (x.getText().equals(name))
+            if (x.getText().contains(name))
             {
                 y= true;
             }

@@ -58,7 +58,6 @@ public class CabinetCartTest {
         objCatalog = new Catalog(driver);
         objCabinetcart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
         objHomePage.DeleteAllCartMethod();
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
         String SelectedItemName = objCatalog.GetName();
@@ -76,7 +75,6 @@ public class CabinetCartTest {
         objCatalog = new Catalog(driver);
         objCabinetcart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
         objHomePage.DeleteAllCartMethod();
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
         String SelectedItemName = objCatalog.GetName();
@@ -94,7 +92,6 @@ public class CabinetCartTest {
         objFavorites =new Favorites(driver);
         objCabinetcart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
         objHomePage.DeleteAllCartMethod();
         objFavorites.ClearAllFavoritesMethod();
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -116,7 +113,6 @@ public class CabinetCartTest {
         objCatalog = new Catalog(driver);
         objCabinetcart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(5, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
@@ -136,7 +132,6 @@ public class CabinetCartTest {
         objCatalog = new Catalog(driver);
         objCabinetcart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(5, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
@@ -156,7 +151,6 @@ public class CabinetCartTest {
         objCatalog = new Catalog(driver);
         objCabinetcart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(2, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
@@ -181,7 +175,6 @@ public class CabinetCartTest {
         objCatalog = new Catalog(driver);
         objCabinetcart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(2, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
@@ -201,7 +194,6 @@ public class CabinetCartTest {
         objCatalog = new Catalog(driver);
         objCabinetcart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(2, objCatalog.NeedCategory2);
         objHomePage.ClickCartIcon();
@@ -228,7 +220,6 @@ public class CabinetCartTest {
         objCatalog = new Catalog(driver);
         objCabinetcart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(2, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
@@ -245,7 +236,6 @@ public class CabinetCartTest {
         objCatalog = new Catalog(driver);
         objCabinetcart = new CabinetCart(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(2, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
@@ -264,7 +254,6 @@ public class CabinetCartTest {
         objCabinetcart = new CabinetCart(driver);
         objFavorites = new Favorites(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
         objHomePage.DeleteAllCartMethod();
         objFavorites.ClearAllFavoritesMethod();
         objCatalog.AddFirstIitems(5, objCatalog.NeedCategory2);
@@ -288,7 +277,6 @@ public class CabinetCartTest {
         objCabinetcart = new CabinetCart(driver);
         objFavorites = new Favorites(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(2, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
@@ -307,7 +295,6 @@ public class CabinetCartTest {
         objFavorites = new Favorites(driver);
         objOformit = new Oformit(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
-        Thread.sleep(2000);
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(2, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();

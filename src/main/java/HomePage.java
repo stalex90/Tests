@@ -16,6 +16,7 @@ public class HomePage {
     int i;
     HomePage objHomepage;
     Oformit objOformit;
+    Waiters objWaiters;
 
 
 
@@ -220,13 +221,13 @@ public class HomePage {
     public void DeleteAllCartMethod() throws InterruptedException {
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(ProfileIcon));
         objHomepage = new HomePage(driver);
+        objWaiters = new Waiters(driver);
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(CartIcon));
-
-        while (driver.findElements(CartCount).size()>0){
+        while (objWaiters.isElementPresent(CartCount)){
             objHomepage.ClickCartIcon();
-            (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(CartWindows));
-            objHomepage.DeleteItem(1);
-            (new WebDriverWait(driver, 30)).until(ExpectedConditions.invisibilityOfElementLocated(CartWindows));
+            if (objWaiters.isElementPresent(CartWindows)){
+                objHomepage.DeleteItem(1);
+            }
         }
     }
 
