@@ -257,10 +257,12 @@ public class PaymentTest {
     @Test(description = "Проверка оплаты заказа с кошелька z-payment Litecoin")
     public void CheckZpayLitecoin() throws InterruptedException {
         objPayment = new Payment(driver);
+
         objPayment.InputSumm("50");
         objPayment.InputEmail("pokupomy1@gmail.com");
         objPayment.ClickZpay();
         objPayment.ClickNextBtn();
+        Thread.sleep(5000);
         objPayment.ClickPays(7);
         objPayment.ClickCoinNext();
         Thread.sleep(5000);

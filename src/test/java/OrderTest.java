@@ -58,7 +58,6 @@ public class OrderTest {
         objHomePage.ClickLoginBtn().CompleteLogin();
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
-        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
         objCatalog.AddRandomItem();
@@ -78,7 +77,6 @@ public class OrderTest {
         Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
-        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
         objCatalog.AddRandomItem();
@@ -103,7 +101,6 @@ public class OrderTest {
         Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
-        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -127,7 +124,6 @@ public class OrderTest {
         Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
-        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -150,7 +146,6 @@ public class OrderTest {
         Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
-        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -174,7 +169,6 @@ public class OrderTest {
         Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
-        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -199,7 +193,6 @@ public class OrderTest {
         Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
-        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -224,7 +217,6 @@ public class OrderTest {
         Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
-        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -248,7 +240,6 @@ public class OrderTest {
         Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
-        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -274,7 +265,6 @@ public class OrderTest {
         Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
-        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -300,7 +290,6 @@ public class OrderTest {
         Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
-        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);
@@ -326,7 +315,6 @@ public class OrderTest {
         Thread.sleep(2000);
         objOrder.DeleteAllOrderMethod();
         objHomePage.LogoText_RetunToHomepage();
-        Thread.sleep(4000);
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objCatalog.SelectCategory(objCatalog.NeedCategory2);

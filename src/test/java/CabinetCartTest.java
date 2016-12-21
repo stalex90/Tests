@@ -46,7 +46,7 @@ public class CabinetCartTest {
         objOS_Version = new OS_Version();
         objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("https://promodev.pokupo.ru/shop/1");
         //driver.manage().window().maximize();
 
