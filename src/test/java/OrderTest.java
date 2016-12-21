@@ -1,7 +1,5 @@
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -26,6 +24,9 @@ public class OrderTest {
     Order objOrder;
     Oformit objOformit;
     CabinetCart objCabinetCart;
+    static Waiters objWaiters;
+
+
 
     @BeforeSuite
     public static void deleteAllFilesFolder() {
@@ -40,6 +41,7 @@ public class OrderTest {
 
     @BeforeMethod
     public static void openBrowser() {
+        objWaiters = new Waiters(driver);
         objOS_Version = new OS_Version();
         objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
@@ -64,7 +66,7 @@ public class OrderTest {
         objHomePage.ClickOformit();
         objHomePage.ClickProfileIcon();
         objHomePage.ClickOrderBtn();
-        Assert.assertTrue(driver.findElement(objOrder.OrdersNames).isDisplayed());
+        Assert.assertTrue(objWaiters.isElementPresentWaiters(objOrder.OrdersNames));
     }
 
     @Test(description = "Проверка Открыть один из заказов и вернуться к списку заказов с помощью кнопки “Назад к списку заказов”")
@@ -86,8 +88,10 @@ public class OrderTest {
         objHomePage.ClickOrderBtn();
         objOrder.ClickOrder(0);
         objOrder.ClickBackToList();
-        Assert.assertTrue(driver.findElement(objOrder.HeaderTitel).isDisplayed());
+        Assert.assertTrue(objWaiters.isElementPresentWaiters(objOrder.HeaderTitel));
     }
+
+
 
     @Test(description = "Проверка Открыть один из заказов на странице заказов в режиме редактирования")
     public void CheckEditOrder() throws InterruptedException {
@@ -109,8 +113,8 @@ public class OrderTest {
         objHomePage.ClickProfileIcon();
         objHomePage.ClickOrderBtn();
         objOrder.ClickEdit(0);
-        Assert.assertTrue(driver.findElement(objOformit.OformitTitel).isDisplayed());
-        Assert.assertTrue(driver.findElement(objOformit.SelectAddressTitel).isDisplayed());
+        Assert.assertTrue(objWaiters.isElementPresentWaiters(objOformit.OformitTitel));
+        Assert.assertTrue(objWaiters.isElementPresentWaiters(objOformit.SelectAddressTitel));
     }
 
     @Test(description = "Проверка удаления заказов из списка")
@@ -182,7 +186,7 @@ public class OrderTest {
         objOrder.CancelOrder(0);
         objOrder.ClickCopyToCart(0);
         Assert.assertEquals(objOrder.GetSuccess(),objOrder.IncartMsg);
-        Assert.assertTrue(driver.findElement(objCabinetCart.HeaderTitel).isDisplayed());
+        Assert.assertTrue(objWaiters.isElementPresentWaiters(objCabinetCart.HeaderTitel));
     }
 
     @Test(description = "Проверка повторения заказа из списка")
@@ -207,8 +211,7 @@ public class OrderTest {
         objOrder.CancelOrder(0);
         objOrder.ClickRepeat(0);
         Assert.assertEquals(objOrder.GetSuccess(),objOrder.RepeatMsg);
-        Assert.assertTrue(driver.findElement(objOformit.OformitTitel).isDisplayed());
-        Assert.assertTrue(driver.findElement(objOformit.SelectAddressTitel).isDisplayed());
+        Assert.assertTrue(objWaiters.isElementPresentWaiters(objOformit.SelectAddressTitel));
     }
 
     @Test(description = "Проверка удаления из открытого заказа")
@@ -283,7 +286,7 @@ public class OrderTest {
         objOrder.ClickOrder(0);
         objOrder.ClickCopyToCart(0);
         Assert.assertEquals(objOrder.GetSuccess(),objOrder.IncartMsg);
-        Assert.assertTrue(driver.findElement(objCabinetCart.HeaderTitel).isDisplayed());
+        Assert.assertTrue(objWaiters.isElementPresentWaiters(objCabinetCart.HeaderTitel));
     }
 
     @Test(description = "Проверка редактирования из открытого заказа")
@@ -308,8 +311,8 @@ public class OrderTest {
         objHomePage.ClickOrderBtn();
         objOrder.ClickOrder(0);
         objOrder.ClickEdit(0);
-        Assert.assertTrue(driver.findElement(objOformit.OformitTitel).isDisplayed());
-        Assert.assertTrue(driver.findElement(objOformit.SelectAddressTitel).isDisplayed());
+        Assert.assertTrue(objWaiters.isElementPresentWaiters(objOformit.OformitTitel));
+        Assert.assertTrue(objWaiters.isElementPresentWaiters(objOformit.SelectAddressTitel));
     }
 
     @Test(description = "Проверка повторения из открытого заказа")
@@ -336,8 +339,8 @@ public class OrderTest {
         objOrder.ClickOrder(0);
         objOrder.ClickRepeat(0);
         Assert.assertEquals(objOrder.GetSuccess(),objOrder.RepeatMsg);
-        Assert.assertTrue(driver.findElement(objOformit.OformitTitel).isDisplayed());
-        Assert.assertTrue(driver.findElement(objOformit.SelectAddressTitel).isDisplayed());
+        Assert.assertTrue(objWaiters.isElementPresentWaiters(objOformit.OformitTitel));
+        Assert.assertTrue(objWaiters.isElementPresentWaiters(objOformit.SelectAddressTitel));
     }
 
 
