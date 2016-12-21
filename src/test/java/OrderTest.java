@@ -41,12 +41,12 @@ public class OrderTest {
 
     @BeforeMethod
     public static void openBrowser() {
-        objWaiters = new Waiters(driver);
         objOS_Version = new OS_Version();
         objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://promodev.pokupo.ru/shop/1");
+        objWaiters = new Waiters(driver);
         //driver.manage().window().maximize();
     }
 
