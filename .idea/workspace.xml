@@ -8,8 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1cb52326-68e4-45ce-b566-dd6a2fd83188" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/GetResponseCode.java" afterPath="$PROJECT_DIR$/src/main/java/GetResponseCode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/GmailSend.java" afterPath="$PROJECT_DIR$/src/main/java/GmailSend.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PokupoHome.java" afterPath="$PROJECT_DIR$/src/main/java/PokupoHome.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CriticalPageTest.java" afterPath="$PROJECT_DIR$/src/test/java/CriticalPageTest.java" />
     </list>
     <ignored path="Pokupo.iws" />
@@ -58,11 +57,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="PokupoHome.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PokupoHome.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#PokupoHome#0;class#PokupoHome#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CriticalPageTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/CriticalPageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.4364548">
-              <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.4749164">
+              <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,10 +149,10 @@
         <option value="$PROJECT_DIR$/src/main/java/PokupoBlog.java" />
         <option value="$PROJECT_DIR$/CriticalPage.xml" />
         <option value="$PROJECT_DIR$/src/test/java/PaymentTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PokupoHome.java" />
         <option value="$PROJECT_DIR$/src/main/java/GmailSend.java" />
-        <option value="$PROJECT_DIR$/src/test/java/CriticalPageTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/GetResponseCode.java" />
+        <option value="$PROJECT_DIR$/src/test/java/CriticalPageTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PokupoHome.java" />
       </list>
     </option>
   </component>
@@ -773,12 +785,6 @@
       <option name="number" value="Default" />
       <updated>1476160413751</updated>
     </task>
-    <task id="LOCAL-00044" summary="2.12.2016">
-      <created>1480672745312</created>
-      <option name="number" value="00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1480672745312</updated>
-    </task>
     <task id="LOCAL-00045" summary="5.12.2016">
       <created>1480918309875</created>
       <option name="number" value="00045" />
@@ -1067,13 +1073,16 @@
       <option name="project" value="LOCAL" />
       <updated>1482481549625</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="23.12.2016">
+      <created>1482482267500</created>
+      <option name="number" value="00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1482482267500</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CriticalPageTest - 2016.12.23 at 12h 10m 22s.xml">
-      <configuration name="CriticalPageTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="CriticalPageTest - 2016.12.23 at 12h 11m 57s.xml">
       <configuration name="CriticalPageTest" configurationId="TestNG" />
     </history-entry>
@@ -1081,6 +1090,9 @@
       <configuration name="CriticalPageTest" configurationId="TestNG" />
     </history-entry>
     <history-entry file="CriticalPageTest - 2016.12.23 at 13h 37m 20s.xml">
+      <configuration name="CriticalPageTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="CriticalPageTest - 2016.12.23 at 13h 41m 56s.xml">
       <configuration name="CriticalPageTest" configurationId="TestNG" />
     </history-entry>
     <history-entry file="CriticalPageTest_ProverkaKodovSostoyaniyaServera - 2016.12.23 at 12h 10m 34s.xml">
@@ -1113,7 +1125,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1058" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3304721" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1122,7 +1134,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33154505" sideWeight="0.5042598" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31759655" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3304721" sideWeight="0.49574015" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3304721" sideWeight="0.49574015" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31866953" sideWeight="0.4968051" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14909478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1594,13 +1606,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PokupoHome.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/GetResponseCode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#PokupoHome#0;class#PokupoHome#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1613,20 +1624,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GetResponseCode.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/PokupoHome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#PokupoHome#0;class#PokupoHome#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CriticalPageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.4364548">
-          <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.4749164">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

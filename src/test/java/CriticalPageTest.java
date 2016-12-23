@@ -28,7 +28,7 @@ public class CriticalPageTest {
     @Test(description = "Проверка кодов ответов от страницы")
     public void ProverkaKodovSostoyaniyaServera() throws InterruptedException, IOException {
         objGetResponseCode = new GetResponseCode();
-        objGetResponseCode.CheckResponseCode("https://pokupo.ru/index");
+        objGetResponseCode.CheckResponseCode("https://pokupo.ru/");
         objGetResponseCode.CheckResponseCode("https://pokupo.ru/sitemap.xml");
         objGetResponseCode.CheckResponseCode("https://pokupo.ru/robots.txt");
         objGetResponseCode.CheckResponseCode("https://pokupo.ru/blog");

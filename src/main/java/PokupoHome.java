@@ -10,7 +10,7 @@ public class PokupoHome {
         this.driver = driver;}
 
     By logo = By.xpath("//a[@class='logo']");
-    By headerBlock = By.xpath("//*[@class='header1']");
+    By headerBlock = By.xpath("//*[@class='header']");
     By videoBlock = By.xpath("//*[@class='video']");
     By createBlock = By.xpath("//*[@class='register orange patterned']");
     By casesBlock = By.xpath("//*[@class='cases']");
