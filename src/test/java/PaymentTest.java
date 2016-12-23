@@ -152,7 +152,7 @@ public class PaymentTest {
         Assert.assertEquals(objPayment.GetSummError(),objPayment.EmptyErrorMsg);
     }
 
-    @Test(description = "Проверка ошибок пустого поля сумма и емаил")
+    @Test(description = "Проверка ошибок некорректного поля сумма и емаил")
     public void ZpayCheckIncorrectWarnings() throws InterruptedException {
         objPayment = new Payment(driver);
         objPayment.InputSumm("-1");
@@ -175,7 +175,7 @@ public class PaymentTest {
 
 
 
-    @Test(description = "Проверка оплаты заказа с кошелька z-payment яндексденьги")
+    /*@Test(description = "Проверка оплаты заказа с кошелька z-payment яндексденьги")
     public void CheckZpayYandex() throws InterruptedException {
         objPayment = new Payment(driver);
         objPayment.InputSumm("0.01");
@@ -229,7 +229,7 @@ public class PaymentTest {
         Assert.assertTrue(driver.findElement(objPayment.PrintChek).isDisplayed());
     }
 
-    /*@Test(description = "Проверка оплаты заказа с кошелька z-payment Card UA")
+    *//*@Test(description = "Проверка оплаты заказа с кошелька z-payment Card UA")
     public void CheckZpayCardUA() throws InterruptedException {
         objPayment = new Payment(driver);
         objPayment.InputSumm("50");
@@ -239,7 +239,7 @@ public class PaymentTest {
         objPayment.ClickPays(5);
         objPayment.ClickYandexNext();
         Assert.assertTrue(driver.findElement(objPayment.PrintChek).isDisplayed());
-    }*/
+    }*//*
 
     @Test(description = "Проверка оплаты заказа с кошелька z-payment Bitcoin")
     public void CheckZpayBitcoin() throws InterruptedException {
@@ -364,7 +364,7 @@ public class PaymentTest {
         objPayment.InputPochta();
         objPayment.ClickNextBtn2();
         Assert.assertTrue(driver.findElement(objPayment.PrintChek).isDisplayed());
-    }
+    }*/
 
     @Test(description = "Проверка к переходу оплаты заказа через intellectmoney")
     public void CheckIntellect() throws InterruptedException {
