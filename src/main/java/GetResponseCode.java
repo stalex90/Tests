@@ -24,6 +24,7 @@ public class GetResponseCode {
             String text = "На странице " + Url + " сервер вернул код состояния - " + Code;
             objGmailSend.SendMessage(text, "starodubov2003@mail.ru");
             objGmailSend.SendMessage(text, "law@pokupo.ru");
+            objGmailSend.SendMessage(text, "admin@pokupo.ru");
 
         }
         System.out.println(Code);

@@ -28,7 +28,7 @@ public class CriticalPageTest {
     @Test(description = "Проверка кодов ответов от страницы")
     public void ProverkaKodovSostoyaniyaServera() throws InterruptedException, IOException {
         objGetResponseCode = new GetResponseCode();
-        objGetResponseCode.CheckResponseCode("https://pokupo.ru/");
+        objGetResponseCode.CheckResponseCode("https://pokupo.ru");
         objGetResponseCode.CheckResponseCode("https://pokupo.ru/sitemap.xml");
         objGetResponseCode.CheckResponseCode("https://pokupo.ru/robots.txt");
         objGetResponseCode.CheckResponseCode("https://pokupo.ru/blog");
@@ -95,6 +95,7 @@ public class CriticalPageTest {
             String text = "Тест " + testResult.getName() + " провален, пожалуйста проверьте вручную";
             objGmailSend.SendMessage(text, "starodubov2003@mail.ru");
             objGmailSend.SendMessage(text, "law@pokupo.ru");
+            objGmailSend.SendMessage(text, "admin@pokupo.ru");
         }
     }
 
