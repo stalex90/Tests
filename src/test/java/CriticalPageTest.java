@@ -34,7 +34,7 @@ public class CriticalPageTest {
         objGetResponseCode.CheckResponseCode("https://pokupo.ru/blog");
     }
 
-    @Test(description = "Проверка страницы pokupo.ru")
+/*    @Test(description = "Проверка страницы pokupo.ru")
     public void ProverkaPokupoRu_content() {
         objOS_Version = new OS_Version();
         objOS_Version.SetChromeProperty();
@@ -81,7 +81,7 @@ public class CriticalPageTest {
             driver.quit();
         }
 
-    }
+    }*/
 
 
 
