@@ -9,7 +9,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import javax.mail.MessagingException;
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -27,7 +26,7 @@ public class CriticalPageTest {
     Waiters objWaiters;
 
     @Test(description = "Проверка кодов ответов от страницы")
-    public void ProverkaKodovSostoyaniyaServera() throws InterruptedException, IOException, MessagingException {
+    public void ProverkaKodovSostoyaniyaServera() throws InterruptedException, IOException {
         objGetResponseCode = new GetResponseCode();
         objGetResponseCode.CheckResponseCode("https://pokupo.ru/index");
         objGetResponseCode.CheckResponseCode("https://pokupo.ru/sitemap.xml");
@@ -35,7 +34,7 @@ public class CriticalPageTest {
         objGetResponseCode.CheckResponseCode("https://pokupo.ru/blog");
     }
 
-/*    @Test(description = "Проверка страницы pokupo.ru")
+    @Test(description = "Проверка страницы pokupo.ru")
     public void ProverkaPokupoRu_content() {
         objOS_Version = new OS_Version();
         objOS_Version.SetChromeProperty();
@@ -82,20 +81,20 @@ public class CriticalPageTest {
             driver.quit();
         }
 
-    }*/
+    }
 
 
 
 
 
     @AfterMethod
-    public void closebrowser(ITestResult testResult) throws IOException, MessagingException {
+    public void closebrowser(ITestResult testResult) throws IOException {
 
         objGmailSend = new GmailSend();
         if (testResult.getStatus() == ITestResult.FAILURE) {
             String text = "Тест " + testResult.getName() + " провален, пожалуйста проверьте вручную";
             objGmailSend.SendMessage(text, "starodubov2003@mail.ru");
-            //objGmailSend.SendMessage(text, "law@pokupo.ru");
+            objGmailSend.SendMessage(text, "law@pokupo.ru");
         }
     }
 

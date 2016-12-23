@@ -6,12 +6,11 @@ import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
-import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class GmailSend {
-    public void SendMessage(String text, String to) throws MessagingException {
+    public void SendMessage(String text, String to) {
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.socketFactory.port", "465");
@@ -27,7 +26,7 @@ public class GmailSend {
                     }
                 });
 
-
+        try {
 
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress("pokupomy1@gmail.com"));
@@ -40,6 +39,8 @@ public class GmailSend {
 
             System.out.println("Done");
 
-
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

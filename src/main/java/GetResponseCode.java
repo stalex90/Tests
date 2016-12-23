@@ -15,7 +15,7 @@ import java.util.Properties;
  */
 public class GetResponseCode {
 
-    public void CheckResponseCode(String Url) throws IOException, MessagingException {
+    public void CheckResponseCode(String Url) throws IOException {
         int Code = Jsoup.connect(Url).followRedirects(false).ignoreHttpErrors(true).validateTLSCertificates(false).timeout(1000*5).execute().statusCode();
         GmailSend objGmailSend;
         objGmailSend = new GmailSend();
@@ -23,7 +23,7 @@ public class GetResponseCode {
         if (Code != 200){
             String text = "На странице " + Url + " сервер вернул код состояния - " + Code;
             objGmailSend.SendMessage(text, "starodubov2003@mail.ru");
-            //objGmailSend.SendMessage(text, "law@pokupo.ru");
+            objGmailSend.SendMessage(text, "law@pokupo.ru");
 
         }
         System.out.println(Code);
