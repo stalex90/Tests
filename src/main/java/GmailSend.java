@@ -29,7 +29,7 @@ public class GmailSend {
         try {
 
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("Test"));
+            message.setFrom(new InternetAddress("pokupomy1@gmail.com"));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(to));
             message.setSubject("Ошибка при ежедневном обращении к критически важным страницам");

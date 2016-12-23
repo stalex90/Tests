@@ -23,7 +23,7 @@ public class GetResponseCode {
         if (Code != 200){
             String text = "На странице " + Url + " сервер вернул код состояния - " + Code;
             objGmailSend.SendMessage(text, "starodubov2003@mail.ru");
-            objGmailSend.SendMessage(text, "law@pokupo.ru");
+            //objGmailSend.SendMessage(text, "law@pokupo.ru");
 
         }
         System.out.println(Code);
