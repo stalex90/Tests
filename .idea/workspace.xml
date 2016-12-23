@@ -8,9 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1cb52326-68e4-45ce-b566-dd6a2fd83188" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/GetResponseCode.java" afterPath="$PROJECT_DIR$/src/main/java/GetResponseCode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/GmailSend.java" afterPath="$PROJECT_DIR$/src/main/java/GmailSend.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CriticalPageTest.java" afterPath="$PROJECT_DIR$/src/test/java/CriticalPageTest.java" />
     </list>
     <ignored path="Pokupo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -773,12 +770,6 @@
       <option name="number" value="Default" />
       <updated>1476160413751</updated>
     </task>
-    <task id="LOCAL-00042" summary="2.12.2016">
-      <created>1480671916078</created>
-      <option name="number" value="00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1480671916078</updated>
-    </task>
     <task id="LOCAL-00043" summary="2.12.2016">
       <created>1480672194265</created>
       <option name="number" value="00043" />
@@ -1067,7 +1058,13 @@
       <option name="project" value="LOCAL" />
       <updated>1482481355125</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="23.12.2016">
+      <created>1482481543375</created>
+      <option name="number" value="00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1482481543375</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TestHistory">
