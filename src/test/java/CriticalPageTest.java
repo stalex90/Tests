@@ -9,6 +9,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
+import javax.mail.MessagingException;
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -26,7 +27,7 @@ public class CriticalPageTest {
     Waiters objWaiters;
 
     @Test(description = "Проверка кодов ответов от страницы")
-    public void ProverkaKodovSostoyaniyaServera() throws InterruptedException, IOException {
+    public void ProverkaKodovSostoyaniyaServera() throws InterruptedException, IOException, MessagingException {
         objGetResponseCode = new GetResponseCode();
         objGetResponseCode.CheckResponseCode("https://pokupo.ru/index");
         objGetResponseCode.CheckResponseCode("https://pokupo.ru/sitemap.xml");
@@ -88,7 +89,7 @@ public class CriticalPageTest {
 
 
     @AfterMethod
-    public void closebrowser(ITestResult testResult) throws IOException {
+    public void closebrowser(ITestResult testResult) throws IOException, MessagingException {
 
         objGmailSend = new GmailSend();
         if (testResult.getStatus() == ITestResult.FAILURE) {

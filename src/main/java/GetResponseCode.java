@@ -15,7 +15,7 @@ import java.util.Properties;
  */
 public class GetResponseCode {
 
-    public void CheckResponseCode(String Url) throws IOException {
+    public void CheckResponseCode(String Url) throws IOException, MessagingException {
         int Code = Jsoup.connect(Url).followRedirects(false).ignoreHttpErrors(true).validateTLSCertificates(false).timeout(1000*5).execute().statusCode();
         GmailSend objGmailSend;
         objGmailSend = new GmailSend();
