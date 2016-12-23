@@ -6,19 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cb52326-68e4-45ce-b566-dd6a2fd83188" name="Default" comment="22.12.2016">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_10_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CriticalPage.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GetResponseCode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GmailSend.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/PokupoBlog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/PokupoHome.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/CriticalPageTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/MessageTest.class" afterPath="$PROJECT_DIR$/target/test-classes/MessageTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/PaymentTest.class" afterPath="$PROJECT_DIR$/target/test-classes/PaymentTest.class" />
+    <list default="true" id="1cb52326-68e4-45ce-b566-dd6a2fd83188" name="Default" comment="23.12.2016">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pokupo.iml" afterPath="$PROJECT_DIR$/Pokupo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/GetResponseCode.java" afterPath="$PROJECT_DIR$/src/main/java/GetResponseCode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CriticalPageTest.java" afterPath="$PROJECT_DIR$/src/test/java/CriticalPageTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/PaymentTest.java" afterPath="$PROJECT_DIR$/src/test/java/PaymentTest.java" />
     </list>
     <ignored path="Pokupo.iws" />
@@ -45,32 +36,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OrderTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/OrderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="329" column="8" selection-start-line="329" selection-start-column="8" selection-end-line="329" selection-end-column="87" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetResponseCode.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GetResponseCode.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/GetResponseCode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaymentTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/PaymentTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.543514">
-              <caret line="154" column="49" selection-start-line="154" selection-start-column="49" selection-end-line="154" selection-end-column="49" />
-              <folding />
+            <state vertical-scroll-proportion="0.69786537">
+              <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/CriticalPageTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="94" column="96" selection-start-line="94" selection-start-column="96" selection-end-line="94" selection-end-column="96" />
+              <caret line="100" column="1" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -188,12 +161,12 @@
         <option value="$PROJECT_DIR$/src/main/java/SSL.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/GmailSend.java" />
-        <option value="$PROJECT_DIR$/src/main/java/GetResponseCode.java" />
         <option value="$PROJECT_DIR$/src/main/java/PokupoHome.java" />
         <option value="$PROJECT_DIR$/src/main/java/PokupoBlog.java" />
-        <option value="$PROJECT_DIR$/src/test/java/CriticalPageTest.java" />
         <option value="$PROJECT_DIR$/CriticalPage.xml" />
         <option value="$PROJECT_DIR$/src/test/java/PaymentTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GetResponseCode.java" />
+        <option value="$PROJECT_DIR$/src/test/java/CriticalPageTest.java" />
       </list>
     </option>
   </component>
@@ -826,12 +799,6 @@
       <option name="number" value="Default" />
       <updated>1476160413751</updated>
     </task>
-    <task id="LOCAL-00037" summary="2.12.2016">
-      <created>1480669952640</created>
-      <option name="number" value="00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1480669952640</updated>
-    </task>
     <task id="LOCAL-00038" summary="2.12.2016">
       <created>1480670794468</created>
       <option name="number" value="00038" />
@@ -1120,7 +1087,13 @@
       <option name="project" value="LOCAL" />
       <updated>1482395158781</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="23.12.2016">
+      <created>1482479889171</created>
+      <option name="number" value="00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1482479889187</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1228,7 +1201,8 @@
     <MESSAGE value="20.12.2016" />
     <MESSAGE value="21.12.2016" />
     <MESSAGE value="22.12.2016" />
-    <option name="LAST_COMMIT_MESSAGE" value="22.12.2016" />
+    <MESSAGE value="23.12.2016" />
+    <option name="LAST_COMMIT_MESSAGE" value="23.12.2016" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1653,24 +1627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GetResponseCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CriticalPageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="96" selection-start-line="94" selection-start-column="96" selection-end-line="94" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CriticalPage.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.9230769">
@@ -1681,9 +1637,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PaymentTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.543514">
-          <caret line="154" column="49" selection-start-line="154" selection-start-column="49" selection-end-line="154" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="154" column="52" selection-start-line="154" selection-start-column="52" selection-end-line="154" selection-end-column="52" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CriticalPageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="100" column="1" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GetResponseCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69786537">
+          <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

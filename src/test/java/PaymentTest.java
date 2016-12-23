@@ -152,7 +152,7 @@ public class PaymentTest {
         Assert.assertEquals(objPayment.GetSummError(),objPayment.EmptyErrorMsg);
     }
 
-    @Test(description = "Проверка ошибок некорректного поля сумма и емаил")
+    @Test(description = "Проверка ошибок некоррекпшетного поля сумма и емаил")
     public void ZpayCheckIncorrectWarnings() throws InterruptedException {
         objPayment = new Payment(driver);
         objPayment.InputSumm("-1");

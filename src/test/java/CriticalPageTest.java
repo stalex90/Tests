@@ -91,11 +91,11 @@ public class CriticalPageTest {
     public void closebrowser(ITestResult testResult) throws IOException {
 
         objGmailSend = new GmailSend();
-            if (testResult.getStatus() == ITestResult.FAILURE) {
-                String text = "Тест " + testResult.getName() + " провален, пожалуйста проверьте вручную";
-                objGmailSend.SendMessage(text, "starodubov2003@mail.ru");
-                //objGmailSend.SendMessage(text, "law@pokupo.ru");
-            }
+        if (testResult.getStatus() == ITestResult.FAILURE) {
+            String text = "Тест " + testResult.getName() + " провален, пожалуйста проверьте вручную";
+            objGmailSend.SendMessage(text, "starodubov2003@mail.ru");
+            objGmailSend.SendMessage(text, "law@pokupo.ru");
+        }
     }
 
 }
