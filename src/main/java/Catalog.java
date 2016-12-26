@@ -30,10 +30,16 @@ public class Catalog {
     By CategoryTitle = By.id("js-nosidebar");
     By FavoriteBtn = By.xpath(".//a[@class='pseudo-link']");
     By AllItemsTitel = By.xpath(".//div[@class='b-item with_popover']/div/div/h4[@class='b-item__title']/a");
+    By AllItemsPrice = By.xpath(".//div[@class='b-catalog']/div[@class='b-catalog__items cards']/div/div/div/div/div/span[1]");
     By SuccessFavoriteMsg = By.xpath(".//h3[contains(@class,'icon-success')]");
     By InCart = By.xpath(".//*[@id='btn_to_cart']");
 
     String SuccessFavorite = "Выбранные товары добавлены в избранное.";
+
+    public int getAllItemsOnPageCount(){
+        List<WebElement> All = driver.findElements(AllItemsPrice);
+        return All.size();
+    }
 
 
     public void SelectCategory(String name)
@@ -128,6 +134,20 @@ public class Catalog {
 
     public String GetFavoriMsg(){
         return driver.findElement(SuccessFavoriteMsg).getText();
+    }
+
+    public boolean checkPrices(String min1, String max1){
+        int min = Integer.parseInt(min1);
+        int max = Integer.parseInt(max1);
+        List<WebElement> ItemsList = driver.findElements(AllItemsPrice);
+        boolean a = true;
+        for (int i = ItemsList.size()-1; i > 0; i--){
+            if (Integer.parseInt(ItemsList.get(i).getText())< min || Integer.parseInt(ItemsList.get(i).getText()) > max){
+                a = false;
+            }
+        }
+        return a;
+
     }
 
 
