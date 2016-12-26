@@ -6,11 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cb52326-68e4-45ce-b566-dd6a2fd83188" name="Default" comment="23.12.2016">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Search.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Search.java" />
+    <list default="true" id="1cb52326-68e4-45ce-b566-dd6a2fd83188" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Searchtest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Catalog.class" afterPath="$PROJECT_DIR$/target/classes/Catalog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Catalog.java" afterPath="$PROJECT_DIR$/src/main/java/Catalog.java" />
     </list>
     <ignored path="Pokupo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,10 +60,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SearchTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.036728">
+            <state vertical-scroll-proportion="0.0">
               <caret line="137" column="6" selection-start-line="137" selection-start-column="6" selection-end-line="137" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -73,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Search.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Search.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Search.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6153846">
+            <state vertical-scroll-proportion="0.118673645">
               <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
             </state>
@@ -179,6 +178,20 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="Pokupo" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Pokupo" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -332,35 +345,7 @@
       <recent name="C:\Documents and Settings\Admin\IdeaProjects\Pokupo" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SearchTest">
-    <configuration default="false" name="SearchTest.checkAdvancedSearchwithPrice" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Pokupo" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SearchTest" />
-      <option name="METHOD_NAME" value="checkAdvancedSearchwithPrice" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="TestNG.C:/Documents and Settings/Admin/IdeaProjects/Pokupo/Search.xml">
     <configuration default="false" name="SearchTest.checkAdvancedSearchwithSeller" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Pokupo" />
@@ -456,6 +441,34 @@
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="C:/Documents and Settings/Admin/IdeaProjects/Pokupo/Search.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Pokupo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/Search.xml" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -759,19 +772,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="TestNG.LogoutHeaderTest" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.SearchTest.checkAdvancedSearchwithPrice" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.SearchTest.checkAdvancedSearchwithSeller" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.SearchTest.checkAdvancedSearchwithExceptword" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.SearchTest.checkAdvancedSearchFull" />
-      <item index="5" class="java.lang.String" itemvalue="TestNG.SearchTest" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.SearchTest.checkAdvancedSearchwithSeller" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.SearchTest.checkAdvancedSearchwithExceptword" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.SearchTest.checkAdvancedSearchFull" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.SearchTest" />
+      <item index="5" class="java.lang.String" itemvalue="TestNG.C:/Documents and Settings/Admin/IdeaProjects/Pokupo/Search.xml" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.SearchTest" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.SearchTest.checkAdvancedSearchFull" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.SearchTest.checkAdvancedSearchwithSeller" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.SearchTest.checkAdvancedSearchwithExceptword" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.SearchTest.checkAdvancedSearchwithPrice" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.C:/Documents and Settings/Admin/IdeaProjects/Pokupo/Search.xml" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.SearchTest" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.SearchTest.checkAdvancedSearchFull" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.SearchTest.checkAdvancedSearchwithSeller" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.SearchTest.checkAdvancedSearchwithExceptword" />
       </list>
     </recent_temporary>
   </component>
@@ -785,12 +798,6 @@
       <created>1476160413751</created>
       <option name="number" value="Default" />
       <updated>1476160413751</updated>
-    </task>
-    <task id="LOCAL-00047" summary="5.12.2016">
-      <created>1480920512546</created>
-      <option name="number" value="00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1480920512546</updated>
     </task>
     <task id="LOCAL-00048" summary="6.12.2016">
       <created>1480998514400</created>
@@ -1080,10 +1087,19 @@
       <option name="project" value="LOCAL" />
       <updated>1482483428359</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="23.12.2016">
+      <created>1482745064736</created>
+      <option name="number" value="00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1482745064751</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="C__Documents_and_Settings_Admin_IdeaProjects_Pokupo_Search_xml - 2016.12.26 at 14h 43m 13s.xml">
+      <configuration name="C:/Documents and Settings/Admin/IdeaProjects/Pokupo/Search.xml" configurationId="TestNG" />
+    </history-entry>
     <history-entry file="SearchTest - 2016.12.26 at 14h 36m 00s.xml">
       <configuration name="SearchTest" configurationId="TestNG" />
     </history-entry>
@@ -1095,9 +1111,6 @@
     </history-entry>
     <history-entry file="SearchTest_checkAdvancedSearchwithExceptword - 2016.12.26 at 14h 28m 34s.xml">
       <configuration name="SearchTest.checkAdvancedSearchwithExceptword" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="SearchTest_checkAdvancedSearchwithPrice - 2016.12.26 at 14h 14m 48s.xml">
-      <configuration name="SearchTest.checkAdvancedSearchwithPrice" configurationId="TestNG" />
     </history-entry>
     <history-entry file="SearchTest_checkAdvancedSearchwithPrice - 2016.12.26 at 14h 15m 17s.xml">
       <configuration name="SearchTest.checkAdvancedSearchwithPrice" configurationId="TestNG" />
@@ -1126,14 +1139,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1058" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3304721" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33154505" sideWeight="0.5042598" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31759655" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.49574015" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31866953" sideWeight="0.4968051" order="9" side_tool="false" content_ui="tabs" />
@@ -1638,21 +1651,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Search.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.036728">
+        <state vertical-scroll-proportion="0.0">
           <caret line="137" column="6" selection-start-line="137" selection-start-column="6" selection-end-line="137" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Search.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.118673645">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
