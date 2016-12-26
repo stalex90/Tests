@@ -62,8 +62,8 @@
       <file leaf-file-name="SearchTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/SearchTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4967213">
-              <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.71967214">
+              <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -814,12 +814,6 @@
       <option name="number" value="Default" />
       <updated>1476160413751</updated>
     </task>
-    <task id="LOCAL-00049" summary="6.12.2016">
-      <created>1480998561291</created>
-      <option name="number" value="00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1480998561291</updated>
-    </task>
     <task id="LOCAL-00050" summary="6.12.2016">
       <created>1480999691010</created>
       <option name="number" value="00050" />
@@ -1108,7 +1102,13 @@
       <option name="project" value="LOCAL" />
       <updated>1482745422658</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="27.12.2016">
+      <created>1482746585080</created>
+      <option name="number" value="00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1482746585095</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1677,8 +1677,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4967213">
-          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.71967214">
+          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
