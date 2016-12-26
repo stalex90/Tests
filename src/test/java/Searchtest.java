@@ -24,6 +24,7 @@ public class SearchTest {
     static Search objSearch;
     static Waiters objWaiters;
     static Catalog objCatalog;
+    static HomePage objHomepage;
 
    /* @BeforeSuite
     public static void deleteAllFilesFolder() {
