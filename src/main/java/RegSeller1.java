@@ -13,7 +13,7 @@ public class RegSeller1 {
 
     int a = 1000000000 + (int)(Math.random()*((2000000000-1000000000)+1)); // рандомное 10 значное число
 
-    String EmailKey = "pokupotest+" + a + "@gmail.com" ;
+    String EmailKey = "pokupotestreg+" + a + "@gmail.com" ;
     String NameKey = "name " + a;
     String DomainKey = "domain" + a;
     String SiteKey = a + ".test";

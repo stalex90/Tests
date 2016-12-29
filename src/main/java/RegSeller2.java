@@ -36,7 +36,7 @@ public class RegSeller2 {
     public void InputEmailCode() throws InterruptedException { //Ввести емаил код
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(EmailCode));
         Thread.sleep(40000);
-        String Code = new Gmail().GetEmailCode();
+        String Code = new GmailSeller().GetEmailCode();
         driver.findElement(EmailCode).sendKeys(Code);
         System.out.println("Code");
     }
