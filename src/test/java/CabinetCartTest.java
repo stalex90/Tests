@@ -64,7 +64,7 @@ public class CabinetCartTest {
         objCatalog.OpenRandomItem();
         objCatalog.ClickInCart();
         objHomePage.ClickProfileIcon();
-        objHomePage.ClickProfileBtn();
+        objHomePage.ClickOrderBtn();
         objCabinetcart.ClickCart();
         Assert.assertTrue(objCabinetcart.CheckAppersNewName(SelectedItemName));
     }
@@ -80,7 +80,7 @@ public class CabinetCartTest {
         String SelectedItemName = objCatalog.GetName();
         objCatalog.AddRandomItem();
         objHomePage.ClickProfileIcon();
-        objHomePage.ClickProfileBtn();
+        objHomePage.ClickOrderBtn();
         objCabinetcart.ClickCart();
         Assert.assertTrue(objCabinetcart.CheckAppersNewName(SelectedItemName));
     }
@@ -99,7 +99,7 @@ public class CabinetCartTest {
         objCatalog.OpenRandomItem();
         objCatalog.AddFavorite();
         objHomePage.ClickProfileIcon();
-        objHomePage.ClickProfileBtn();
+        objHomePage.ClickOrderBtn();
         objFavorites.ClickFavorites();
         objFavorites.ClickInCart();
         Assert.assertEquals(objFavorites.GetSuccessMsg(),objFavorites.SuccessInCartMsg);
@@ -116,7 +116,7 @@ public class CabinetCartTest {
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(5, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
-        objHomePage.ClickProfileBtn();
+        objHomePage.ClickOrderBtn();
         objCabinetcart.ClickCart();
         int CartCount = objCabinetcart.CountItemsInCart();
         objCabinetcart.ClickCheckbox(0);
@@ -135,7 +135,7 @@ public class CabinetCartTest {
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(5, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
-        objHomePage.ClickProfileBtn();
+        objHomePage.ClickOrderBtn();
         objCabinetcart.ClickCart();
         int CartCount = objCabinetcart.CountItemsInCart();
         objCabinetcart.ClickRemoveIcons(0);
@@ -154,7 +154,7 @@ public class CabinetCartTest {
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(2, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
-        objHomePage.ClickProfileBtn();
+        objHomePage.ClickOrderBtn();
         objCabinetcart.ClickCart();
         Double Price = objCabinetcart.GetPriceIitem(0);
         objCabinetcart.ClickPlusIcons(0);
@@ -178,7 +178,7 @@ public class CabinetCartTest {
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(2, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
-        objHomePage.ClickProfileBtn();
+        objHomePage.ClickOrderBtn();
         objCabinetcart.ClickCart();
         objCabinetcart.ClickPlusIconsForMax(0);
         String a = objCabinetcart.GetSuccess();
@@ -203,7 +203,7 @@ public class CabinetCartTest {
         objHomePage.ClickCartIcon();
         Thread.sleep(3000);
         objHomePage.ClickProfileIcon();
-        objHomePage.ClickProfileBtn();
+        objHomePage.ClickOrderBtn();
         objCabinetcart.ClickCart();
         Double Price = objCabinetcart.GetPriceIitem(0)/objCabinetcart.GetCountIitem(0);
         objCabinetcart.ClickMinusIcons(0);
@@ -223,7 +223,7 @@ public class CabinetCartTest {
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(2, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
-        objHomePage.ClickProfileBtn();
+        objHomePage.ClickOrderBtn();
         objCabinetcart.ClickCart();
         objCabinetcart.InputMaxCountItem(0);
         Assert.assertEquals(objCabinetcart.GetSuccess(),objCabinetcart.MaxMsg);
@@ -239,7 +239,7 @@ public class CabinetCartTest {
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(2, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
-        objHomePage.ClickProfileBtn();
+        objHomePage.ClickOrderBtn();
         objCabinetcart.ClickCart();
         objCabinetcart.ClearCartMethod();
         Thread.sleep(2000);
@@ -258,7 +258,7 @@ public class CabinetCartTest {
         objFavorites.ClearAllFavoritesMethod();
         objCatalog.AddFirstIitems(5, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
-        objHomePage.ClickProfileBtn();
+        objHomePage.ClickOrderBtn();
         objCabinetcart.ClickCart();
         objCabinetcart.ClickCheckbox(0);
         objCabinetcart.ClickCheckbox(1);
@@ -280,7 +280,7 @@ public class CabinetCartTest {
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(2, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
-        objHomePage.ClickProfileBtn();
+        objHomePage.ClickOrderBtn();
         objCabinetcart.ClickCart();
         objCabinetcart.ClickContinueShop();
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(objCatalog.AllCategorys));
@@ -298,7 +298,7 @@ public class CabinetCartTest {
         objHomePage.DeleteAllCartMethod();
         objCatalog.AddFirstIitems(2, objCatalog.NeedCategory2);
         objHomePage.ClickProfileIcon();
-        objHomePage.ClickProfileBtn();
+        objHomePage.ClickOrderBtn();
         objCabinetcart.ClickCart();
         objCabinetcart.ClickOrder();
         Assert.assertTrue(driver.findElement(objOformit.OformitTitel).isDisplayed());
