@@ -53,8 +53,8 @@ public class OformitTest {
         objHomePage.DeleteAllCartMethod();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         objOrder.DeleteAllOrderMethod();
-        objHomePage.LogoText_RetunToHomepage();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        objHomePage.LogoText_RetunToHomepage();
         objCatalog.SelectCategory(objCatalog.NeedCategory);
         objCatalog.AddItem(1);
         objHomePage.ClickCartIcon();

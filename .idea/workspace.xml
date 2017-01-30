@@ -6,18 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cb52326-68e4-45ce-b566-dd6a2fd83188" name="Default" comment="19.01.2017">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Oformit.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/OformitTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Oformit.class" afterPath="$PROJECT_DIR$/target/classes/Oformit.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/CabinetCartTest.class" afterPath="$PROJECT_DIR$/target/test-classes/CabinetCartTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/MessageTest.class" afterPath="$PROJECT_DIR$/target/test-classes/MessageTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/OrderTest.class" afterPath="$PROJECT_DIR$/target/test-classes/OrderTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/RegistrationTest.class" afterPath="$PROJECT_DIR$/target/test-classes/RegistrationTest.class" />
+    <list default="true" id="1cb52326-68e4-45ce-b566-dd6a2fd83188" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Oformit.java" afterPath="$PROJECT_DIR$/src/main/java/Oformit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/MessageTest.java" afterPath="$PROJECT_DIR$/src/test/java/MessageTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SearchTest.java" afterPath="$PROJECT_DIR$/src/test/java/SearchTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/OformitTest.java" afterPath="$PROJECT_DIR$/src/test/java/OformitTest.java" />
     </list>
     <ignored path="Pokupo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +36,8 @@
       <file leaf-file-name="OformitTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/OformitTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="168" column="75" lean-forward="false" selection-start-line="168" selection-start-column="75" selection-end-line="168" selection-end-column="75" />
+            <state relative-caret-position="527">
+              <caret line="55" column="72" lean-forward="false" selection-start-line="55" selection-start-column="72" selection-end-line="55" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -799,13 +790,6 @@
       <option name="presentableId" value="Default" />
       <updated>1476160413751</updated>
     </task>
-    <task id="LOCAL-00054" summary="7.12.2016">
-      <created>1481107876687</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1481107876687</updated>
-    </task>
     <task id="LOCAL-00055" summary="12.12.2016">
       <created>1481542558937</created>
       <option name="number" value="00055" />
@@ -1142,7 +1126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1484806545169</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="30.01.2017">
+      <created>1485770931239</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1485770931241</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1234,7 +1225,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Pokupo" />
     <MESSAGE value="27.10.2016" />
     <MESSAGE value="1.11.2016" />
     <MESSAGE value="15.11.2016" />
@@ -1259,7 +1249,8 @@
     <MESSAGE value="23.12.2016" />
     <MESSAGE value="27.12.2016" />
     <MESSAGE value="19.01.2017" />
-    <option name="LAST_COMMIT_MESSAGE" value="19.01.2017" />
+    <MESSAGE value="30.01.2017" />
+    <option name="LAST_COMMIT_MESSAGE" value="30.01.2017" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1676,8 +1667,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/OformitTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="168" column="75" lean-forward="false" selection-start-line="168" selection-start-column="75" selection-end-line="168" selection-end-column="75" />
+        <state relative-caret-position="527">
+          <caret line="55" column="72" lean-forward="false" selection-start-line="55" selection-start-column="72" selection-end-line="55" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
