@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -26,15 +27,15 @@ public class OformitTest {
     static Waiters objWaiters;
     static Order objOrder;
 
-    /*@BeforeSuite
+    @BeforeSuite
     public static void deleteAllFilesFolder() {
         objOS_Version = new OS_Version();
         if (objOS_Version.isUnix()) {
-            String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Сообщения)/screenshots/";
+            String path = "/var/lib/jenkins/workspace/Оформление заказа/screenshots/";
             for (File myFile : new File(path).listFiles())
                 if (myFile.isFile()) myFile.delete();
         }
-    }*/
+    }
 
     @BeforeMethod
     public static void openBrowser() throws InterruptedException{
