@@ -85,7 +85,7 @@ public class OformitTest {
     public void CheckBack(){
         objOformit.clickBackBtn();
         objHomePage.ClickCartIcon();
-        Assert.assertTrue(objWaiters.isElementPresent(objHomePage.Oformit));
+        Assert.assertTrue(objWaiters.isElementPresentWaiters(objHomePage.Oformit));
     }
 
     @Test(description = "Пустой адрес")
