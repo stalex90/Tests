@@ -4,7 +4,21 @@
   <test name="Pokupo">
     <classes>
 
+      <class name="CabinetCartTest"/>
+      <class name="CartTest"/>
+      <class name="FavoritesTest"/>
+      <class name="LoginHeaderTest"/>
+      <class name="LoginModuleTest"/>
       <class name="LogoutHeaderTest"/>
+      <class name="MessageTest"/>
+      <class name="OformitTest"/>
+      <class name="OrderTest"/>
+      <class name="PaymentTest"/>
+      <class name="ProfileTest"/>
+      <class name="RegistrationSellerTest"/>
+      <class name="RegistrationTest"/>
+      <class name="SearchTest"/>
+
 
     </classes>
   </test> <!-- Pokupo -->
