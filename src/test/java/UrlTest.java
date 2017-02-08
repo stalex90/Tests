@@ -54,8 +54,6 @@ public class UrlTest {
         public void CheckDisplayCount(){
             objHomePage = new HomePage(driver);
             objCatalog = new Catalog(driver);
-            objCatalog.SelectCategory(objCatalog.NeedCategory);
-            objCatalog.AddItem(10);
             Assert.assertEquals(objHomePage.GetCartCount(),9);
         }
 
