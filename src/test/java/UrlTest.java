@@ -29,7 +29,7 @@ public class UrlTest {
 
         private static String URL=System.getProperty("url");
 
-        @BeforeSuite
+       /* @BeforeSuite
         public static void deleteAllFilesFolder() {
             objOS_Version = new OS_Version();
             if (objOS_Version.isUnix()) {
@@ -37,7 +37,7 @@ public class UrlTest {
                 for (File myFile : new File(path).listFiles())
                     if (myFile.isFile()) myFile.delete();
             }
-        }
+        }*/
 
         @BeforeMethod
         public static void openBrowser() {
@@ -56,7 +56,7 @@ public class UrlTest {
             objCatalog = new Catalog(driver);
             objCatalog.SelectCategory(objCatalog.NeedCategory);
             objCatalog.AddItem(10);
-            Assert.assertTrue(driver.findElement(objHomePage.CartCount).isDisplayed());
+            Assert.assertEquals(objHomePage.GetCartCount(),9);
         }
 
     @AfterMethod
@@ -64,7 +64,7 @@ public class UrlTest {
         if (objOS_Version.isUnix()) {
             if (testResult.getStatus() == ITestResult.FAILURE) {
                 File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-                String path = "/var/lib/jenkins/workspace/Тестирование корзины/screenshots/" + testResult.getName() + ".jpg";
+                String path = "/var/lib/jenkins/workspace/тестюрл/screenshots/" + testResult.getName() + ".jpg";
                 FileUtils.copyFile(scrFile, new File(path));
             }
         }
