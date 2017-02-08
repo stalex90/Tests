@@ -33,7 +33,7 @@ public class UrlTest {
         public static void deleteAllFilesFolder() {
             objOS_Version = new OS_Version();
             if (objOS_Version.isUnix()) {
-                String path = "/var/lib/jenkins/workspace/тестюрл/src/test/resources/";
+                String path = "/var/lib/jenkins/workspace/тестюрл/screenshots/";
                 for (File myFile : new File(path).listFiles())
                     if (myFile.isFile()) myFile.delete();
             }
