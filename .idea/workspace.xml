@@ -128,8 +128,8 @@
       <file leaf-file-name="UrlTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/UrlTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="53" column="40" lean-forward="true" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
+            <state relative-caret-position="172">
+              <caret line="35" column="65" lean-forward="false" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -818,13 +818,6 @@
       <option name="presentableId" value="Default" />
       <updated>1476160413751</updated>
     </task>
-    <task id="LOCAL-00064" summary="15.12.2016">
-      <created>1481792981484</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1481792981484</updated>
-    </task>
     <task id="LOCAL-00065" summary="15.12.2016">
       <created>1481793916687</created>
       <option name="number" value="00065" />
@@ -1161,7 +1154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486543321503</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="30.01.2017">
+      <created>1486543434920</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1486543434920</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1698,8 +1698,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/UrlTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="53" column="40" lean-forward="true" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
+        <state relative-caret-position="172">
+          <caret line="35" column="65" lean-forward="false" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

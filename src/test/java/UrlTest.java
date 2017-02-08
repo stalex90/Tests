@@ -29,15 +29,15 @@ public class UrlTest {
 
         private static String URL=System.getProperty("url");
 
-       /* @BeforeSuite
+        @BeforeSuite
         public static void deleteAllFilesFolder() {
             objOS_Version = new OS_Version();
             if (objOS_Version.isUnix()) {
-                String path = "/var/lib/jenkins/workspace/Тестирование корзины/src/test/resources/";
+                String path = "/var/lib/jenkins/workspace/тестюрл/src/test/resources/";
                 for (File myFile : new File(path).listFiles())
                     if (myFile.isFile()) myFile.delete();
             }
-        }*/
+        }
 
         @BeforeMethod
         public static void openBrowser() {
@@ -54,7 +54,7 @@ public class UrlTest {
         public void CheckDisplayCount(){
             objHomePage = new HomePage(driver);
             objCatalog = new Catalog(driver);
-            Assert.assertEquals(objHomePage.GetCartCount(),9);
+
             System.out.println(driver.getCurrentUrl());
         }
 
