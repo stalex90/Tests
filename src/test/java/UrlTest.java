@@ -55,6 +55,7 @@ public class UrlTest {
             objHomePage = new HomePage(driver);
             objCatalog = new Catalog(driver);
             Assert.assertEquals(objHomePage.GetCartCount(),9);
+            System.out.println(driver.getCurrentUrl());
         }
 
     @AfterMethod
