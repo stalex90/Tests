@@ -4,6 +4,7 @@
   <test name="Pokupo">
     <classes>
 
+      <class name="LoginHeaderTest"/>
       <class name="LogoutHeaderTest"/>
 
     </classes>

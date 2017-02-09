@@ -6,22 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cb52326-68e4-45ce-b566-dd6a2fd83188" name="Default" comment="">
+    <list default="true" id="1cb52326-68e4-45ce-b566-dd6a2fd83188" name="Default" comment="09.02.2017">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/LogoutHeader.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/LoginHeader.xml" afterPath="$PROJECT_DIR$/Header.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CabinetCartTest.java" afterPath="$PROJECT_DIR$/src/test/java/CabinetCartTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CartTest.java" afterPath="$PROJECT_DIR$/src/test/java/CartTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/FavoritesTest.java" afterPath="$PROJECT_DIR$/src/test/java/FavoritesTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/LoginHeaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/LoginHeaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/LoginModuleTest.java" afterPath="$PROJECT_DIR$/src/test/java/LoginModuleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/LogoutHeaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/LogoutHeaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/MessageTest.java" afterPath="$PROJECT_DIR$/src/test/java/MessageTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/OformitTest.java" afterPath="$PROJECT_DIR$/src/test/java/OformitTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/OrderTest.java" afterPath="$PROJECT_DIR$/src/test/java/OrderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ProfileTest.java" afterPath="$PROJECT_DIR$/src/test/java/ProfileTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/RegistrationSellerTest.java" afterPath="$PROJECT_DIR$/src/test/java/RegistrationSellerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/RegistrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/RegistrationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SearchTest.java" afterPath="$PROJECT_DIR$/src/test/java/SearchTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/UrlTest.java" afterPath="$PROJECT_DIR$/src/test/java/UrlTest.java" />
     </list>
     <ignored path="Pokupo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,11 +54,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CriticalPageTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CriticalPageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/CriticalPageTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LK.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LK.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Header.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Header.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -102,8 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Favorites.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Favorites.java" />
         <option value="$PROJECT_DIR$/src/main/java/Profile.java" />
         <option value="$PROJECT_DIR$/CabinetCart.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Order.java" />
@@ -153,6 +159,8 @@
         <option value="$PROJECT_DIR$/src/test/java/LoginHeaderTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/LoginModuleTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/CriticalPageTest.java" />
+        <option value="$PROJECT_DIR$/LK.xml" />
+        <option value="$PROJECT_DIR$/Header.xml" />
       </list>
     </option>
   </component>
@@ -747,20 +755,6 @@
       <option name="presentableId" value="Default" />
       <updated>1476160413751</updated>
     </task>
-    <task id="LOCAL-00068" summary="15.12.2016">
-      <created>1481797312250</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1481797312265</updated>
-    </task>
-    <task id="LOCAL-00069" summary="15.12.2016">
-      <created>1481798448859</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1481798448859</updated>
-    </task>
     <task id="LOCAL-00070" summary="15.12.2016">
       <created>1481800506828</created>
       <option name="number" value="00070" />
@@ -1090,7 +1084,21 @@
       <option name="project" value="LOCAL" />
       <updated>1486547056772</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="09.02.2017">
+      <created>1486618442466</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1486618442467</updated>
+    </task>
+    <task id="LOCAL-00118" summary="09.02.2017">
+      <created>1486619105347</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1486619105349</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1136,7 +1144,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3304721" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1152,7 +1160,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29571578" sideWeight="0.4968051" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16979167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16979167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1182,7 +1190,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1.11.2016" />
     <MESSAGE value="15.11.2016" />
     <MESSAGE value="Merge branch 'master' of https://github.com/stalex90/Tests&#10;&#10;# Conflicts:&#10;#&#9;src/test/java/RegistrationSellerTest.java&#10;" />
     <MESSAGE value="17.11" />
@@ -1207,7 +1214,8 @@
     <MESSAGE value="19.01.2017" />
     <MESSAGE value="2.2.2017" />
     <MESSAGE value="30.01.2017" />
-    <option name="LAST_COMMIT_MESSAGE" value="30.01.2017" />
+    <MESSAGE value="09.02.2017" />
+    <option name="LAST_COMMIT_MESSAGE" value="09.02.2017" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1243,21 +1251,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/RegistrationPage3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Messages.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/lang/ProcessImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Favorites.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1439,6 +1432,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1614,6 +1608,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Messages.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LK.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Header.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
           <folding />
         </state>
       </provider>
