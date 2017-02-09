@@ -40,6 +40,7 @@ public class Screenshots {
     public void ifFailTakeScreenshot() throws IOException {
         objSelectFolder = new SelectFolder();
         String s = objSelectFolder.folderName();
+        System.out.println(s);
 
         if (objOS_Version.isUnix()) {
             if (testResult.getStatus() == ITestResult.FAILURE) {
