@@ -30,7 +30,7 @@ public class UrlTest {
 
         private static String URL=System.getProperty("url");
 
-        @BeforeSuite
+        /*@BeforeSuite
         public static void deleteAllFilesFolder() {
             objOS_Version = new OS_Version();
             objSelectFolder = new SelectFolder();
@@ -41,7 +41,7 @@ public class UrlTest {
                 for (File myFile : new File(path).listFiles())
                     if (myFile.isFile()) myFile.delete();
             }
-        }
+        }*/
 
         @BeforeMethod
         public static void openBrowser() {
