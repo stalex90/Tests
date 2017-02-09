@@ -7,19 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cb52326-68e4-45ce-b566-dd6a2fd83188" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/CabinetCartTest.class" afterPath="$PROJECT_DIR$/target/test-classes/CabinetCartTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/CartTest.class" afterPath="$PROJECT_DIR$/target/test-classes/CartTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/FavoritesTest.class" afterPath="$PROJECT_DIR$/target/test-classes/FavoritesTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/LoginHeaderTest.class" afterPath="$PROJECT_DIR$/target/test-classes/LoginHeaderTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/LoginModuleTest.class" afterPath="$PROJECT_DIR$/target/test-classes/LoginModuleTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/LogoutHeaderTest.class" afterPath="$PROJECT_DIR$/target/test-classes/LogoutHeaderTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/MessageTest.class" afterPath="$PROJECT_DIR$/target/test-classes/MessageTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/OrderTest.class" afterPath="$PROJECT_DIR$/target/test-classes/OrderTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/ProfileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/ProfileTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/RegistrationSellerTest.class" afterPath="$PROJECT_DIR$/target/test-classes/RegistrationSellerTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/RegistrationTest.class" afterPath="$PROJECT_DIR$/target/test-classes/RegistrationTest.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Screenshots.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Screenshots.java" afterPath="$PROJECT_DIR$/src/main/java/Screenshots.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/UrlTest.java" afterPath="$PROJECT_DIR$/src/test/java/UrlTest.java" />
     </list>
     <ignored path="Pokupo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,34 +34,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UrlTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/UrlTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="49" column="11" lean-forward="true" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Screenshots.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Screenshots.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="31" column="38" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="31" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CabinetCartTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/CabinetCartTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
+            <state relative-caret-position="-4020">
               <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -86,6 +52,18 @@
             <state relative-caret-position="102">
               <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="30" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UrlTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/UrlTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-160">
+              <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,8 +144,8 @@
         <option value="$PROJECT_DIR$/src/test/java/RegistrationSellerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/SelectFolder.java" />
         <option value="$PROJECT_DIR$/src/test/java/CabinetCartTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/UrlTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Screenshots.java" />
+        <option value="$PROJECT_DIR$/src/test/java/UrlTest.java" />
       </list>
     </option>
   </component>
@@ -770,13 +748,6 @@
       <option name="presentableId" value="Default" />
       <updated>1476160413751</updated>
     </task>
-    <task id="LOCAL-00086" summary="23.12.2016">
-      <created>1482479889171</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1482479889187</updated>
-    </task>
     <task id="LOCAL-00087" summary="23.12.2016">
       <created>1482480231515</created>
       <option name="number" value="00087" />
@@ -1113,7 +1084,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486633631085</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="09.02.2017">
+      <created>1486633745496</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1486633745496</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1642,9 +1620,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Screenshots.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="31" column="38" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="31" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CabinetCartTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
+        <state relative-caret-position="-4020">
           <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1654,18 +1640,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/UrlTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="49" column="11" lean-forward="true" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Screenshots.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="31" column="38" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="31" selection-end-column="38" />
+        <state relative-caret-position="-160">
+          <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

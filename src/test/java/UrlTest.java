@@ -25,15 +25,23 @@ public class UrlTest {
         Catalog objCatalog;
         Cart objCart;
         Oformit objOformit;
-        static Screenshots objScreenshots;
         static OS_Version objOS_Version;
+        static SelectFolder objSelectFolder;
 
         private static String URL=System.getProperty("url");
 
         @BeforeSuite
         public static void deleteAllFilesFolder() {
-            objScreenshots = new Screenshots(driver);
-            objScreenshots.clearScreenshotsFolder();
+            objOS_Version = new OS_Version();
+            objSelectFolder = new SelectFolder();
+            String s = objSelectFolder.folderName();
+            if (objOS_Version.isUnix()) {
+                File myPath = new File(s);
+                myPath.mkdir();
+                String path = s;
+                for (File myFile : new File(path).listFiles())
+                    if (myFile.isFile()) myFile.delete();
+            }
         }
 
         @BeforeMethod
@@ -42,7 +50,7 @@ public class UrlTest {
             objOS_Version.SetChromeProperty();
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-            driver.get("https://promodev.pokupo.ru/shop/1");
+            driver.get(URL);
             //driver.manage().window().maximize();
 
         }
@@ -58,8 +66,15 @@ public class UrlTest {
 
     @AfterMethod
     public void closebrowser(ITestResult testResult) throws IOException {
-        objScreenshots = new Screenshots(driver, testResult);
-        objScreenshots.ifFailTakeScreenshot();
+        objSelectFolder = new SelectFolder();
+        String s = objSelectFolder.folderName();
+        if (objOS_Version.isUnix()) {
+            if (testResult.getStatus() == ITestResult.FAILURE) {
+                File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+                String path = s + testResult.getName() + ".jpg";
+                FileUtils.copyFile(scrFile, new File(path));
+            }
+        }
         driver.quit();
     }
 }
