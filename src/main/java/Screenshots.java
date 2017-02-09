@@ -36,7 +36,7 @@ public class Screenshots {
         }
     }
 
-    public void ifFailTakeScreenshot(ITestResult testResult) throws IOException {
+    public void ifFailTakeScreenshot() throws IOException {
         objSelectFolder = new SelectFolder();
         String s = objSelectFolder.folderName();
 

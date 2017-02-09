@@ -59,7 +59,7 @@ public class UrlTest {
     @AfterMethod
     public void closebrowser(ITestResult testResult) throws IOException {
         objScreenshots = new Screenshots(testResult);
-        objScreenshots.ifFailTakeScreenshot(testResult);
+        objScreenshots.ifFailTakeScreenshot();
         driver.quit();
     }
 }
