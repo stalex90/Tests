@@ -20,6 +20,9 @@ public class SelectFolder {
                 indexes.add(i);
             }
         }
+        System.out.println(text);
+        System.out.println(list);
+        System.out.println(indexes);
 
         String s = text.substring(0,indexes.get(6));
 
