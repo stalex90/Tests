@@ -26,6 +26,7 @@ public class RegistrationTest {
     RegistrationPage3 objRegistrationPage3;
     RegistrationPage4 objRegistrationPage4;
     static OS_Version objOS_Version;
+    private static String URL=System.getProperty("url");
 
     @BeforeSuite
     public static void deleteAllFilesFolder() {
@@ -44,7 +45,7 @@ public class RegistrationTest {
         objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get("https://promodev.pokupo.ru/shop/1");
+        driver.get(URL);
         //driver.manage().window().maximize();
 
 

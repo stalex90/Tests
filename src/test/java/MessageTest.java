@@ -26,6 +26,7 @@ public class MessageTest {
     HomePage objHomePage;
     Profile objProfile;
     Messages objMessages;
+    private static String URL=System.getProperty("url");
 
 
     @BeforeSuite
@@ -44,7 +45,7 @@ public class MessageTest {
         objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.get("https://promodev.pokupo.ru/shop/1");
+        driver.get(URL);
     }
 
     @Test(description = "Создать новое сообщение одному из существующих  продавцов.")

@@ -16,6 +16,7 @@ public class LoginHeaderTest {
     LoginPage objLoginPage;
     LogoutPopup objLogoutPopup;
     static OS_Version objOS_Version;
+    private static String URL=System.getProperty("url");
 
     @BeforeMethod
     public static void openBrowser() {
@@ -23,7 +24,7 @@ public class LoginHeaderTest {
         objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get("https://promodev.pokupo.ru/shop/1");
+        driver.get(URL);
         //driver.manage().window().maximize();
 
     }

@@ -25,6 +25,7 @@ public class OrderTest {
     Oformit objOformit;
     CabinetCart objCabinetCart;
     static Waiters objWaiters;
+    private static String URL=System.getProperty("url");
 
 
 
@@ -45,7 +46,7 @@ public class OrderTest {
         objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("https://promodev.pokupo.ru/shop/1");
+        driver.get(URL);
         objWaiters = new Waiters(driver);
         //driver.manage().window().maximize();
     }

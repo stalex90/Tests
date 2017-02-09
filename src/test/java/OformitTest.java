@@ -26,6 +26,7 @@ public class OformitTest {
     static Catalog objCatalog;
     static Waiters objWaiters;
     static Order objOrder;
+    private static String URL=System.getProperty("url");
 
     @BeforeSuite
     public static void deleteAllFilesFolder() {
@@ -43,7 +44,7 @@ public class OformitTest {
         objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get("https://promodev.pokupo.ru/shop/1");
+        driver.get(URL);
         //driver.manage().window().maximize();
         objOformit = new Oformit(driver);
         objHomePage = new HomePage(driver);

@@ -24,6 +24,7 @@ public class RegistrationSellerTest {
     RegSeller2 objRegSeller2;
     CabinetSeller objCabinetSeller;
     static OS_Version objOS_Version;
+    private static String URL=System.getProperty("url");
 
     @BeforeSuite
     public static void deleteAllFilesFolder() {
@@ -42,7 +43,7 @@ public class RegistrationSellerTest {
         //System.setProperty("webdriver.chrome.driver","chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.get("https://dev.pokupo.ru/user/reg_seller/");
+        driver.get(URL);
         driver.manage().window().maximize();
     }
 
