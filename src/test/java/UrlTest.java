@@ -42,7 +42,7 @@ public class UrlTest {
             objOS_Version.SetChromeProperty();
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-            driver.get(URL);
+            driver.get("https://promodev.pokupo.ru/shop/1");
             //driver.manage().window().maximize();
 
         }
