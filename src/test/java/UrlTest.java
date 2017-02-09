@@ -38,7 +38,7 @@ public class UrlTest {
             if (objOS_Version.isUnix()) {
                 File myPath = new File(s);
                 myPath.mkdir();
-                String path = s + "screenshots/";
+                String path = s;
                 for (File myFile : new File(path).listFiles())
                     if (myFile.isFile()) myFile.delete();
             }

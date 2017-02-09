@@ -26,7 +26,7 @@ public class SelectFolder {
 */
 
 
-        return text;
+        return text + "/screenshots/";
     }
 
 
