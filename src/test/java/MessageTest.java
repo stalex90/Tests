@@ -27,13 +27,17 @@ public class MessageTest {
     Profile objProfile;
     Messages objMessages;
     private static String URL=System.getProperty("url");
-
+    static SelectFolder objSelectFolder;
 
     @BeforeSuite
     public static void deleteAllFilesFolder() {
         objOS_Version = new OS_Version();
+        objSelectFolder = new SelectFolder();
+        String s = objSelectFolder.folderName();
         if (objOS_Version.isUnix()) {
-            String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Сообщения)/screenshots/";
+            File myPath = new File(s);
+            myPath.mkdir();
+            String path = s;
             for (File myFile : new File(path).listFiles())
                 if (myFile.isFile()) myFile.delete();
         }
@@ -186,10 +190,12 @@ public class MessageTest {
 
     @AfterMethod
     public void closebrowser(ITestResult testResult) throws IOException {
+        objSelectFolder = new SelectFolder();
+        String s = objSelectFolder.folderName();
         if (objOS_Version.isUnix()) {
             if (testResult.getStatus() == ITestResult.FAILURE) {
                 File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-                String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Сообщения)/screenshots/" + testResult.getName() + ".jpg";
+                String path = s + testResult.getName() + ".jpg";
                 FileUtils.copyFile(scrFile, new File(path));
             }
         }

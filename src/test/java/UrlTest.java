@@ -26,9 +26,9 @@ public class UrlTest {
         Cart objCart;
         Oformit objOformit;
         static OS_Version objOS_Version;
-        static SelectFolder objSelectFolder;
 
-        private static String URL=System.getProperty("url");
+                private static String URL=System.getProperty("url");
+        static SelectFolder objSelectFolder;
 
         @BeforeSuite
         public static void deleteAllFilesFolder() {

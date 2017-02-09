@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -25,16 +26,20 @@ public class FavoritesTest {
     static Catalog objCatalog;
     static Oformit objOformit;
     private static String URL=System.getProperty("url");
+    static SelectFolder objSelectFolder;
 
-
-    @BeforeMethod
-    public static void openBrowser() {
+    @BeforeSuite
+    public static void deleteAllFilesFolder() {
         objOS_Version = new OS_Version();
-        objOS_Version.SetChromeProperty();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get(URL);
-        //driver.manage().window().maximize();
+        objSelectFolder = new SelectFolder();
+        String s = objSelectFolder.folderName();
+        if (objOS_Version.isUnix()) {
+            File myPath = new File(s);
+            myPath.mkdir();
+            String path = s;
+            for (File myFile : new File(path).listFiles())
+                if (myFile.isFile()) myFile.delete();
+        }
     }
 
     @Test(description = "Проверка добавление в избранное и появление в списке избранного")
@@ -159,10 +164,12 @@ public class FavoritesTest {
 
     @AfterMethod
     public void closebrowser(ITestResult testResult) throws IOException {
+        objSelectFolder = new SelectFolder();
+        String s = objSelectFolder.folderName();
         if (objOS_Version.isUnix()) {
             if (testResult.getStatus() == ITestResult.FAILURE) {
                 File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-                String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Избранное)/screenshots/" + testResult.getName() + ".jpg";
+                String path = s + testResult.getName() + ".jpg";
                 FileUtils.copyFile(scrFile, new File(path));
             }
         }

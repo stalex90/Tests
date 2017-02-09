@@ -31,12 +31,17 @@ public class CabinetCartTest {
     CabinetCart objCabinetcart;
     static OS_Version objOS_Version;
     private static String URL=System.getProperty("url");
+    static SelectFolder objSelectFolder;
 
-   @BeforeSuite
+    @BeforeSuite
     public static void deleteAllFilesFolder() {
         objOS_Version = new OS_Version();
+        objSelectFolder = new SelectFolder();
+        String s = objSelectFolder.folderName();
         if (objOS_Version.isUnix()) {
-            String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Корзина)/screenshots/";
+            File myPath = new File(s);
+            myPath.mkdir();
+            String path = s;
             for (File myFile : new File(path).listFiles())
                 if (myFile.isFile()) myFile.delete();
         }
@@ -307,10 +312,12 @@ public class CabinetCartTest {
 
     @AfterMethod
     public void closebrowser(ITestResult testResult) throws IOException {
+        objSelectFolder = new SelectFolder();
+        String s = objSelectFolder.folderName();
         if (objOS_Version.isUnix()) {
             if (testResult.getStatus() == ITestResult.FAILURE) {
                 File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-                String path = "/var/lib/jenkins/workspace/Тест личный кабинет (Корзина)/screenshots/" + testResult.getName() + ".jpg";
+                String path = s + testResult.getName() + ".jpg";
                 FileUtils.copyFile(scrFile, new File(path));
             }
         }

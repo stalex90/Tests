@@ -1,8 +1,14 @@
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -16,17 +22,20 @@ public class LogoutHeaderTest {
     RegistrationPage1 objRegistrationPage1;
     static OS_Version objOS_Version;
     private static String URL=System.getProperty("url");
+    static SelectFolder objSelectFolder;
 
-    @BeforeMethod
-    public static void openBrowser(){
+    @BeforeSuite
+    public static void deleteAllFilesFolder() {
         objOS_Version = new OS_Version();
-        objOS_Version.SetChromeProperty();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get(URL);
-        //driver.manage().window().maximize();
-
-
+        objSelectFolder = new SelectFolder();
+        String s = objSelectFolder.folderName();
+        if (objOS_Version.isUnix()) {
+            File myPath = new File(s);
+            myPath.mkdir();
+            String path = s;
+            for (File myFile : new File(path).listFiles())
+                if (myFile.isFile()) myFile.delete();
+        }
     }
 
     @Test (description = "Проверка перехода на домашнюю страницу по логотипу")
@@ -67,8 +76,16 @@ public class LogoutHeaderTest {
 
 
     @AfterMethod
-    public static void closeBrowser() throws InterruptedException {
-        Thread.sleep(3000);
+    public void closebrowser(ITestResult testResult) throws IOException {
+        objSelectFolder = new SelectFolder();
+        String s = objSelectFolder.folderName();
+        if (objOS_Version.isUnix()) {
+            if (testResult.getStatus() == ITestResult.FAILURE) {
+                File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+                String path = s + testResult.getName() + ".jpg";
+                FileUtils.copyFile(scrFile, new File(path));
+            }
+        }
         driver.quit();
     }
 
