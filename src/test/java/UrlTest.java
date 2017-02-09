@@ -37,7 +37,7 @@ public class UrlTest {
             String s = objSelectFolder.folderName();
             if (objOS_Version.isUnix()) {
 
-                String path = s + "тестюрл/screenshots/";
+                String path = s + "screenshots/";
                 for (File myFile : new File(path).listFiles())
                     if (myFile.isFile()) myFile.delete();
             }
@@ -70,7 +70,7 @@ public class UrlTest {
         if (objOS_Version.isUnix()) {
             if (testResult.getStatus() == ITestResult.FAILURE) {
                 File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-                String path = s + "тестюрл/screenshots/" + testResult.getName() + ".jpg";
+                String path = s + "screenshots/" + testResult.getName() + ".jpg";
                 FileUtils.copyFile(scrFile, new File(path));
             }
         }
