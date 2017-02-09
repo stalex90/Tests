@@ -13,8 +13,15 @@ public class Screenshots {
     OS_Version objOS_Version;
     SelectFolder objSelectFolder;
     WebDriver driver;
+    ITestResult testResult;
     public Screenshots(WebDriver driver) {
-        this.driver = driver;}
+        this.driver = driver;
+
+    }
+
+    public Screenshots(ITestResult testResult) {
+        this.testResult = testResult;
+    }
 
     public void clearScreenshotsFolder() {
         objOS_Version = new OS_Version();
@@ -32,6 +39,7 @@ public class Screenshots {
     public void ifFailTakeScreenshot(ITestResult testResult) throws IOException {
         objSelectFolder = new SelectFolder();
         String s = objSelectFolder.folderName();
+
         if (objOS_Version.isUnix()) {
             if (testResult.getStatus() == ITestResult.FAILURE) {
                 File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
