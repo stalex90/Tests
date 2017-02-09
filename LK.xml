@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+  <test name="Pokupo">
+    <classes>
+
+      <class name="OrderTest"/>
+      <class name="FavoritesTest"/>
+      <class name="CabinetCartTest"/>
+      <class name="ProfileTest"/>
+      <class name="MessageTest"/>
+
+    </classes>
+  </test> <!-- Pokupo -->
+</suite> <!-- Default Suite -->
