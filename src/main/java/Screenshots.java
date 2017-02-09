@@ -19,8 +19,9 @@ public class Screenshots {
 
     }
 
-    public Screenshots(ITestResult testResult) {
+    public Screenshots(WebDriver driver, ITestResult testResult) {
         this.testResult = testResult;
+        this.driver = driver;
     }
 
     public void clearScreenshotsFolder() {
