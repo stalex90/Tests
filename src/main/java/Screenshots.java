@@ -29,8 +29,7 @@ public class Screenshots {
         }
     }
 
-    public void ifFailTakeScreenshot() throws IOException {
-        ITestResult testResult = null;
+    public void ifFailTakeScreenshot(ITestResult testResult) throws IOException {
         objSelectFolder = new SelectFolder();
         String s = objSelectFolder.folderName();
         if (objOS_Version.isUnix()) {
