@@ -11,23 +11,6 @@ public class SelectFolder {
 
     public String folderName(){
         String text = System.getProperty("user.dir");
-        char[] list = text.toCharArray();
-        ArrayList<Integer> indexes = new ArrayList<>();
-
-        for (int i = 0; i<list.length;i++){
-            String x = list[i] + "";
-            if (x.equals("/")){
-                indexes.add(i);
-            }
-        }
-        System.out.println(text);
-        System.out.println(list);
-        System.out.println(indexes);
-
-        String s = text.substring(0,indexes.get(6));
-
-
-
 /*
         if (text.contains("DEV - promodev.pokupo.ru")){
             s = "/var/lib/jenkins/workspace/DEV - promodev.pokupo.ru/";
@@ -43,7 +26,7 @@ public class SelectFolder {
 */
 
 
-        return s;
+        return text;
     }
 
 
