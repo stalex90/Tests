@@ -42,6 +42,17 @@ public class ProfileTest {
         }
     }
 
+    @BeforeMethod
+    public static void openBrowser() {
+        objOS_Version = new OS_Version();
+        objOS_Version.SetChromeProperty();
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.get(URL);
+        //driver.manage().window().maximize();
+
+    }
+
     @Test(description = "Проверка автоматического заполнения фио")
     public void CheckInputFullname() throws InterruptedException {
         objHomePage = new HomePage(driver);
