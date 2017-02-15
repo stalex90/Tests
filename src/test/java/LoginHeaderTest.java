@@ -61,7 +61,7 @@ public class LoginHeaderTest {
 
     @Test (description = "Проверка перехода на домашнюю страницу по логотипу")
     public void ReturnLogo() throws InterruptedException {
-
+        objWaiteres = new Waiters(driver);
         objHomePage = new HomePage(driver);
         objLoginPage = objHomePage.ClickLoginBtn();
         objLoginPage.CompleteLogin();
@@ -141,7 +141,7 @@ public class LoginHeaderTest {
         if (objOS_Version.isUnix()) {
             if (testResult.getStatus() == ITestResult.FAILURE) {
                 File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-                String path = s + testResult.getName() + ".jpg";
+                String path = s + testResult.getClass() + testResult.getName() + ".jpg";
                 FileUtils.copyFile(scrFile, new File(path));
             }
         }
