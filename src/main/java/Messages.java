@@ -17,6 +17,7 @@ public class Messages {
         this.driver = driver;
     }
 
+    By Titel = By.xpath("//span[text()='Сообщения']");
     By NewMsg = By.xpath("//button[contains(@class,'btn_add_message')]");
     By ClosIcn = By.xpath("//div[@id='modal-message']/div/div/div/span[contains(@class,'close-modal')]");
     By CancelBtn = By.xpath("//button[text()='Отмена']");

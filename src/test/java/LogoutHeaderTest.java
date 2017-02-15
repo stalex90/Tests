@@ -23,6 +23,7 @@ public class LogoutHeaderTest {
     static OS_Version objOS_Version;
     private static String URL=System.getProperty("url");
     static SelectFolder objSelectFolder;
+    Waiters objWaiteres;
 
     @BeforeSuite
     public static void deleteAllFilesFolder() {
@@ -44,26 +45,32 @@ public class LogoutHeaderTest {
         objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get(URL);
+        if (objOS_Version.isUnix()) {
+            driver.get(URL);}
+        if (objOS_Version.isWindows()){
+            driver.get("http://pokupotest.pokupo.ru/shop/1");
+        }
         //driver.manage().window().maximize();
 
     }
 
     @Test (description = "Проверка перехода на домашнюю страницу по логотипу")
-    public void ReturnLogo() {
-
+    public void ReturnLogo() throws InterruptedException {
+        objWaiteres = new Waiters(driver);
         objHomePage = new HomePage(driver);
         objHomePage.LogoImage_RetunToHomepage();
-        Assert.assertEquals(objHomePage.getURL(),"https://promodev.pokupo.ru/shop/1");
+        Thread.sleep(2000);
+        Assert.assertTrue(objWaiteres.isElementPresentWaiters(objHomePage.LogoImage));
 
     }
 
     @Test (description = "Проверка перехода на домашнюю страницу по названию магазина")
-    public void ReturnText()  {
-
+    public void ReturnText() throws InterruptedException  {
+        objWaiteres = new Waiters(driver);
         objHomePage = new HomePage(driver);
         objHomePage.LogoText_RetunToHomepage();
-        Assert.assertEquals(objHomePage.getURL(),"https://promodev.pokupo.ru/shop/1");
+        Thread.sleep(2000);
+        Assert.assertTrue(objWaiteres.isElementPresentWaiters(objHomePage.LogoImage));
 
     }
 

@@ -25,6 +25,10 @@ public class LoginHeaderTest {
     static OS_Version objOS_Version;
     private static String URL=System.getProperty("url");
     static SelectFolder objSelectFolder;
+    Waiters objWaiteres;
+    Profile objProfile;
+    Order objOrder;
+    Messages objMessages;
 
     @BeforeSuite
     public static void deleteAllFilesFolder() {
@@ -46,7 +50,11 @@ public class LoginHeaderTest {
         objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get(URL);
+        if (objOS_Version.isUnix()) {
+        driver.get(URL);}
+        if (objOS_Version.isWindows()){
+        driver.get("http://pokupotest.pokupo.ru/shop/1");
+        }
         //driver.manage().window().maximize();
 
     }
@@ -58,54 +66,59 @@ public class LoginHeaderTest {
         objLoginPage = objHomePage.ClickLoginBtn();
         objLoginPage.CompleteLogin();
         objHomePage.LogoImage_RetunToHomepage();
-        Assert.assertEquals(objHomePage.getURL(),"https://promodev.pokupo.ru/shop/1");
+        Thread.sleep(2000);
+        Assert.assertTrue(objWaiteres.isElementPresentWaiters(objHomePage.LogoImage));
 
     }
 
     @Test (description = "Проверка перехода на домашнюю страницу по названию магазина")
-    public void ReturnText()  {
-
+    public void ReturnText()  throws InterruptedException {
+        objWaiteres = new Waiters(driver);
         objHomePage = new HomePage(driver);
         objLoginPage = objHomePage.ClickLoginBtn();
         objLoginPage.CompleteLogin();
         objHomePage.LogoText_RetunToHomepage();
-        Assert.assertEquals(objHomePage.getURL(),"https://promodev.pokupo.ru/shop/1");
+        Thread.sleep(2000);
+        Assert.assertTrue(objWaiteres.isElementPresentWaiters(objHomePage.LogoImage));
 
     }
 
     @Test (description = "Проверка открытия страницы профиль")
     public void CheckProfileOpens()  {
-
+        objWaiteres = new Waiters(driver);
         objHomePage = new HomePage(driver);
+        objProfile = new Profile(driver);
         objLoginPage = objHomePage.ClickLoginBtn();
         objLoginPage.CompleteLogin();
         objHomePage.ClickProfileIcon();
         objHomePage.ClickProfileBtn();
-        Assert.assertEquals(objHomePage.getURL(),"https://promodev.pokupo.ru/shop/1#/profile/");
+        Assert.assertTrue(objWaiteres.isElementPresentWaiters(objProfile.FirstName));
 
     }
 
     @Test (description = "Проверка открытия страницы заказы")
     public void CheckOrderOpens()  {
-
+        objWaiteres = new Waiters(driver);
+        objOrder = new Order(driver);
         objHomePage = new HomePage(driver);
         objLoginPage = objHomePage.ClickLoginBtn();
         objLoginPage.CompleteLogin();
         objHomePage.ClickProfileIcon();
         objHomePage.ClickOrderBtn();
-        Assert.assertEquals(objHomePage.getURL(),"https://promodev.pokupo.ru/shop/1#/purchases/block=list");
+        Assert.assertTrue(objWaiteres.isElementPresentWaiters(objOrder.HeaderTitel));
 
     }
 
     @Test (description = "Проверка открытия страницы сообщения")
     public void CheckMessageOpens()  {
-
+        objWaiteres = new Waiters(driver);
+        objMessages = new Messages(driver);
         objHomePage = new HomePage(driver);
         objLoginPage = objHomePage.ClickLoginBtn();
         objLoginPage.CompleteLogin();
         objHomePage.ClickProfileIcon();
         objHomePage.ClickMessageBtn();
-        Assert.assertEquals(objHomePage.getURL(),"https://promodev.pokupo.ru/shop/1#/messages/");
+        Assert.assertTrue(objWaiteres.isElementPresentWaiters(objMessages.Titel));
 
     }
 
