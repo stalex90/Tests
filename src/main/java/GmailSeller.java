@@ -33,11 +33,13 @@ public class GmailSeller {
             int a=0;
             int b=0;
             for (int i=0;i<CodeS.length;i++){
-                if (CodeS[i].equals("и") && CodeS[i+1].equals(":")){
-                    a = i+4;
+                if (CodeS[i].equals("К") && CodeS[i+1].equals("о") && CodeS[i+2].equals("д") && CodeS[i+3].equals("а")){
+                    a = i+13;
+
                 }
-                if ((CodeS[i].equals("П") && CodeS[i+1].equals("о") && CodeS[i+2].equals("с")) || (CodeS[i].equals("С") && CodeS[i+1].equals("н") && CodeS[i+2].equals("а"))) {
+                if ((CodeS[i].equals("В") && CodeS[i+1].equals("а") && CodeS[i+2].equals("ш") && CodeS[i+3].equals("л")) ) {
                     b = i-2;
+
                 }
             }
             Code = Code.substring(a,b);

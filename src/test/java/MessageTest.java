@@ -28,6 +28,7 @@ public class MessageTest {
     Messages objMessages;
     private static String URL=System.getProperty("url");
     static SelectFolder objSelectFolder;
+    static Waiters objWaiters;
 
     @BeforeSuite
     public static void deleteAllFilesFolder() {
@@ -49,7 +50,13 @@ public class MessageTest {
         objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.get(URL);
+        if (objOS_Version.isUnix()) {
+            driver.get(URL);}
+        if (objOS_Version.isWindows()){
+            driver.get("http://pokupotest.pokupo.ru/shop/1");
+        }
+        objWaiters = new Waiters(driver);
+
     }
 
     @Test(description = "Создать новое сообщение одному из существующих  продавцов.")
@@ -83,7 +90,7 @@ public class MessageTest {
         objMessages.ClickSelectAll();
         objMessages.ClickDeleteSelected();
         objMessages.ClickYes();
-        Assert.assertTrue(driver.findElement(objMessages.NoMsgs).isDisplayed());
+        Assert.assertTrue(objWaiters.isElementPresentWaiters(objMessages.NoMsgs));
     }
 
     @Test(description = "Удалить сообщение с помощью иконки корзина")

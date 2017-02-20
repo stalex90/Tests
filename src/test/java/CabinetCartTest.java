@@ -53,7 +53,11 @@ public class CabinetCartTest {
         objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get(URL);
+        if (objOS_Version.isUnix()) {
+            driver.get(URL);}
+        if (objOS_Version.isWindows()){
+            driver.get("http://pokupotest.pokupo.ru/shop/1");
+        }
         //driver.manage().window().maximize();
 
     }
