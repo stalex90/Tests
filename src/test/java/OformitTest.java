@@ -49,7 +49,11 @@ public class OformitTest {
         objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get(URL);
+        if (objOS_Version.isUnix()) {
+            driver.get(URL);}
+        if (objOS_Version.isWindows()){
+            driver.get("http://promodev56.pokupo.ru/shop/1");
+        }
         //driver.manage().window().maximize();
         objOformit = new Oformit(driver);
         objHomePage = new HomePage(driver);
@@ -58,12 +62,12 @@ public class OformitTest {
         objOrder = new Order(driver);
         objHomePage.ClickLoginBtn().CompleteLogin();
         objHomePage.DeleteAllCartMethod();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        objOrder.DeleteAllOrderMethod();
+        /*driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        objOrder.DeleteAllOrderMethod();*/
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        objHomePage.LogoText_RetunToHomepage();
+        //objHomePage.LogoText_RetunToHomepage();
         objCatalog.SelectCategory(objCatalog.NeedCategory);
-        objCatalog.AddItem(1);
+        objCatalog.AddItem(3);
         objHomePage.ClickCartIcon();
         objHomePage.ClickOformit();
     }
@@ -71,6 +75,7 @@ public class OformitTest {
     @Test(description = "Оформить заказ")
     public void CheckCompleteOrder()  {
         objOformit.clickaddressCheckboxes(0);
+
         objOformit.clickContinueBtnInvis();
         objOformit.clickShipCheckboxes(0);
         objOformit.clickContinueBtnInvis();
@@ -80,12 +85,12 @@ public class OformitTest {
         Assert.assertEquals(objOformit.GetSuccessMsg(),objOformit.succesMsg);
     }
 
-    @Test(description = "Добавить новый адрес")
+    /*@Test(description = "Добавить новый адрес")
     public void CheckAddAddress() {
         objOformit.clickAddAddress();
         objOformit.inputAllAddress();
         Assert.assertEquals(objOformit.GetSuccessMsg(),objOformit.succesAdrMsg);
-    }
+    }*/
 
     @Test(description = "Вернуться назад")
     public void CheckBack(){

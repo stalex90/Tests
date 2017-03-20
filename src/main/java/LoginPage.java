@@ -27,6 +27,8 @@ public class LoginPage {
     By CloseBtn = By.xpath(".//span[contains(@class,'close-popup')]");
     By WarningMsg = By.xpath(".//p[text()='Ошибка в логине или пароле']");
 
+
+
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }

@@ -20,7 +20,7 @@ public class RegSeller1 {
     String PhoneKey = "7" + a;
 
     String EmptyEmailMsg = "Это поле обязательно для заполнения";
-    String IncorrectEmailMsg = "Введите корректный email";
+    String IncorrectEmailMsg = "Введите корректный emailORphone";
     String ShortNameMsg = "Hазвание магазина не может быть менее 4 символов";
     String IncorrectNameMsg = "Логин/название магазина содержит недопустимые символы. Название магазина может содержать русские и латинские символы, цифры, подчеркивания, дефисы, точки и пробелы. Первым символом должна быть буква";
     String IncorrectDomainMsg ="Субдомен может содержать только латинские символы, цифры, дефис и подчеркивание. Первым и последним символами должны быть латинские символы.";
@@ -35,10 +35,10 @@ public class RegSeller1 {
 
     By Chastnoe = By.xpath(".//span[contains(@class,'person')]"); //Частное лицо
     By Company = By.xpath(".//span[contains(@class,'company')]");   // Компания
-    By Email = By.xpath(".//input[@name='email']"); //Поле емаил
+    By Email = By.xpath(".//input[@name='emailORphone']"); //Поле емаил
     By Checkbox = By.xpath(".//*[@id='agreement']/div/label"); // Чекбокс согласия
     By Additional = By.xpath(".//*[@id='registerShopWizard']/div[3]/span"); // Линк дополнительная информация
-    By Submit = By.xpath(".//button[contains(@class,'GetCode')]"); // Кнопка получить код на email
+    By Submit = By.xpath(".//button[contains(@class,'GetCode')]"); // Кнопка получить код на emailORphone
 
     By NameShop = By.xpath(".//input[@name='sellername']"); // Поле название магазина
     By Domain = By.xpath(".//input[@name='subdomain']"); // Поле желаемы поддомен
@@ -46,7 +46,7 @@ public class RegSeller1 {
     By Phone = By.xpath(".//input[@name='phone']"); // Поле номер телефона
     By Invite = By.xpath(".//input[@name='invite']"); // Поле код приглашения
 
-    By EmailError = By.xpath(".//div[contains(@class,'emailError')]"); //Сообщение об ошибке email
+    By EmailError = By.xpath(".//div[contains(@class,'emailError')]"); //Сообщение об ошибке emailORphone
     By NameError = By.xpath(".//div[contains(@class,'sellernameError')]");//Сообщение об ошибке название магазина
     By DomainError = By.xpath(".//div[contains(@class,'subdomainError')]");//Сообщение об ошибке домена
     By SiteError = By.xpath(".//div[contains(@class,'siteError')]");//Сообщение об ошибке адрес сайта

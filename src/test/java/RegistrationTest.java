@@ -3,6 +3,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -20,14 +22,13 @@ import java.util.concurrent.TimeUnit;
 public class RegistrationTest {
 
     static WebDriver driver;
-    HomePage objHomePage;
-    RegistrationPage1 objRegistrationPage1;
-    RegistrationPage2 objRegistrationPage2;
-    RegistrationPage3 objRegistrationPage3;
-    RegistrationPage4 objRegistrationPage4;
+    static HomePage objHomePage;
     static OS_Version objOS_Version;
     private static String URL=System.getProperty("url");
     static SelectFolder objSelectFolder;
+    static RegistrationPopup objReg;
+    static Waiters objWait;
+    static LoginPage objLogin;
 
     @BeforeSuite
     public static void deleteAllFilesFolder() {
@@ -53,16 +54,89 @@ public class RegistrationTest {
         if (objOS_Version.isUnix()) {
             driver.get(URL);}
         if (objOS_Version.isWindows()){
-            driver.get("http://promodev.pokupo.ru/shop/1");
+            driver.get("http://promodev56.pokupo.ru/shop/1");
         }
         //driver.manage().window().maximize();
+        objHomePage = new HomePage(driver);
+        objReg = new RegistrationPopup(driver);
+        objWait = new Waiters(driver);
+
 
 
     }
 
+    @Test (description = "Проверка регистрации с email главную страницу")
+    public void Registration() throws InterruptedException {
+        objHomePage.ClickRegBtn();
+        objReg.inputEmailPhone(objReg.emailN);
+        objReg.clickSubmit();
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.invisibilityOfElementLocated(objReg.submit));
+        objReg.inputEmailCode();
+        objReg.clickCodeSubmit();
+        Assert.assertTrue(objWait.isElementPresentWaiters(objHomePage.ProfileIcon));
+    }
+
+    @Test (description = "Проверка регистрации с email через окно логина")
+    public void RegistrationAtLogin() throws InterruptedException {
+        objHomePage.ClickLoginBtn().ClickRegBtn();
+        objReg.inputEmailPhone(objReg.emailN);
+        objReg.clickSubmit();
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.invisibilityOfElementLocated(objReg.submit));
+        objReg.inputEmailCode();
+        objReg.clickCodeSubmit();
+        Assert.assertTrue(objWait.isElementPresentWaiters(objHomePage.ProfileIcon));
+    }
+
+    @Test (description = "Проверка регистрации с phone")
+    public void RegistrationWithPhone() throws InterruptedException {
+        objHomePage.ClickRegBtn();
+        objReg.inputEmailPhone(objReg.phoneN);
+        objReg.clickSubmit();
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.invisibilityOfElementLocated(objReg.submit));
+        objReg.inputPhoneCode();
+        objReg.clickCodeSubmit();
+        Assert.assertTrue(objWait.isElementPresentWaiters(objHomePage.ProfileIcon));
+    }
+
+    @Test (description = "Проверка ошибок поля емаил")
+    public void CheckErrorsEmail() throws InterruptedException {
+        objHomePage.ClickRegBtn();
+        objReg.inputEmailPhone("    ");
+        objReg.clickSubmit();
+        Assert.assertEquals(objReg.GetError(),objReg.emptyMsg);
+        objReg.clearField(objReg.emailORphone);
+        objReg.inputEmailPhone("asdfghjkl");
+        objReg.clickSubmit();
+        Assert.assertEquals(objReg.GetError(),objReg.wrongPhoneEmailMsg);
+      }
+
+    @Test (description = "Проверка ошибок поля код")
+    public void  CheckErrorsCode() throws InterruptedException {
+        objHomePage.ClickRegBtn();
+        objReg.inputEmailPhone(objReg.emailN);
+        objReg.clickSubmit();
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.invisibilityOfElementLocated(objReg.submit));
+        objReg.inputEmptyCode();
+        objReg.clickCodeSubmit();
+        Assert.assertEquals(objReg.GetError(),objReg.emptyMsg);
+        objReg.clearField(objReg.code);
+        objReg.inputWrongCode();
+        objReg.clickCodeSubmit();
+        Assert.assertEquals(objReg.GetError(),objReg.wrongCodeMsg);
+    }
 
 
-    @Test (description = "Проверка регистрации с вводом всех данных")
+
+
+
+
+
+
+
+
+
+
+   /* @Test (description = "Проверка регистрации с вводом всех данных")
     public void FullRegistration() throws InterruptedException {
         objHomePage = new HomePage(driver);
         objRegistrationPage1 = objHomePage.ClickRegBtn();
@@ -108,7 +182,7 @@ public class RegistrationTest {
         Assert.assertEquals(objRegistrationPage1.GetLoginWarning() ,"Минимум 3 символа");
     }
 
-    @Test (description = "Проверка появления ошибки при некорректном email")
+    @Test (description = "Проверка появления ошибки при некорректном emailORphone")
     public void InvalidEmailWarningsStep1() {
         objHomePage = new HomePage(driver);
         objRegistrationPage1 = objHomePage.ClickRegBtn();
@@ -353,6 +427,7 @@ public class RegistrationTest {
         objRegistrationPage4.ClickContinueBtn();
         Assert.assertEquals(objRegistrationPage4.GetIndexWarning(), "Только цифры");
     }
+    */
 
 
 

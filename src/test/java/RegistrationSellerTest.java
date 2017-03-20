@@ -22,7 +22,7 @@ public class RegistrationSellerTest {
     static WebDriver driver;
     RegSeller1 objRegSeller1;
     RegSeller2 objRegSeller2;
-    CabinetSeller objCabinetSeller;
+    CabinetSellerProfile objCabinetSeller;
     static OS_Version objOS_Version;
     private static String URL=System.getProperty("url");
     static SelectFolder objSelectFolder;
@@ -48,15 +48,19 @@ public class RegistrationSellerTest {
         //System.setProperty("webdriver.chrome.driver","chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.get(URL);
-        driver.manage().window().maximize();
+        if (objOS_Version.isUnix()) {
+            driver.get(URL);}
+        if (objOS_Version.isWindows()){
+            driver.get("https://dev.pokupo.ru/user/reg_seller/");
+        }
+        //driver.manage().window().maximize();
     }
 
     @Test(description = "Полная регистрация частного лица")
     public void ChastnoeFullRegistration() throws InterruptedException {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller2 = new RegSeller2(driver);
-        objCabinetSeller = new CabinetSeller(driver);
+        objCabinetSeller = new CabinetSellerProfile(driver);
         objRegSeller1.ChastnoeCompleteRegSeller1();
         objRegSeller2.EmailCompleteRegSeller2();
         Assert.assertTrue(driver.findElement(objCabinetSeller.LogoutBtn).isDisplayed());
@@ -66,7 +70,7 @@ public class RegistrationSellerTest {
     public void CompanyFullRegistration() throws InterruptedException {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller2 = new RegSeller2(driver);
-        objCabinetSeller = new CabinetSeller(driver);
+        objCabinetSeller = new CabinetSellerProfile(driver);
         objRegSeller1.CompanyCompleteRegSeller1();
         objRegSeller2.EmailCompleteRegSeller2();
         Assert.assertTrue(driver.findElement(objCabinetSeller.LogoutBtn).isDisplayed());
@@ -76,7 +80,7 @@ public class RegistrationSellerTest {
     public void ChastnoeShortRegistration() throws InterruptedException {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller2 = new RegSeller2(driver);
-        objCabinetSeller = new CabinetSeller(driver);
+        objCabinetSeller = new CabinetSellerProfile(driver);
         objRegSeller1.InputEmail();
         objRegSeller1.ClickCheckbox();
         objRegSeller1.ClickSubmit();
@@ -89,7 +93,7 @@ public class RegistrationSellerTest {
     public void CompanyShortRegistration() throws InterruptedException {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller2 = new RegSeller2(driver);
-        objCabinetSeller = new CabinetSeller(driver);
+        objCabinetSeller = new CabinetSellerProfile(driver);
         objRegSeller1.ClickCompany();
         objRegSeller1.InputEmail();
         objRegSeller1.ClickCheckbox();
@@ -103,7 +107,7 @@ public class RegistrationSellerTest {
     public void ChastnoeFullRegistrationWithoutPhone() throws InterruptedException {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller2 = new RegSeller2(driver);
-        objCabinetSeller = new CabinetSeller(driver);
+        objCabinetSeller = new CabinetSellerProfile(driver);
         objRegSeller1.ChastnoeCompleteRegSellerWithoutPhone1();
         objRegSeller2.InputEmailCode();
         objRegSeller2.ClickSubmit();
@@ -114,7 +118,7 @@ public class RegistrationSellerTest {
     public void CompanyFullRegistrationWithoutPhone() throws InterruptedException {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller2 = new RegSeller2(driver);
-        objCabinetSeller = new CabinetSeller(driver);
+        objCabinetSeller = new CabinetSellerProfile(driver);
         objRegSeller1.CompanyCompleteRegSellerWithoutPhone1();
         objRegSeller2.InputEmailCode();
         objRegSeller2.ClickSubmit();
@@ -139,7 +143,7 @@ public class RegistrationSellerTest {
         Assert.assertTrue(driver.findElement(objRegSeller1.Email).isDisplayed());
     }
 
-    @Test(description = "Ошибка пустого email")
+    @Test(description = "Ошибка пустого emailORphone")
     public void EmptyEmail()  {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller1.ClickCheckbox();
@@ -147,7 +151,7 @@ public class RegistrationSellerTest {
         Assert.assertEquals(objRegSeller1.GetEmailError(),objRegSeller1.EmptyEmailMsg);
     }
 
-    @Test(description = "Ошибка некорректного email")
+    @Test(description = "Ошибка некорректного emailORphone")
     public void IncorrectEmail()  {
         objRegSeller1 = new RegSeller1(driver);
         objRegSeller1.InputIncorrectEmail();

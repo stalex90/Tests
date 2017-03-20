@@ -25,7 +25,7 @@ public class RegistrationPage1 {
 
     By RegistrationHeader = By.xpath(".//h1[text()='Регистрация пользователя']");
     By Login = By.xpath(".//input[@name ='nickname']");
-    By Email = By.xpath(".//input[@name='email']");
+    By Email = By.xpath(".//input[@name='emailORphone']");
     By Phone = By.id("phone");
     By FirstPassword = By.id("firstPassword");
     By SecondPassword = By.id("secondPassword");

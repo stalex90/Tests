@@ -63,7 +63,7 @@ public class Payment {
     By PayinoutCheck = By.xpath("//input[@value='Оплатить']");
 
     By ErrorSumma = By.xpath(".//span[contains(@data-bind,'error.amount')]");
-    By ErrorEmail = By.xpath(".//span[contains(@data-bind,'error.email')]");
+    By ErrorEmail = By.xpath(".//span[contains(@data-bind,'error.emailORphone')]");
     By ErrorWallet = By.xpath("//span[@class='TextError']");
 
 

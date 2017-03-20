@@ -23,10 +23,12 @@ public class LoginModuleTest {
     static WebDriver driver;
     HomePage objHomePage;
     LoginPage objLoginPage;
-    RegistrationPage1 objRegistrationPage1;
+    RegistrationPopup objReg;
     static OS_Version objOS_Version;
     private static String URL=System.getProperty("url");
     static SelectFolder objSelectFolder;
+    static Waiters objWait;
+
 
     @BeforeSuite
     public static void deleteAllFilesFolder() {
@@ -48,8 +50,13 @@ public class LoginModuleTest {
         objOS_Version.SetChromeProperty();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get(URL);
+        if (objOS_Version.isUnix()) {
+            driver.get(URL);}
+        if (objOS_Version.isWindows()){
+            driver.get("http://promodev56.pokupo.ru/shop/1");
+        }
         //driver.manage().window().maximize();
+        objWait = new Waiters(driver);
 
     }
 
@@ -93,9 +100,10 @@ public class LoginModuleTest {
     public void RegistrationButton()  {
 
         objHomePage = new HomePage(driver);
+        objReg = new RegistrationPopup(driver);
         objLoginPage = objHomePage.ClickLoginBtn();
-        objRegistrationPage1 = objLoginPage.ClickRegBtn();
-        Assert.assertEquals(objRegistrationPage1.GetNameWidget(),"Регистрация пользователя");
+        objLoginPage.ClickRegBtn();
+        Assert.assertTrue(objWait.isElementPresentWaiters(objReg.emailORphone));
 
     }
 
