@@ -34,57 +34,6 @@ public class CriticalPageTest {
         objGetResponseCode.CheckResponseCode("https://pokupo.ru/blog");
     }
 
-    @Test(description = "Проверка страницы pokupo.ru")
-    public void ProverkaPokupoRu_content() {
-        objOS_Version = new OS_Version();
-        objOS_Version.SetChromeProperty();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get("https://pokupo.ru/");
-        objPokupoHome = new PokupoHome(driver);
-        objWaiters = new Waiters(driver);
-
-        try {
-            Assert.assertTrue(objWaiters.isElementPresentWaiters(objPokupoHome.logo));
-            Assert.assertTrue(objWaiters.isElementPresentWaiters(objPokupoHome.headerBlock));
-            Assert.assertTrue(objWaiters.isElementPresentWaiters(objPokupoHome.videoBlock));
-            Assert.assertTrue(objWaiters.isElementPresentWaiters(objPokupoHome.createBlock));
-            Assert.assertTrue(objWaiters.isElementPresentWaiters(objPokupoHome.casesBlock));
-            Assert.assertTrue(objWaiters.isElementPresentWaiters(objPokupoHome.benefitsBlock));
-            Assert.assertTrue(objWaiters.isElementPresentWaiters(objPokupoHome.portalBlock));
-            Assert.assertTrue(objWaiters.isElementPresentWaiters(objPokupoHome.missionBlock));
-            Assert.assertTrue(objWaiters.isElementPresentWaiters(objPokupoHome.seoBlock));
-            Assert.assertTrue(objWaiters.isElementPresentWaiters(objPokupoHome.footerBlock));
-        } finally {
-            driver.quit();
-        }
-
-    }
-
-    @Test(description = "Проверка страницы pokupo.ru/blog")
-    public void ProverkaPokupoBlog_content() {
-        objOS_Version = new OS_Version();
-        objOS_Version.SetChromeProperty();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get("https://pokupo.ru/blog");
-        objPokupoBlog = new PokupoBlog(driver);
-        objWaiters = new Waiters(driver);
-
-        try {
-            Assert.assertTrue(objWaiters.isElementPresentWaiters(objPokupoBlog.headerBlock));
-            Assert.assertTrue(objWaiters.isElementPresentWaiters(objPokupoBlog.eventsBlock));
-            Assert.assertTrue(objWaiters.isElementPresentWaiters(objPokupoBlog.footerBlock));
-            Assert.assertTrue(objPokupoBlog.getEvents()>0);
-
-        } finally {
-            driver.quit();
-        }
-
-    }
-
-
-
 
 
     @AfterMethod
